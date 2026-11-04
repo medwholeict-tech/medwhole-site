@@ -12,7 +12,7 @@ Setup, environments, content ownership, CI/CD, deployment and recovery.
 
 | Date | 4 November 2026 - Africa/Lagos |
 
-| Source revision | de2e0c1 |
+| Source revision | 25e682d |
 
 | Repository | github.com/medwholeict-tech/medwhole-site |
 
@@ -312,7 +312,7 @@ Some layout and approved fallback copy remains versioned in the website source. 
 
 | /api/payments/initialize | donation-payments - pending record before provider initialization |
 
-| /api/payments/verify; webhook | Verified amount, currency, donor and reference; recurring reconciliation |
+| /give/complete; payment webhook | Verified amount, currency, donor and reference; recurring reconciliation |
 
 Validation, anti-bot checks and rate limiting run at the website layer. A failed primary write must return an error rather than report an unsaved submission as successful. REST create/update responses are unwrapped to native documents before using their IDs.
 
@@ -502,7 +502,7 @@ pnpm build
 pnpm --dir cms build
 ```
 
-Migration validation includes 48 automated tests, explicit website and CMS TypeScript checks, production builds, native Payload storage/access checks, source-ID reconciliation, media storage verification and rendered website checks. Check the final release record for the deployed revision and any remaining limitations.
+Migration validation includes a clean schema installation covering 70 tables and 903 columns, 48 automated tests, explicit website and CMS TypeScript checks, production builds, native Payload storage/access checks, source-ID reconciliation, media storage verification and rendered website checks. Check the final release record for the deployed revision and any remaining limitations.
 
 | Symptom | Check / next action |
 | --- | --- |
