@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { donationIntentSchema } from "@/lib/donation-intent"
 import { sendDonationAdminNotification, sendDonationInstructionsEmail } from "@/lib/donation-email"
 import { writeClient } from "@/lib/sanity.server"
+import { createWebsiteSubmission } from "@/lib/cms/payload"
 
 export const runtime = "nodejs"
 
@@ -50,6 +51,26 @@ export async function POST(request: NextRequest) {
       emailStatus,
       submittedAt,
     })
+
+    // Also record into Payload operational inbox
+    try {
+      if (process.env.PAYLOAD_CMS_URL && process.env.PAYLOAD_CMS_WEBSITE_API_KEY) {
+        await createWebsiteSubmission("donation-intents", {
+          reference,
+          fullName: input.fullName,
+          email: input.email || undefined,
+          phone: input.phone || undefined,
+          amount: String(input.amount),
+          currency: input.currency,
+          frequency: input.frequency,
+          programme: input.programme || undefined,
+          status: "new",
+          submittedAt,
+        })
+      }
+    } catch (cmsError) {
+      console.warn("Payload donation intent write:", cmsError)
+    }
 
     const emailIntent = {
       reference,

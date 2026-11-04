@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { createClient } from "@sanity/client"
 import { rateLimit } from "@/lib/rate-limit"
+import { createWebsiteSubmission } from "@/lib/cms/payload"
 
 const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
@@ -46,6 +47,24 @@ export async function POST(request: NextRequest) {
       status: "new",
       submittedAt: new Date().toISOString(),
     })
+
+    // Also record into Payload operational inbox
+    try {
+      if (process.env.PAYLOAD_CMS_URL && process.env.PAYLOAD_CMS_WEBSITE_API_KEY) {
+        await createWebsiteSubmission("partnership-applications", {
+          fullName: data.contactName || data.organizationName,
+          email: data.contactEmail,
+          organisation: data.organizationName,
+          phone: data.contactPhone || "",
+          partnershipType: data.organizationType || data.partnershipInterest || "",
+          message: [data.proposedCollaboration, data.organizationCapacity, data.geographicFocus].filter(Boolean).join("\n\n"),
+          status: "new",
+          submittedAt: new Date().toISOString(),
+        })
+      }
+    } catch (cmsError) {
+      console.warn("Payload partnership application write:", cmsError)
+    }
 
     return NextResponse.json(
       { 

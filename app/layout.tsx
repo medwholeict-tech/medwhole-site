@@ -40,7 +40,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              'try{if(window.location.hostname!=="localhost"&&sessionStorage.getItem("medwhole-brand-intro-seen")==="1"){document.documentElement.dataset.brandIntroSeen="true"}}catch(e){}',
+              'try{if(window.location.hostname!=="localhost"&&sessionStorage.getItem("medwhole-brand-intro-seen")==="1"){document.documentElement.dataset.brandIntroSeen="true"}}catch(e){};if(typeof window!=="undefined"){window.addEventListener("unhandledrejection",function(e){if(e&&e.reason&&e.reason.message==="Connection closed."){e.preventDefault()}})}',
           }}
         />
         <OrganizationSchema />

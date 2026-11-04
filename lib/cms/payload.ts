@@ -92,6 +92,7 @@ export async function createWebsiteSubmission(
     headers: { ...getHeaders(websiteApiKey), "Content-Type": "application/json" },
     body: JSON.stringify(data),
     cache: "no-store",
+    signal: AbortSignal.timeout(4000),
   })
   if (!response.ok) throw new Error(`Payload submission failed with HTTP ${response.status}`)
   return response.json()

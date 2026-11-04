@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { writeClient } from '@/lib/sanity.server'
 import { newsletterFormSchema } from '@/lib/newsletter'
 import { rateLimit } from '@/lib/rate-limit'
+import { createWebsiteSubmission } from '@/lib/cms/payload'
 
 export async function POST(request: Request) {
   const ip = (request.headers as Headers).get('x-forwarded-for')?.split(',')[0] ?? 'unknown'
@@ -65,6 +66,21 @@ export async function POST(request: Request) {
       subscribedAt: new Date().toISOString(),
       status: 'active',
     })
+
+    // Also record into Payload operational inbox
+    try {
+      if (process.env.PAYLOAD_CMS_URL && process.env.PAYLOAD_CMS_WEBSITE_API_KEY) {
+        await createWebsiteSubmission('newsletter-subscribers', {
+          email,
+          name: name || undefined,
+          confirmedAt: new Date().toISOString(),
+          status: 'new',
+          submittedAt: new Date().toISOString(),
+        })
+      }
+    } catch (cmsError) {
+      console.warn('Payload newsletter write:', cmsError)
+    }
 
     return NextResponse.json({
       message: 'Subscribed successfully',

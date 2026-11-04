@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 import { contactFormSchema } from "@/lib/contact"
 import { writeClient } from "@/lib/sanity.server"
 import { rateLimit } from "@/lib/rate-limit"
+import { createWebsiteSubmission } from "@/lib/cms/payload"
 
 export async function POST(request: Request) {
   const ip = (request.headers as Headers).get("x-forwarded-for")?.split(",")[0] ?? "unknown"
@@ -34,6 +35,22 @@ export async function POST(request: Request) {
       status: "new",
       submittedAt: new Date().toISOString(),
     })
+
+    try {
+      if (process.env.PAYLOAD_CMS_URL && process.env.PAYLOAD_CMS_WEBSITE_API_KEY) {
+        await createWebsiteSubmission("contact-submissions", {
+          fullName: parsed.data.name,
+          email: parsed.data.email.toLowerCase(),
+          phone: parsed.data.phone || "",
+          subject: parsed.data.subject,
+          message: parsed.data.message,
+          status: "new",
+          submittedAt: new Date().toISOString(),
+        })
+      }
+    } catch (cmsError) {
+      console.warn("Payload contact submission write:", cmsError)
+    }
 
     return NextResponse.json(
       { success: true, message: "Message received successfully", id: submission._id },

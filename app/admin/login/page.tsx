@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Image from "next/image"
 import { signIn } from "next-auth/react"
-import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -11,7 +10,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
 export default function AdminLoginPage() {
-  const router = useRouter()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
@@ -31,13 +29,14 @@ export default function AdminLoginPage() {
 
       if (result?.error) {
         setError("Invalid email or password")
+        setIsLoading(false)
       } else {
-        router.push("/admin/dashboard")
-        router.refresh()
+        // Full navigation ensures the session cookie is transferred on the initial document request
+        // and avoids concurrent RSC stream cancellation ("Connection closed.").
+        window.location.href = "/admin/dashboard"
       }
     } catch {
       setError("An error occurred. Please try again.")
-    } finally {
       setIsLoading(false)
     }
   }
