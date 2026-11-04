@@ -55,6 +55,12 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'medwhole.org' }],
+        destination: 'https://www.medwhole.org/:path*',
+        permanent: true,
+      },
       { source: '/what-we-do', destination: '/our-work', permanent: true },
       { source: '/programs', destination: '/our-work', permanent: true },
       ...Object.entries(legacyProgramRoutes).map(([slug, destination]) => ({ source: `/programs/${slug}`, destination, permanent: true })),

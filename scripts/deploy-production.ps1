@@ -36,13 +36,14 @@ if ([string]::IsNullOrWhiteSpace($branchName)) {
   $branchName = "detached-head"
 }
 
+if ($branchName -ne "main") {
+  throw "Production deployment stopped: Hostinger deploys the main branch. Switch to main before deploying."
+}
+
 Write-Host "Verifying commit $commitSha on $branchName..."
 Invoke-Checked pnpm run verify
 
-Write-Host "Deploying the verified source for commit $commitSha..."
-Invoke-Checked npx --yes vercel@59.16.0 deploy --prod --yes `
-  --meta "gitCommitSha=$commitSha" `
-  --meta "gitBranch=$branchName" `
-  --meta "deploymentSource=local-git"
+Write-Host "Pushing verified commit $commitSha to Hostinger's connected GitHub branch..."
+Invoke-Checked git push origin main
 
-Write-Host "Production now corresponds to Git commit $commitSha."
+Write-Host "GitHub main now contains commit $commitSha. Hostinger handles automatic builds for new pushes; check its build status before considering deployment complete."

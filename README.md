@@ -65,7 +65,7 @@ See [ADMIN_SETUP.md](./ADMIN_SETUP.md) for complete setup guide.
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 15 (App Router)
 - **Database**: Neon PostgreSQL (Serverless)
 - **ORM**: Drizzle ORM
 - **Authentication**: NextAuth v5
@@ -115,13 +115,38 @@ See [ADMIN_SETUP.md](./ADMIN_SETUP.md) for complete setup guide.
 
 ## Deployment
 
-Recommended: **Vercel**
+Production uses **Hostinger Node.js hosting** for the website, **Cloudflare
+Workers** for Payload CMS, and **Cloudflare DNS** for `medwhole.org`.
 
-1. Push to GitHub
-2. Import in Vercel
-3. Add environment variables
-4. Deploy
-5. Run `pnpm admin:create` in production
+- Canonical website: `https://www.medwhole.org` (`medwhole.org` redirects here).
+- CMS: `https://medwhole-cms.medwhole.workers.dev` (admin at `/admin`).
+- Hostinger preview: `https://aqua-jellyfish-909555.hostingersite.com`.
+- GitHub repository: `medwholeict-tech/medwhole-site`, branch `main`.
+
+Hostinger builds new pushes to `main` with Node 22, pnpm, build script `build`,
+output directory `.next`, and `NEXT_DIST_DIR=.next`. Set `NEXTAUTH_URL`,
+`NEXT_PUBLIC_APP_URL`, and `NEXT_PUBLIC_SITE_URL` to `https://www.medwhole.org`.
+Set `PAYLOAD_CMS_URL` to the CMS URL above and `PAYLOAD_CMS_PUBLIC_ENABLED=true`.
+Keep the distinct Payload API keys and other service secrets in Hostinger's
+environment settings. Never use `localhost` as the production CMS address.
+
+`pnpm deploy:production` verifies a clean `main` checkout and pushes it to GitHub.
+Confirm that the Hostinger build completes before treating the change as live.
+The CMS is deployed separately with `pnpm --dir cms cf:deploy`; its allowed
+origins are maintained in `cms/wrangler.jsonc` and the Cloudflare build workflow.
+
+Cloudflare website DNS targets (DNS only, using Hostinger CDN):
+
+| Type | Name | Target |
+| --- | --- | --- |
+| CNAME | `@` | `medwhole.org.cdn.hstgr.net` |
+| CNAME | `www` | `www.medwhole.org.cdn.hstgr.net` |
+
+Replace the old website A/AAAA/CNAME records when moving hosts. Preserve email
+and verification records. Cloudflare flattens the apex CNAME. Once these records
+resolve to Hostinger, confirm its domain SSL certificate is active and HTTPS
+redirection is enabled. The old website Worker is retained as a fallback and is
+not the main production host.
 
 ## Future Enhancements
 

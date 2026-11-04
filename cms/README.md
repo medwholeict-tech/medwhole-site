@@ -2,8 +2,10 @@
 
 This directory contains the separate Payload CMS application. It runs on
 Next.js 15.4.11, which is supported by the pinned Payload release, independently
-from the public Next.js 14 website. Public content remains on its current
-sources until CMS import and verification are complete.
+from the public Next.js 15 website on Hostinger. The production CMS endpoint is
+`https://medwhole-cms.medwhole.workers.dev`; its editor is at `/admin`. Cloudflare
+DNS manages the website domain. Public reads and operational submissions use
+the separate integration credentials described below.
 
 ## Local setup
 

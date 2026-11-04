@@ -2,12 +2,22 @@ name: Build Cloudflare artifacts
 
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        description: Cloudflare artifact to build (main website runs on Hostinger)
+        type: choice
+        default: cms
+        options:
+          - cms
+          - website
+          - all
 
 permissions:
   contents: read
 
 jobs:
   website:
+    if: inputs.target == 'website' || inputs.target == 'all'
     name: Build website Worker
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -58,6 +68,7 @@ jobs:
           retention-days: 3
 
   cms:
+    if: inputs.target == 'cms' || inputs.target == 'all'
     name: Build CMS Worker
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -86,8 +97,8 @@ jobs:
           DATABASE_URL: "postgresql://build:build@127.0.0.1:5432/build"
           PAYLOAD_DB_PUSH: "false"
           PAYLOAD_PUBLIC_SERVER_URL: "https://medwhole-cms.medwhole.workers.dev"
-          PAYLOAD_CORS_ORIGINS: "https://www.medwhole.org,https://medwhole-website.medwhole.workers.dev"
-          PAYLOAD_CSRF_ORIGINS: "https://www.medwhole.org,https://medwhole-website.medwhole.workers.dev"
+          PAYLOAD_CORS_ORIGINS: "https://www.medwhole.org,https://medwhole.org,https://aqua-jellyfish-909555.hostingersite.com,https://medwhole-website.medwhole.workers.dev"
+          PAYLOAD_CSRF_ORIGINS: "https://www.medwhole.org,https://medwhole.org,https://aqua-jellyfish-909555.hostingersite.com,https://medwhole-website.medwhole.workers.dev"
           PAYLOAD_LOG_LEVEL: "info"
 
       - name: Upload CMS artifact

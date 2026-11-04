@@ -16,8 +16,8 @@
   ],
   "vars": {
     "PAYLOAD_PUBLIC_SERVER_URL": "https://medwhole-cms.medwhole.workers.dev",
-    "PAYLOAD_CORS_ORIGINS": "https://www.medwhole.org,https://medwhole-website.medwhole.workers.dev",
-    "PAYLOAD_CSRF_ORIGINS": "https://www.medwhole.org,https://medwhole-website.medwhole.workers.dev",
+    "PAYLOAD_CORS_ORIGINS": "https://www.medwhole.org,https://medwhole.org,https://aqua-jellyfish-909555.hostingersite.com,https://medwhole-website.medwhole.workers.dev",
+    "PAYLOAD_CSRF_ORIGINS": "https://www.medwhole.org,https://medwhole.org,https://aqua-jellyfish-909555.hostingersite.com,https://medwhole-website.medwhole.workers.dev",
     "PAYLOAD_DB_PUSH": "false",
     "PAYLOAD_LOG_LEVEL": "info"
   },
