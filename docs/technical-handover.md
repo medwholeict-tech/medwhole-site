@@ -12,7 +12,7 @@ Setup, environments, content ownership, CI/CD, deployment and recovery.
 
 | Date | 4 November 2026 - Africa/Lagos |
 
-| Source revision | 25e682d |
+| Source revision | 26a77ac |
 
 | Repository | github.com/medwholeict-tech/medwhole-site |
 
@@ -475,6 +475,8 @@ Cloudflare is the authoritative DNS manager. Hostinger runs the website processe
 | MX / SPF / DKIM / verification | Existing email and verification configuration; not part of the CMS runtime migration. |
 
 | Proxy mode | Preserve the tested website configuration; do not toggle proxying as a generic fix. |
+
+The former temporary CMS hostname redirects to this canonical origin using PAYLOAD_PREVIOUS_HOST. Keep that hostname different from the canonical CMS hostname to prevent a redirect loop.
 
 ### When changing website DNS
 

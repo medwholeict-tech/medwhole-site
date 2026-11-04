@@ -31,3 +31,11 @@ Verified all 26 persistent object-storage files against stored sizes. Mirrored e
 Native Payload and the website NextAuth portal use separate accounts. Existing CMS accounts and passwords were preserved. The CMS has no outbound email adapter configured; password-reset delivery remains a separate operational integration. Website notification email still uses Resend. No paid payment was initiated and no donor notification was sent during migration verification.
 
 Private source exports, pre-change database backups and reconciliation reports remain outside Git under ignored migration working files. Transfer them to approved organizational backup storage. Historical source columns in migration SQL are retained for database compatibility; active application code, dependencies and environment use Payload.
+
+## Custom CMS domain
+
+Payload now uses https://cms.medwhole.org with the existing Hostinger CMS application and database. Cloudflare has a DNS-only CNAME: cms.medwhole.org to cms.medwhole.org.cdn.hstgr.net. Hostinger issues and serves HTTPS for this alias.
+
+The website PAYLOAD_CMS_URL and CMS PAYLOAD_PUBLIC_SERVER_URL use the canonical origin. CMS CORS/CSRF origins are explicit. PAYLOAD_PREVIOUS_HOST enables a permanent redirect from the former temporary hostname, preserving paths and queries. Local development keeps the redirect disabled unless explicitly configured.
+
+Verification: canonical HTTPS and published-content reads passed. Contact, volunteering, partnership and newsletter submissions persisted through the website after the environment cutover; exact verification records were removed. The canonical redirect and loop prevention passed local configuration checks.
