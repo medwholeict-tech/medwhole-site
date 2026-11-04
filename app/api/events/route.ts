@@ -1,35 +1,13 @@
-import { NextRequest, NextResponse } from "next/server"
-import { db } from "@/db"
-import { events } from "@/db/schema"
-import { eq, desc } from "drizzle-orm"
+import { NextResponse } from "next/server"
+import { getAllEvents } from "@/lib/cms/queries"
 
-export const dynamic = 'force-dynamic'
-
-export async function GET(request: NextRequest) {
+export async function GET(request: Request) {
+  const query = new URL(request.url).searchParams
+  const limit = Math.max(1, Math.min(Number(query.get("limit")) || 100, 100))
   try {
-    const searchParams = request.nextUrl.searchParams
-    const category = searchParams.get("category")
-    const limit = searchParams.get("limit") ? parseInt(searchParams.get("limit")!) : undefined
-
-    let query = db.select().from(events).where(eq(events.isActive, true)).orderBy(desc(events.createdAt))
-
-    if (limit) {
-      query = query.limit(limit) as any
-    }
-
-    const allEvents = await query
-
-    // Filter by category if provided
-    const filteredEvents = category 
-      ? allEvents.filter(event => event.category?.toLowerCase() === category.toLowerCase())
-      : allEvents
-
-    return NextResponse.json(filteredEvents, { status: 200 })
-  } catch (error) {
-    console.error("Error fetching events:", error)
-    return NextResponse.json(
-      { error: "Failed to fetch events" },
-      { status: 500 }
-    )
+    const events = await getAllEvents()
+    return NextResponse.json(events.filter(event => !query.get("category") || event.category === query.get("category")).slice(0, limit))
+  } catch {
+    return NextResponse.json({ error: "Events are temporarily unavailable" }, { status: 503 })
   }
 }

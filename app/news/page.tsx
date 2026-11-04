@@ -3,8 +3,6 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-import { getNews } from "@/lib/sanity-queries"
-import { urlFor } from "@/lib/sanity"
 import { getPayloadNews } from "@/lib/cms/content"
 import { filterNewsCategory, newsCategories, newsCategoryLabels, selectedNewsCategory } from "@/lib/public-page-ux"
 import { generateApprovedSEO } from "@/lib/approved-seo"
@@ -17,18 +15,7 @@ export default async function NewsPage(props: { searchParams?: Promise<{ categor
   const searchParams = await props.searchParams;
   const selected = selectedNewsCategory(searchParams?.category)
   const payloadArticles = await getPayloadNews()
-  const sourceArticles: NewsArticle[] = payloadArticles.length
-    ? payloadArticles.map((article) => ({ ...article, id: article.id }))
-    : (await getNews(undefined, 50).catch(() => [])).map((article: { _id: string; title: string; slug: { current: string }; excerpt?: string; featuredImage?: unknown; category?: string; publishedAt?: string }) => ({
-        id: article._id,
-        title: article.title,
-        slug: article.slug?.current || "",
-        excerpt: article.excerpt,
-        imageUrl: article.featuredImage ? urlFor(article.featuredImage).width(900).height(675).fit("crop").url() : undefined,
-        imageAlt: "",
-        category: article.category,
-        publishedAt: article.publishedAt,
-      }))
+  const sourceArticles: NewsArticle[] = payloadArticles
   const articles = filterNewsCategory<NewsArticle>(sourceArticles, selected)
 
   return (

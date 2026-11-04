@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { getSitemapEntries } from "@/lib/sanity-queries"
+import { getSitemapEntries } from "@/lib/cms/queries"
 import { absoluteUrl } from "@/lib/seo"
 import { approvedPages } from "@/lib/approved-copy"
 
@@ -52,7 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return [...new Map([...staticEntries, ...dynamicEntries].map((entry) => [entry.url, entry])).values()]
   } catch (error) {
-    console.error("Could not add Sanity entries to sitemap:", error)
+    console.error("Could not add Payload entries to sitemap:", error)
     return staticEntries
   }
 }

@@ -1,7 +1,7 @@
 import "server-only"
-import { createHash, createHmac, timingSafeEqual } from "node:crypto"
+import { createHmac, timingSafeEqual } from "node:crypto"
 import { Resend } from "resend"
-import { writeClient } from "@/lib/sanity.server"
+import { createPayment, findPayment, updatePayment } from "@/lib/cms/payments"
 import { paymentMatches } from "./payment-validation"
 import { recordPayloadEmailDelivery } from "@/lib/cms/email-delivery"
 
@@ -30,23 +30,23 @@ export async function settlePaystackPayment(reference: string) {
   if (!/^[A-Za-z0-9._=-]{6,120}$/.test(reference)) throw new Error("INVALID_REFERENCE")
   const actual = await paystackRequest<Verification>(`/transaction/verify/${encodeURIComponent(reference)}`)
   const originalReference = actual.metadata?.donationReference || reference
-  let original: any = /^[A-Za-z0-9-]{6,120}$/.test(originalReference) ? await writeClient.getDocument(`private.donation-payment-${originalReference}`) : null
+  let original = /^[A-Za-z0-9-]{6,120}$/.test(originalReference) ? await findPayment("reference", originalReference) : null
   // Later subscription charges have new references. Each checkout has its own plan.
   const planCode = actual.plan_object?.plan_code || (typeof actual.plan === "object" ? actual.plan?.plan_code : actual.plan)
   if (!original && planCode) {
-    original = await writeClient.fetch(`*[_type == "donationPayment" && planCode == $planCode && frequency == "monthly"][0]`, { planCode })
+    original = await findPayment("planCode", planCode)
+    if (original?.frequency !== "monthly") original = null
   }
   if (!original) return { status: "ignored" }
-  if (!paymentMatches({ reference, amount: original.amount, currency: original.currency }, actual) || actual.customer?.email?.toLowerCase() !== original.email.toLowerCase()) return { status: "unconfirmed" }
-  const id = `private.donation-charge-${createHash("sha256").update(reference).digest("hex")}`
-  await writeClient.createIfNotExists({
-    _id: id, _type: "donationPayment", reference, parentReference: original.reference,
-    fullName: original.fullName, email: original.email, amount: actual.amount, currency: actual.currency,
+  if (!paymentMatches({ reference, amount: original.amountMinor, currency: original.currency }, actual) || actual.customer?.email?.toLowerCase() !== original.email.toLowerCase()) return { status: "unconfirmed" }
+  let charge = await findPayment("reference", reference)
+  if (!charge) charge = await createPayment({
+    reference, parentReference: original.reference,
+    fullName: original.fullName, email: original.email, amountMinor: actual.amount, currency: actual.currency,
     frequency: original.frequency, designation: original.designation, community: original.community,
-    status: "paid", paidAt: actual.paid_at || new Date().toISOString(), submittedAt: new Date().toISOString(),
+    status: "paid", providerStatus: "success", paidAt: actual.paid_at || new Date().toISOString(), submittedAt: new Date().toISOString(),
   })
-  await writeClient.patch(original._id).set({ status: "paid", paidAt: actual.paid_at || new Date().toISOString() }).commit()
-  const charge: any = await writeClient.getDocument(id)
+  charge = await updatePayment(charge.id, { status: "paid", providerStatus: "success", paidAt: actual.paid_at || new Date().toISOString() })
   if (!charge.receiptSent && process.env.RESEND_API_KEY && process.env.EMAIL_FROM) {
     const resend = new Resend(process.env.RESEND_API_KEY)
     const result = await resend.emails.send({
@@ -59,7 +59,7 @@ export async function settlePaystackPayment(reference: string) {
       throw new Error("RECEIPT_DELIVERY_FAILED")
     }
     await recordPayloadEmailDelivery({ template: "donation-payment-receipt", recordId: reference, recipient: original.email, providerId: result.data?.id, status: "sent" })
-    await writeClient.patch(id).set({ receiptSent: true }).commit()
+    await updatePayment(charge.id, { receiptSent: true })
   }
   return { status: "paid", reference, amount: actual.amount / 100, currency: actual.currency }
 }

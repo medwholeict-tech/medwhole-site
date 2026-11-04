@@ -4,12 +4,19 @@ import { amountInKobo, checkoutSchema, paymentMatches } from "../lib/payment-val
 
 vi.mock("server-only", () => ({}))
 const database = vi.hoisted(() => new Map<string, any>())
-vi.mock("@/lib/sanity.server", () => ({ writeClient: {
-  getDocument: vi.fn(async (id: string) => database.get(id)),
-  createIfNotExists: vi.fn(async (record: any) => { if (!database.has(record._id)) database.set(record._id, record); return database.get(record._id) }),
-  patch: vi.fn((id: string) => ({ set: (values: any) => ({ commit: async () => database.set(id, { ...database.get(id), ...values }) }) })),
-  fetch: vi.fn(async (_query: string, params: { planCode: string }) => [...database.values()].find((record) => record.planCode === params.planCode)),
-} }))
+vi.mock("@/lib/cms/payments", () => ({
+  findPayment: vi.fn(async (field: string, value: string) => [...database.values()].find(record => record[field] === value) || null),
+  createPayment: vi.fn(async (record: any) => {
+    if (!database.has(record.reference)) database.set(record.reference, { ...record, id: `id-${record.reference}` })
+    return database.get(record.reference)
+  }),
+  updatePayment: vi.fn(async (id: string, values: any) => {
+    const record = [...database.values()].find(item => item.id === id)
+    const updated = { ...record, ...values }
+    database.set(record.reference, updated)
+    return updated
+  }),
+}))
 import { settlePaystackPayment, validPaystackSignature } from "../lib/paystack"
 
 beforeEach(() => {
@@ -46,20 +53,22 @@ describe("donation payment boundaries", () => {
     expect(validPaystackSignature(raw, "not-a-signature")).toBe(false)
   })
   it("records a verified charge only once across callback and webhook retries", async () => {
-    database.set("private.donation-payment-MW-test", { _id: "private.donation-payment-MW-test", reference: "MW-test", amount: 500000, currency: "NGN", email: "ada@example.com", fullName: "Ada Okafor", designation: "Health", frequency: "one-off" })
+    database.set("MW-test", { id: "id-MW-test", reference: "MW-test", amountMinor: 500000, currency: "NGN", email: "ada@example.com", fullName: "Ada Okafor", designation: "Health", frequency: "one-off" })
     vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => ({ status: true, data: { reference: "MW-test", amount: 500000, currency: "NGN", status: "success", customer: { email: "ada@example.com" } } }) })))
     expect(await settlePaystackPayment("MW-test")).toMatchObject({ status: "paid", amount: 5000 })
     expect(await settlePaystackPayment("MW-test")).toMatchObject({ status: "paid" })
-    expect([...database.keys()].filter((id) => id.startsWith("private.donation-charge-"))).toHaveLength(1)
+    expect(database.size).toBe(1)
+    expect(database.get("MW-test")).toMatchObject({ status: "paid", providerStatus: "success" })
   })
   it("does not mark an underpayment or different donor as paid", async () => {
-    database.set("private.donation-payment-MW-test", { _id: "private.donation-payment-MW-test", reference: "MW-test", amount: 500000, currency: "NGN", email: "ada@example.com" })
+    database.set("MW-test", { id: "id-MW-test", reference: "MW-test", amountMinor: 500000, currency: "NGN", email: "ada@example.com" })
     vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => ({ status: true, data: { reference: "MW-test", amount: 1, currency: "NGN", status: "success", customer: { email: "other@example.com" } } }) })))
     expect(await settlePaystackPayment("MW-test")).toMatchObject({ status: "unconfirmed" })
-    expect([...database.keys()].filter((id) => id.startsWith("private.donation-charge-"))).toHaveLength(0)
+    expect(database.get("MW-test").status).not.toBe("paid")
+    expect(database.size).toBe(1)
   })
   it("associates a later monthly charge through the verified plan_object", async () => {
-    database.set("private.donation-payment-MW-original", { _id: "private.donation-payment-MW-original", reference: "MW-original", amount: 500000, currency: "NGN", email: "ada@example.com", frequency: "monthly", planCode: "PLN_monthly" })
+    database.set("MW-original", { id: "id-MW-original", reference: "MW-original", amountMinor: 500000, currency: "NGN", email: "ada@example.com", frequency: "monthly", planCode: "PLN_monthly" })
     vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => ({ status: true, data: { reference: "renewal-reference", amount: 500000, currency: "NGN", status: "success", plan_object: { plan_code: "PLN_monthly" }, customer: { email: "ada@example.com" } } }) })))
     expect(await settlePaystackPayment("renewal-reference")).toMatchObject({ status: "paid" })
     const charges = [...database.values()].filter((record) => record.parentReference === "MW-original")

@@ -1,156 +1,87 @@
-# MedWHOLE Alliance Website
+# MedWHOLE website and Payload CMS
 
-Official website for MedWhole - A non-profit organization advancing holistic healthcare in Nigeria.
+The public Next.js website runs on Hostinger. Payload is the only active CMS and the primary store for editorial content, public form submissions, donation intents and payment records. The Payload admin application runs as a separate Hostinger Node.js website. Cloudflare manages authoritative DNS; Hostinger serves the website and TLS.
 
-## Quick Start
+## Services and routes
 
-### 1. Install Dependencies
-```bash
-pnpm install
-```
+| Service | Location | Purpose |
+|---|---|---|
+| Public website | https://www.medwhole.org | Public pages, forms, server-side CMS requests |
+| Apex domain | https://medwhole.org | Redirect to canonical www website |
+| Website admin | /admin | Existing NextAuth portal; /admin/content opens Payload, /admin/submissions exposes permitted inboxes |
+| Payload editor | https://darkblue-weasel-536637.hostingersite.com/admin | Native content editor, media and administrative collections |
+| Old editor bookmark | /studio | Redirect to /admin/content |
+| CMS database | Dedicated Neon PostgreSQL, medwhole_cms schema | Content, CMS administrators, submissions, donations, versions |
+| Website database | Separate Neon connection | Existing NextAuth administrator identity; not a second CMS |
+| Media | Neon Object Storage via S3-compatible adapter | Persistent CMS uploads |
 
-### 2. Set Up Neon Database
-1. Go to [Neon Console](https://console.neon.tech/)
-2. Create a new project
-3. Copy the connection string
+## Clone and install
 
-### 3. Configure Environment Variables
-```bash
-cp .env.example .env
-```
+Use Node.js 22 and pnpm 10.33.2. On Windows use pnpm.cmd if PowerShell blocks script execution.
 
-Edit `.env` and add your credentials (see [ADMIN_SETUP.md](./ADMIN_SETUP.md) for details):
-```env
-DATABASE_URL=postgresql://username:password@your-project.neon.tech/neondb?sslmode=require
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your-secret-here
-NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY=your-key
-IMAGEKIT_PRIVATE_KEY=your-key
-NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT=your-endpoint
-```
+~~~sh
+git clone https://github.com/medwholeict-tech/medwhole-site.git
+cd medwhole-site
+corepack enable
+corepack prepare pnpm@10.33.2 --activate
+pnpm install --frozen-lockfile
+pnpm --dir cms install --frozen-lockfile --ignore-workspace
+~~~
 
-### 4. Push Database Schema & Create Admin
-```bash
-pnpm db:push
-pnpm admin:create
-```
+Root and cms have separate package manifests and lockfiles. Install both.
 
-### 5. Run Development Server
-```bash
+## Local environments
+
+Copy env.sample to .env.local and cms/env.sample to cms/.env.local. Obtain real values from the project owner through a private channel. Never commit environment files, source exports, credentials or personal submissions. Use separate development databases and buckets. Production credentials are not a local development template.
+
+The root DATABASE_URL belongs to the website identity database. The CMS DATABASE_URL belongs to the dedicated Payload database. Do not swap them. Configure local CMS URL http://localhost:3100 in the website and local website origin http://localhost:3000 in CMS CORS/CSRF. PAYLOAD_SECRET must be stable for a given CMS installation.
+
+~~~sh
+pnpm --dir cms migrate
+pnpm cms:dev
+# In a second terminal
 pnpm dev
-```
+~~~
 
-Open [http://localhost:3000](http://localhost:3000)
+On an existing database inspect migration status and take a backup first. A historical dev migration marker can make Payload CLI propose a schema reset: decline it and reconcile migration history against the actual schema. Never approve a production reset. PAYLOAD_DB_PUSH stays false in production. Create the first CMS administrator at /admin/create-first-user on a fresh database. Create separate integration users and enable API keys with roles: content_read, editor, operations, finance and website_service. Copy each key to its matching server-side website variable. These are not browser credentials. The website portal uses its own NextAuth administrator; pnpm admin:create manages that identity.
 
-## Admin Panel
+## Environment reference
 
-Access: **http://localhost:3000/admin/login**
+See env.sample and cms/env.sample. Website read, editor, operations, finance and submission keys have separate privileges. PAYLOAD_CMS_ADMIN_API_KEY is the editor integration, not a shared human password. RESEND_API_KEY and EMAIL_FROM configure website notifications. PAYSTACK_SECRET_KEY enables payments; configure the verified webhook endpoint /api/payments/webhook with Paystack. Never test by charging real cards. ImageKit variables support the existing optional upload helper and static image delivery. They do not replace Payload media storage.
 
-Complete CMS for managing:
-- ✅ Team Members (with photo uploads)
-- ✅ Programs (with images, objectives, outcomes)
-- ✅ Statistics (impact metrics)
-- ✅ Partners (with logo uploads)
-- ✅ Job Postings
-- ✅ Events (coming soon)
-- ✅ Impact Stories (coming soon)
+## Content and inbox workflow
 
-See [ADMIN_SETUP.md](./ADMIN_SETUP.md) for complete setup guide.
+Edit and publish in the native Payload admin. Drafts are not public. Published content normally revalidates on the website after about 60 seconds. Media requiring consent or alternative-text review must be reviewed before publishing. Existing approved website imagery is also stored in public/images; imported public story images are mirrored in public/images/content and have no dependency on the retired CMS CDN.
 
-### Database Management
+Contact, volunteering, partnership, newsletter, event registration and donation intent routes save directly to Payload. Payment initialization, verification and recurring-charge reconciliation use the private donation-payments collection. Failed persistence must fail the request; it must not acknowledge an unsaved submission. Operations and finance inboxes require their own integration keys. Anonymous users and content readers cannot list private submissions.
 
-- **Push schema**: `pnpm db:push`
-- **Open Drizzle Studio**: `pnpm db:studio`
-- **Create admin user**: `pnpm admin:create`
+## Checks
 
-## Tech Stack
+~~~sh
+pnpm exec vitest run
+pnpm exec tsc --noEmit
+pnpm build
+pnpm --dir cms build
+~~~
 
-- **Framework**: Next.js 15 (App Router)
-- **Database**: Neon PostgreSQL (Serverless)
-- **ORM**: Drizzle ORM
-- **Authentication**: NextAuth v5
-- **Image Management**: ImageKit
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
+The website build configuration currently skips Next.js lint/type checking; run the explicit checks above. This repository's verify command runs tests and the production website build. The public build must use a reachable Payload CMS with valid read credentials.
 
-## Project Structure
+## Deployment and CI/CD
 
-```
-├── app/                  # Next.js app directory
-│   ├── admin/           # Admin dashboard & CRUD pages
-│   ├── api/             # API routes (auth, admin)
-│   ├── (public pages)/  # Public-facing pages
-├── components/          # React components
-├── db/                  # Database schema & connection
-├── lib/                 # Utilities (auth, imagekit)
-├── scripts/             # Setup scripts
-└── public/              # Static assets
-```
+Both applications run on the existing Hostinger Business plan and use the same GitHub repository, main branch. The public website root is the repository root; the CMS application root is cms. Each has its own environment variables, build logs and process. Node.js is 22, package manager pnpm, build script build, output .next. A GitHub push to main triggers each connected auto-deployment. Verify both build results in Hostinger; a successful Git push alone is not a successful release.
 
-## Core Data Models
+CMS application: https://darkblue-weasel-536637.hostingersite.com/admin. This Hostinger-generated domain provides HTTPS without changing Cloudflare DNS. The main domain remains on Cloudflare DNS and points to Hostinger. CMS DATABASE_URL connects directly to its dedicated Neon database; CMS uploads use the existing persistent object-storage bucket. Set PAYLOAD_PUBLIC_SERVER_URL to the CMS origin and set the website PAYLOAD_CMS_URL to the same origin.
 
-- **Team Members**: Leadership team profiles
-- **Programs**: Academy, Health, Consult programs
-- **Impact Stories**: Success stories and testimonials
-- **Statistics**: Homepage metrics
-- **Events**: Upcoming conferences, webinars
-- **Partners**: Partner organizations
-- **Job Postings**: Career opportunities
-- **Admin Users**: Authentication
+For schema changes: back up, apply reviewed additive migrations and release the compatible CMS before the website that requires those fields. For coordinated releases, use a feature branch for the CMS build first, verify it, then promote that tested commit to main. scripts/deploy-production.ps1 verifies the clean main checkout before pushing; it does not monitor both hosting jobs automatically.
 
-## Status
+.github/workflows/cloudflare-build.yml is a manually dispatched artifact build for the retired optional Workers deployment. It does not deploy either active Hostinger application. Worker configs and build helpers remain available for a deliberate future platform change; Cloudflare Workers is not the active CMS runtime. No paid Workers plan is required for the current architecture. Run the normal pnpm build / pnpm --dir cms build checks for Hostinger releases.
 
-1. ✅ Database schema created
-2. ✅ Admin authentication (NextAuth)
-3. ✅ Image uploads (ImageKit)
-4. ✅ Team Members CRUD
-5. ✅ Programs CRUD
-6. ✅ Statistics CRUD
-7. ✅ Partners CRUD
-8. ✅ Jobs CRUD
-9. ⏳ Events CRUD (in progress)
-10. ⏳ Impact Stories CRUD (in progress)
-11. ⏳ Connect admin data to frontend pages
+Cloudflare's Free Worker CPU limit caused intermittent error 1102 in the native CMS admin, so the Payload runtime moved to existing Hostinger capacity. After cutover, the old Worker endpoints are disabled. This change does not affect Cloudflare's authoritative DNS role. Preserve unrelated mail and subdomain records.
 
-## Deployment
+## Backup and recovery
 
-Production uses **Hostinger Node.js hosting** for the website, **Cloudflare
-Workers** for Payload CMS, and **Cloudflare DNS** for `medwhole.org`.
+Back up the CMS database (including versions and administrators), website identity database and object-storage bucket. Keep credentials in a private vault. Restore into a separate database before switching a service connection. Roll back a website using the previous known-good Git commit and Hostinger deployment; roll back a CMS using its previous Hostinger deployment only if compatible with the current additive schema. Do not run destructive down migrations to undo imported records.
 
-- Canonical website: `https://www.medwhole.org` (`medwhole.org` redirects here).
-- CMS: `https://medwhole-cms.medwhole.workers.dev` (admin at `/admin`).
-- Hostinger preview: `https://aqua-jellyfish-909555.hostingersite.com`.
-- GitHub repository: `medwholeict-tech/medwhole-site`, branch `main`.
+## Migration record
 
-Hostinger builds new pushes to `main` with Node 22, pnpm, build script `build`,
-output directory `.next`, and `NEXT_DIST_DIR=.next`. Set `NEXTAUTH_URL`,
-`NEXT_PUBLIC_APP_URL`, and `NEXT_PUBLIC_SITE_URL` to `https://www.medwhole.org`.
-Set `PAYLOAD_CMS_URL` to the CMS URL above and `PAYLOAD_CMS_PUBLIC_ENABLED=true`.
-Keep the distinct Payload API keys and other service secrets in Hostinger's
-environment settings. Never use `localhost` as the production CMS address.
-
-`pnpm deploy:production` verifies a clean `main` checkout and pushes it to GitHub.
-Confirm that the Hostinger build completes before treating the change as live.
-The CMS is deployed separately with `pnpm --dir cms cf:deploy`; its allowed
-origins are maintained in `cms/wrangler.jsonc` and the Cloudflare build workflow.
-
-Cloudflare website DNS targets (DNS only, using Hostinger CDN):
-
-| Type | Name | Target |
-| --- | --- | --- |
-| CNAME | `@` | `medwhole.org.cdn.hstgr.net` |
-| CNAME | `www` | `www.medwhole.org.cdn.hstgr.net` |
-
-Replace the old website A/AAAA/CNAME records when moving hosts. Preserve email
-and verification records. Cloudflare flattens the apex CNAME. Once these records
-resolve to Hostinger, confirm its domain SSL certificate is active and HTTPS
-redirection is enabled. The old website Worker is retained as a fallback and is
-not the main production host.
-
-## Future Enhancements
-
-- Add Sanity CMS for blog/news content
-- Implement rich text editor for descriptions
-- Email notifications for form submissions
-- Analytics dashboard
+scripts/migrations/payload-only-data.mjs is a one-time, repeatable offline export importer. It previews by default, requires --source with a private NDJSON export, and writes only with --apply. It preserves original identifiers, raw operational details, native rich text and existing editorial edits. The November 2026 cutover imports 25 editorial records and 52 historical inbox records, alongside the pre-existing 39 pages and 26 CMS media assets. The incomplete historical registration remains archived. Source backups and reconciliation reports belong in private storage, not Git. Historical database migration files retain original column names for upgrade/rollback compatibility; current application code and dependencies use Payload only.

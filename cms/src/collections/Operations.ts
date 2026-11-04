@@ -15,6 +15,8 @@ function privateInbox(slug: string, titleField: string, fields: Field[], donatio
     },
     fields: [
       ...fields,
+      { name: 'externalId', type: 'text', unique: true, index: true, admin: { readOnly: true } },
+      { name: 'details', type: 'json', access: { read: readAccess }, admin: { description: 'Additional submitted fields and migration information.' } },
       { name: 'status', type: 'select', required: true, defaultValue: statuses[0], options: statuses },
       { name: 'submittedAt', type: 'date', required: true, defaultValue: () => new Date().toISOString() },
       { name: 'sourcePage', type: 'text' },
@@ -48,27 +50,37 @@ export const PartnershipApplications = privateInbox('partnership-applications', 
 export const NewsletterSubscribers = privateInbox('newsletter-subscribers', 'email', [
   { name: 'email', type: 'email', required: true, unique: true }, { name: 'name', type: 'text' },
   { name: 'confirmedAt', type: 'date' }, { name: 'unsubscribedAt', type: 'date' },
-])
+  { name: 'interests', type: 'json' },
+], false, ['active', 'unsubscribed', 'archived'])
 
 export const EventRegistrations = privateInbox('event-registrations', 'fullName', [
-  ...nameEmail, { name: 'event', type: 'relationship', relationTo: 'events', required: true },
+  { name: 'fullName', type: 'text' }, { name: 'email', type: 'email' },
+  { name: 'event', type: 'relationship', relationTo: 'events' },
   { name: 'phone', type: 'text' }, { name: 'formData', type: 'json' },
 ])
 
 export const DonationIntents = privateInbox('donation-intents', 'reference', [
-  { name: 'reference', type: 'text', required: true, unique: true }, ...nameEmail,
+  { name: 'reference', type: 'text', required: true, unique: true },
+  { name: 'fullName', type: 'text', required: true }, { name: 'email', type: 'email' },
   { name: 'phone', type: 'text' }, { name: 'amount', type: 'text', required: true },
   { name: 'currency', type: 'select', options: ['NGN', 'USD', 'GBP'], required: true },
   { name: 'frequency', type: 'select', options: ['one-time', 'monthly'], required: true },
   { name: 'programme', type: 'text' },
-], true)
+  { name: 'country', type: 'text' }, { name: 'designation', type: 'text' },
+  { name: 'expectedTransferDate', type: 'date' },
+  { name: 'emailStatus', type: 'text', validate: (value: unknown) => !value || ['not-requested', 'sent', 'failed'].includes(String(value)) || 'Choose a valid email status' },
+], true, ['new', 'instructions-sent', 'in_review', 'resolved', 'archived'])
 
 export const DonationPayments = privateInbox('donation-payments', 'reference', [
   { name: 'reference', type: 'text', required: true, unique: true },
   { name: 'parentReference', type: 'text' }, { name: 'amountMinor', type: 'number', required: true },
+  ...nameEmail,
+  { name: 'frequency', type: 'text', required: true, validate: (value: unknown) => ['one-off', 'monthly'].includes(String(value)) || 'Choose one-off or monthly' },
+  { name: 'designation', type: 'text' }, { name: 'community', type: 'text' },
+  { name: 'planCode', type: 'text', index: true },
   { name: 'currency', type: 'text', required: true }, { name: 'providerStatus', type: 'text', required: true },
   { name: 'paidAt', type: 'date' }, { name: 'receiptSent', type: 'checkbox', defaultValue: false },
-], true)
+], true, ['pending', 'paid', 'failed', 'cancelled', 'archived'])
 
 export const EmailDeliveries = privateInbox('email-deliveries', 'template', [
   { name: 'template', type: 'text', required: true }, { name: 'recordId', type: 'text', required: true },

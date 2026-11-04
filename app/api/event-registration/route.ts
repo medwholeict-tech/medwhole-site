@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { writeClient } from '@/lib/sanity.server'
+import { createWebsiteSubmission, getPayloadDocument, listPrivatePayloadDocuments } from '@/lib/cms/payload'
+import { getAllEvents } from '@/lib/cms/queries'
 import { sendRegistrationConfirmation, sendOrganizerNotification } from '@/lib/email'
 import { rateLimit } from '@/lib/rate-limit'
 import {
@@ -13,7 +14,7 @@ import { auth } from '@/lib/auth'
 
 export const dynamic = 'force-dynamic'
 
-// Sanity document IDs are limited to alphanumeric characters plus _ . -
+// Accept native record IDs, with bounded input for cached pre-migration forms.
 const eventIdSchema = z
   .string()
   .regex(/^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$/, 'Invalid event ID')
@@ -104,6 +105,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const parsedEmail = z.string().email().safeParse(contactEmail)
+    if (!parsedEmail.success) return NextResponse.json({ error: 'A valid email is required' }, { status: 400 })
+
     if (isSpamPattern(contactName, contactEmail).isBot) {
       return NextResponse.json({
         success: true,
@@ -112,38 +116,23 @@ export async function POST(request: NextRequest) {
     }
 
     // Fetch event details
-    const event = await writeClient.fetch(
-      `*[_type == "event" && _id == $eventId][0] {
-        _id,
-        title,
-        slug,
-        date,
-        venue,
-        registrationForm {
-          notificationEmails
-        }
-      }`,
-      { eventId }
-    )
+    const event = (await getAllEvents()).find(record => String(record.id) === eventId || record.sourceId === eventId)
 
     if (!event) {
       return NextResponse.json({ error: 'Event not found' }, { status: 404 })
     }
 
-    // Create registration document in Sanity
-    const registration = await writeClient.create({
-      _type: 'eventRegistration',
-      event: {
-        _type: 'reference',
-        _ref: eventId,
-      },
+    const deadline = event.registrationDeadline ? Date.parse(event.registrationDeadline) : Date.parse(event.endDate || event.date)
+    if (!event.requiresRegistration || event.status === 'completed' || deadline < Date.now()) {
+      return NextResponse.json({ error: 'Registration is closed for this event' }, { status: 400 })
+    }
+    const registration = await createWebsiteSubmission('event-registrations', {
+      event: event.id,
       submittedAt: new Date().toISOString(),
-      formData: {
-        data: formData,
-      },
-      contactEmail,
-      contactName,
-      status: 'pending',
+      formData,
+      email: parsedEmail.data.toLowerCase(),
+      fullName: contactName,
+      status: 'new',
     })
 
     // Send confirmation email to registrant
@@ -169,7 +158,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Send notification to event organizers
-    const notificationEmails = event.registrationForm?.notificationEmails || []
+    const privateEvent = await getPayloadDocument('events', String(event.id)).catch(() => null)
+    const eventDetails = privateEvent?.details as { registrationForm?: { notificationEmails?: string[] } } | undefined
+    const notificationEmails = eventDetails?.registrationForm?.notificationEmails || []
     if (notificationEmails.length > 0) {
       try {
         await sendOrganizerNotification(
@@ -196,7 +187,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      registrationId: registration._id,
+      registrationId: registration.id,
       message: 'Registration submitted successfully',
     })
   } catch (error) {
@@ -231,18 +222,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid event ID' }, { status: 400 })
     }
 
-    const registrations = await writeClient.fetch(
-      `*[_type == "eventRegistration" && event._ref == $eventId] | order(submittedAt desc) {
-        _id,
-        submittedAt,
-        contactEmail,
-        contactName,
-        status,
-        formData,
-        notes
-      }`,
-      { eventId: parsedEventId.data }
-    )
+    const query = new URLSearchParams({ 'where[event][equals]': parsedEventId.data, limit: '100', sort: '-submittedAt', depth: '0' })
+    const registrations = (await listPrivatePayloadDocuments('event-registrations', query.toString())).docs
 
     return NextResponse.json({ registrations })
   } catch (error) {

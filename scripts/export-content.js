@@ -77,14 +77,14 @@ sections.push(para('Mentorship, accountability, resources, networks, and guidanc
 sections.push(heading('Updates from the Work', HeadingLevel.HEADING_2));
 sections.push(para('Stay informed'));
 sections.push(bold('Latest news'));
-sections.push(para('[Dynamically loaded from Sanity — news articles with titles, excerpts, categories, and dates]'));
+sections.push(para('[Dynamically loaded from Payload — news articles with titles, excerpts, categories, and dates]'));
 sections.push(bold('Upcoming events'));
-sections.push(para('[Dynamically loaded from Sanity — events with titles, descriptions, categories, dates, and locations]'));
+sections.push(para('[Dynamically loaded from Payload — events with titles, descriptions, categories, dates, and locations]'));
 sections.push(para('CTA: View all updates'));
 
 sections.push(heading('In Practice — Gallery', HeadingLevel.HEADING_2));
 sections.push(bold('People, learning, service.'));
-sections.push(para('[Dynamically loaded gallery images from Sanity]'));
+sections.push(para('[Dynamically loaded gallery images from Payload]'));
 sections.push(para('CTA: View gallery'));
 
 sections.push(heading('Take Part', HeadingLevel.HEADING_2));
@@ -131,7 +131,7 @@ sections.push(bold('Capacity Development'));
 sections.push(para('Growing local human capital through the ComPart Programme: crafts workshops, BLS and CPR training, digital literacy, and mentorship.'));
 
 sections.push(heading('People Behind the Work — Meet Our Leadership', HeadingLevel.HEADING_2));
-sections.push(para('[Dynamically loaded leadership team profiles from Sanity — names, roles, bios, and photos]'));
+sections.push(para('[Dynamically loaded leadership team profiles from Payload — names, roles, bios, and photos]'));
 sections.push(para('CTA: Contact the team'));
 sections.push(divider());
 
@@ -379,12 +379,12 @@ sections.push(para('Students learn to apply what they receive, becoming particip
 sections.push(heading('Academy Gallery', HeadingLevel.HEADING_2));
 sections.push(para('Transforming Lives Through Education'));
 sections.push(para('See our students thrive through quality education, character development, and wholistic support'));
-sections.push(para('[Dynamically loaded gallery images from Sanity]'));
+sections.push(para('[Dynamically loaded gallery images from Payload]'));
 sections.push(para('CTA: View Complete Academy Gallery'));
 
 sections.push(heading('Academy Events', HeadingLevel.HEADING_2));
 sections.push(para('Stay updated with the latest training programs, workshops, and educational events from MedWHOLE Academy'));
-sections.push(para('[Dynamically loaded events from Sanity]'));
+sections.push(para('[Dynamically loaded events from Payload]'));
 sections.push(para('CTA: View All Academy Events'));
 
 sections.push(heading('CTA', HeadingLevel.HEADING_2));
@@ -560,14 +560,14 @@ sections.push(para('Stay updated with the latest news, announcements, and events
 sections.push(para('Badge: Latest Updates'));
 
 sections.push(heading('Featured News', HeadingLevel.HEADING_2));
-sections.push(para('[Dynamically loaded from Sanity — featured news article with image, title, excerpt, category, date, author]'));
+sections.push(para('[Dynamically loaded from Payload — featured news article with image, title, excerpt, category, date, author]'));
 
 sections.push(heading('Recent News', HeadingLevel.HEADING_2));
-sections.push(para('[Dynamically loaded news grid from Sanity — cards with images, titles, excerpts, categories, dates]'));
+sections.push(para('[Dynamically loaded news grid from Payload — cards with images, titles, excerpts, categories, dates]'));
 
 sections.push(heading('Events', HeadingLevel.HEADING_2));
 sections.push(para('Tabs: Upcoming | Past Events'));
-sections.push(para('[Dynamically loaded events from Sanity — with titles, descriptions, categories, dates, locations, and pricing]'));
+sections.push(para('[Dynamically loaded events from Payload — with titles, descriptions, categories, dates, locations, and pricing]'));
 
 sections.push(heading('Stay Informed', HeadingLevel.HEADING_2));
 sections.push(para('Subscribe to our newsletter to receive the latest news, updates, and insights from MedWHOLE Alliance.'));
@@ -614,7 +614,7 @@ sections.push(divider());
 
 // ============ NEWS [SLUG] PAGE ============
 sections.push(heading('News Article Detail Page', HeadingLevel.HEADING_1));
-sections.push(para('[Dynamically loaded from Sanity — article with title, category, date, author, featured image, excerpt, and full body content]'));
+sections.push(para('[Dynamically loaded from Payload — article with title, category, date, author, featured image, excerpt, and full body content]'));
 sections.push(para('Sidebar: About the Author | Stay Updated (newsletter signup) | Related Articles'));
 sections.push(para('Share options: Facebook | Twitter | LinkedIn | Copy Link'));
 sections.push(para('CTA: Explore More News → View All News'));
@@ -622,7 +622,7 @@ sections.push(divider());
 
 // ============ EVENTS [SLUG] PAGE ============
 sections.push(heading('Event Detail Page', HeadingLevel.HEADING_1));
-sections.push(para('[Dynamically loaded from Sanity — event with title, category, date, time, location, description, content, featured image]'));
+sections.push(para('[Dynamically loaded from Payload — event with title, category, date, time, location, description, content, featured image]'));
 sections.push(para('Sidebar: Registration/Price Card (free or paid, capacity, registration deadline, register button) | Event Details Card (date & time, venue, organizer, contact email, contact phone)'));
 sections.push(para('[Custom registration form when applicable]'));
 sections.push(divider());
@@ -636,7 +636,7 @@ sections.push(para('Badge: Our Impact'));
 
 sections.push(heading('Gallery Tabs', HeadingLevel.HEADING_2));
 sections.push(para('Tabs: All Photos | Health Services | Academy'));
-sections.push(para('[Dynamically loaded gallery images from Sanity with filtering by category]'));
+sections.push(para('[Dynamically loaded gallery images from Payload with filtering by category]'));
 sections.push(divider());
 
 // ============ RESOURCES PAGE ============

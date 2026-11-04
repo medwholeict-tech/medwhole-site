@@ -1,15 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
-import { createClient } from "@sanity/client"
 import { rateLimit } from "@/lib/rate-limit"
 import { createWebsiteSubmission } from "@/lib/cms/payload"
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
-  apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2024-01-01",
-  token: process.env.SANITY_API_TOKEN!,
-  useCdn: false,
-})
 
 export async function POST(request: NextRequest) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0] ?? "unknown"
@@ -28,49 +19,21 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true })
     }
 
-    // Create partnership application in Sanity
-    const application = await client.create({
-      _type: "partnershipApplication",
-      organizationName: data.organizationName,
-      organizationType: data.organizationType,
-      contactPerson: {
-        name: data.contactName,
-        title: data.contactTitle,
-        email: data.contactEmail,
-        phone: data.contactPhone,
-      },
-      organizationWebsite: data.website || undefined,
-      partnershipInterest: data.partnershipInterest,
-      proposedCollaboration: data.proposedCollaboration,
-      organizationCapacity: data.organizationCapacity || undefined,
-      geographicFocus: data.geographicFocus || undefined,
-      status: "new",
-      submittedAt: new Date().toISOString(),
+    const application = await createWebsiteSubmission("partnership-applications", {
+      fullName: data.contactName || data.organizationName, email: String(data.contactEmail).toLowerCase(),
+      organisation: data.organizationName, phone: data.contactPhone,
+      partnershipType: data.organizationType || "", message: data.proposedCollaboration,
+      details: { contactTitle: data.contactTitle, organizationWebsite: data.website,
+        partnershipInterest: data.partnershipInterest, organizationCapacity: data.organizationCapacity,
+        geographicFocus: data.geographicFocus },
+      status: "new", submittedAt: new Date().toISOString(),
     })
-
-    // Also record into Payload operational inbox
-    try {
-      if (process.env.PAYLOAD_CMS_URL && process.env.PAYLOAD_CMS_WEBSITE_API_KEY) {
-        await createWebsiteSubmission("partnership-applications", {
-          fullName: data.contactName || data.organizationName,
-          email: data.contactEmail,
-          organisation: data.organizationName,
-          phone: data.contactPhone || "",
-          partnershipType: data.organizationType || data.partnershipInterest || "",
-          message: [data.proposedCollaboration, data.organizationCapacity, data.geographicFocus].filter(Boolean).join("\n\n"),
-          status: "new",
-          submittedAt: new Date().toISOString(),
-        })
-      }
-    } catch (cmsError) {
-      console.warn("Payload partnership application write:", cmsError)
-    }
 
     return NextResponse.json(
       { 
         success: true, 
         message: "Partnership application submitted successfully!",
-        id: application._id 
+        id: application.id
       },
       { status: 201 }
     )

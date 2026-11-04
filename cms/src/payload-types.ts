@@ -225,9 +225,9 @@ export interface Media {
    */
   source?: string | null;
   /**
-   * Stable asset ID used for safe, repeatable Sanity imports.
+   * Original asset identifier retained for reconciliation.
    */
-  sourceSanityId?: string | null;
+  sourceId?: string | null;
   /**
    * This migrated asset needs meaningful alternative text before publication.
    */
@@ -394,12 +394,9 @@ export interface Programme {
   featured?: boolean | null;
   order?: number | null;
   /**
-   * Stable source ID used for safe, repeatable Sanity imports.
+   * Original record identifier retained for migration reconciliation.
    */
-  sourceSanityId?: string | null;
-  /**
-   * Read-only migration record of the original source document.
-   */
+  sourceId?: string | null;
   sourceSnapshot?:
     | {
         [k: string]: unknown;
@@ -409,6 +406,33 @@ export interface Programme {
     | number
     | boolean
     | null;
+  /**
+   * Additional structured content and registration settings.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -433,12 +457,9 @@ export interface Event {
   featured?: boolean | null;
   gallery?: (number | Media)[] | null;
   /**
-   * Stable source ID used for safe, repeatable Sanity imports.
+   * Original record identifier retained for migration reconciliation.
    */
-  sourceSanityId?: string | null;
-  /**
-   * Read-only migration record of the original source document.
-   */
+  sourceId?: string | null;
   sourceSnapshot?:
     | {
         [k: string]: unknown;
@@ -448,6 +469,33 @@ export interface Event {
     | number
     | boolean
     | null;
+  /**
+   * Additional structured content and registration settings.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -479,12 +527,9 @@ export interface News {
   publishedAt?: string | null;
   featured?: boolean | null;
   /**
-   * Stable source ID used for safe, repeatable Sanity imports.
+   * Original record identifier retained for migration reconciliation.
    */
-  sourceSanityId?: string | null;
-  /**
-   * Read-only migration record of the original source document.
-   */
+  sourceId?: string | null;
   sourceSnapshot?:
     | {
         [k: string]: unknown;
@@ -494,6 +539,33 @@ export interface News {
     | number
     | boolean
     | null;
+  /**
+   * Additional structured content and registration settings.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -520,12 +592,9 @@ export interface Community {
       }[]
     | null;
   /**
-   * Stable source ID used for safe, repeatable Sanity imports.
+   * Original record identifier retained for migration reconciliation.
    */
-  sourceSanityId?: string | null;
-  /**
-   * Read-only migration record of the original source document.
-   */
+  sourceId?: string | null;
   sourceSnapshot?:
     | {
         [k: string]: unknown;
@@ -535,6 +604,33 @@ export interface Community {
     | number
     | boolean
     | null;
+  /**
+   * Additional structured content and registration settings.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -553,12 +649,9 @@ export interface ImpactStory {
   image?: (number | null) | Media;
   imageAlt?: string | null;
   /**
-   * Stable source ID used for safe, repeatable Sanity imports.
+   * Original record identifier retained for migration reconciliation.
    */
-  sourceSanityId?: string | null;
-  /**
-   * Read-only migration record of the original source document.
-   */
+  sourceId?: string | null;
   sourceSnapshot?:
     | {
         [k: string]: unknown;
@@ -568,6 +661,33 @@ export interface ImpactStory {
     | number
     | boolean
     | null;
+  /**
+   * Additional structured content and registration settings.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -587,12 +707,9 @@ export interface TeamMember {
   linkedinUrl?: string | null;
   order?: number | null;
   /**
-   * Stable source ID used for safe, repeatable Sanity imports.
+   * Original record identifier retained for migration reconciliation.
    */
-  sourceSanityId?: string | null;
-  /**
-   * Read-only migration record of the original source document.
-   */
+  sourceId?: string | null;
   sourceSnapshot?:
     | {
         [k: string]: unknown;
@@ -602,6 +719,33 @@ export interface TeamMember {
     | number
     | boolean
     | null;
+  /**
+   * Additional structured content and registration settings.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -618,12 +762,9 @@ export interface Partner {
   websiteUrl?: string | null;
   order?: number | null;
   /**
-   * Stable source ID used for safe, repeatable Sanity imports.
+   * Original record identifier retained for migration reconciliation.
    */
-  sourceSanityId?: string | null;
-  /**
-   * Read-only migration record of the original source document.
-   */
+  sourceId?: string | null;
   sourceSnapshot?:
     | {
         [k: string]: unknown;
@@ -633,6 +774,33 @@ export interface Partner {
     | number
     | boolean
     | null;
+  /**
+   * Additional structured content and registration settings.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -650,12 +818,9 @@ export interface Resource {
   author?: string | null;
   publishedAt?: string | null;
   /**
-   * Stable source ID used for safe, repeatable Sanity imports.
+   * Original record identifier retained for migration reconciliation.
    */
-  sourceSanityId?: string | null;
-  /**
-   * Read-only migration record of the original source document.
-   */
+  sourceId?: string | null;
   sourceSnapshot?:
     | {
         [k: string]: unknown;
@@ -665,6 +830,33 @@ export interface Resource {
     | number
     | boolean
     | null;
+  /**
+   * Additional structured content and registration settings.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -684,12 +876,9 @@ export interface Job {
   body?: string | null;
   deadline?: string | null;
   /**
-   * Stable source ID used for safe, repeatable Sanity imports.
+   * Original record identifier retained for migration reconciliation.
    */
-  sourceSanityId?: string | null;
-  /**
-   * Read-only migration record of the original source document.
-   */
+  sourceId?: string | null;
   sourceSnapshot?:
     | {
         [k: string]: unknown;
@@ -699,6 +888,33 @@ export interface Job {
     | number
     | boolean
     | null;
+  /**
+   * Additional structured content and registration settings.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -714,6 +930,19 @@ export interface ContactSubmission {
   phone?: string | null;
   subject: string;
   message: string;
+  externalId?: string | null;
+  /**
+   * Additional submitted fields and migration information.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   status: 'new' | 'in_review' | 'replied' | 'resolved' | 'archived';
   submittedAt: string;
   sourcePage?: string | null;
@@ -759,6 +988,19 @@ export interface VolunteerApplication {
     | boolean
     | null;
   motivation: string;
+  externalId?: string | null;
+  /**
+   * Additional submitted fields and migration information.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   status: 'new' | 'in_review' | 'replied' | 'resolved' | 'archived';
   submittedAt: string;
   sourcePage?: string | null;
@@ -779,6 +1021,19 @@ export interface PartnershipApplication {
   phone?: string | null;
   partnershipType?: string | null;
   message: string;
+  externalId?: string | null;
+  /**
+   * Additional submitted fields and migration information.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   status: 'new' | 'in_review' | 'replied' | 'resolved' | 'archived';
   submittedAt: string;
   sourcePage?: string | null;
@@ -797,7 +1052,29 @@ export interface NewsletterSubscriber {
   name?: string | null;
   confirmedAt?: string | null;
   unsubscribedAt?: string | null;
-  status: 'new' | 'in_review' | 'replied' | 'resolved' | 'archived';
+  interests?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  externalId?: string | null;
+  /**
+   * Additional submitted fields and migration information.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  status: 'active' | 'unsubscribed' | 'archived';
   submittedAt: string;
   sourcePage?: string | null;
   consent?: boolean | null;
@@ -811,11 +1088,24 @@ export interface NewsletterSubscriber {
  */
 export interface EventRegistration {
   id: number;
-  fullName: string;
-  email: string;
-  event: number | Event;
+  fullName?: string | null;
+  email?: string | null;
+  event?: (number | null) | Event;
   phone?: string | null;
   formData?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  externalId?: string | null;
+  /**
+   * Additional submitted fields and migration information.
+   */
+  details?:
     | {
         [k: string]: unknown;
       }
@@ -840,13 +1130,30 @@ export interface DonationIntent {
   id: number;
   reference: string;
   fullName: string;
-  email: string;
+  email?: string | null;
   phone?: string | null;
   amount: string;
   currency: 'NGN' | 'USD' | 'GBP';
   frequency: 'one-time' | 'monthly';
   programme?: string | null;
-  status: 'new' | 'in_review' | 'replied' | 'resolved' | 'archived';
+  country?: string | null;
+  designation?: string | null;
+  expectedTransferDate?: string | null;
+  emailStatus?: string | null;
+  externalId?: string | null;
+  /**
+   * Additional submitted fields and migration information.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  status: 'new' | 'instructions-sent' | 'in_review' | 'resolved' | 'archived';
   submittedAt: string;
   sourcePage?: string | null;
   consent?: boolean | null;
@@ -863,11 +1170,30 @@ export interface DonationPayment {
   reference: string;
   parentReference?: string | null;
   amountMinor: number;
+  fullName: string;
+  email: string;
+  frequency: string;
+  designation?: string | null;
+  community?: string | null;
+  planCode?: string | null;
   currency: string;
   providerStatus: string;
   paidAt?: string | null;
   receiptSent?: boolean | null;
-  status: 'new' | 'in_review' | 'replied' | 'resolved' | 'archived';
+  externalId?: string | null;
+  /**
+   * Additional submitted fields and migration information.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  status: 'pending' | 'paid' | 'failed' | 'cancelled' | 'archived';
   submittedAt: string;
   sourcePage?: string | null;
   consent?: boolean | null;
@@ -887,6 +1213,19 @@ export interface EmailDelivery {
   providerId?: string | null;
   attempts?: number | null;
   lastError?: string | null;
+  externalId?: string | null;
+  /**
+   * Additional submitted fields and migration information.
+   */
+  details?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   status: 'queued' | 'sent' | 'failed' | 'retry';
   submittedAt: string;
   sourcePage?: string | null;
@@ -1081,7 +1420,7 @@ export interface MediaSelect<T extends boolean = true> {
   category?: T;
   consentConfirmed?: T;
   source?: T;
-  sourceSanityId?: T;
+  sourceId?: T;
   altReviewRequired?: T;
   consentReviewRequired?: T;
   usageNotes?: T;
@@ -1193,8 +1532,10 @@ export interface ProgrammesSelect<T extends boolean = true> {
   imageAlt?: T;
   featured?: T;
   order?: T;
-  sourceSanityId?: T;
+  sourceId?: T;
   sourceSnapshot?: T;
+  details?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1217,8 +1558,10 @@ export interface EventsSelect<T extends boolean = true> {
   registrationUrl?: T;
   featured?: T;
   gallery?: T;
-  sourceSanityId?: T;
+  sourceId?: T;
   sourceSnapshot?: T;
+  details?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1238,8 +1581,10 @@ export interface NewsSelect<T extends boolean = true> {
   author?: T;
   publishedAt?: T;
   featured?: T;
-  sourceSanityId?: T;
+  sourceId?: T;
   sourceSnapshot?: T;
+  details?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1264,8 +1609,10 @@ export interface CommunitiesSelect<T extends boolean = true> {
         body?: T;
         id?: T;
       };
-  sourceSanityId?: T;
+  sourceId?: T;
   sourceSnapshot?: T;
+  details?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1282,8 +1629,10 @@ export interface ImpactStoriesSelect<T extends boolean = true> {
   body?: T;
   image?: T;
   imageAlt?: T;
-  sourceSanityId?: T;
+  sourceId?: T;
   sourceSnapshot?: T;
+  details?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1301,8 +1650,10 @@ export interface TeamMembersSelect<T extends boolean = true> {
   email?: T;
   linkedinUrl?: T;
   order?: T;
-  sourceSanityId?: T;
+  sourceId?: T;
   sourceSnapshot?: T;
+  details?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1317,8 +1668,10 @@ export interface PartnersSelect<T extends boolean = true> {
   logo?: T;
   websiteUrl?: T;
   order?: T;
-  sourceSanityId?: T;
+  sourceId?: T;
   sourceSnapshot?: T;
+  details?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1334,8 +1687,10 @@ export interface ResourcesSelect<T extends boolean = true> {
   document?: T;
   author?: T;
   publishedAt?: T;
-  sourceSanityId?: T;
+  sourceId?: T;
   sourceSnapshot?: T;
+  details?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1353,8 +1708,10 @@ export interface JobsSelect<T extends boolean = true> {
   level?: T;
   body?: T;
   deadline?: T;
-  sourceSanityId?: T;
+  sourceId?: T;
   sourceSnapshot?: T;
+  details?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -1369,6 +1726,8 @@ export interface ContactSubmissionsSelect<T extends boolean = true> {
   phone?: T;
   subject?: T;
   message?: T;
+  externalId?: T;
+  details?: T;
   status?: T;
   submittedAt?: T;
   sourcePage?: T;
@@ -1389,6 +1748,8 @@ export interface VolunteerApplicationsSelect<T extends boolean = true> {
   areasOfInterest?: T;
   skills?: T;
   motivation?: T;
+  externalId?: T;
+  details?: T;
   status?: T;
   submittedAt?: T;
   sourcePage?: T;
@@ -1408,6 +1769,8 @@ export interface PartnershipApplicationsSelect<T extends boolean = true> {
   phone?: T;
   partnershipType?: T;
   message?: T;
+  externalId?: T;
+  details?: T;
   status?: T;
   submittedAt?: T;
   sourcePage?: T;
@@ -1425,6 +1788,9 @@ export interface NewsletterSubscribersSelect<T extends boolean = true> {
   name?: T;
   confirmedAt?: T;
   unsubscribedAt?: T;
+  interests?: T;
+  externalId?: T;
+  details?: T;
   status?: T;
   submittedAt?: T;
   sourcePage?: T;
@@ -1443,6 +1809,8 @@ export interface EventRegistrationsSelect<T extends boolean = true> {
   event?: T;
   phone?: T;
   formData?: T;
+  externalId?: T;
+  details?: T;
   status?: T;
   submittedAt?: T;
   sourcePage?: T;
@@ -1464,6 +1832,12 @@ export interface DonationIntentsSelect<T extends boolean = true> {
   currency?: T;
   frequency?: T;
   programme?: T;
+  country?: T;
+  designation?: T;
+  expectedTransferDate?: T;
+  emailStatus?: T;
+  externalId?: T;
+  details?: T;
   status?: T;
   submittedAt?: T;
   sourcePage?: T;
@@ -1480,10 +1854,18 @@ export interface DonationPaymentsSelect<T extends boolean = true> {
   reference?: T;
   parentReference?: T;
   amountMinor?: T;
+  fullName?: T;
+  email?: T;
+  frequency?: T;
+  designation?: T;
+  community?: T;
+  planCode?: T;
   currency?: T;
   providerStatus?: T;
   paidAt?: T;
   receiptSent?: T;
+  externalId?: T;
+  details?: T;
   status?: T;
   submittedAt?: T;
   sourcePage?: T;
@@ -1503,6 +1885,8 @@ export interface EmailDeliveriesSelect<T extends boolean = true> {
   providerId?: T;
   attempts?: T;
   lastError?: T;
+  externalId?: T;
+  details?: T;
   status?: T;
   submittedAt?: T;
   sourcePage?: T;

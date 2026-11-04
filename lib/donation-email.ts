@@ -170,7 +170,7 @@ export async function sendDonationAdminNotification(intent: DonationEmailIntent)
       ${intent.designation ? `<tr><td style="padding:8px 12px 8px 0;color:#5d6670;">Specific work</td><td style="padding:8px 0;font-weight:600;color:#14213d;">${escapeHtml(intent.designation)}</td></tr>` : ""}
       ${intent.sourcePath ? `<tr><td style="padding:8px 12px 8px 0;color:#5d6670;">Source page</td><td style="padding:8px 0;color:#14213d;"><a href="${escapeHtml(`${siteUrl}${intent.sourcePath}`)}" style="color:#004f42;">${escapeHtml(intent.sourcePath)}</a></td></tr>` : ""}
     </table>
-    <a href="${escapeHtml(`${siteUrl}/studio`)}" style="display:inline-block;background:#ffb800;color:#14213d;padding:12px 20px;text-decoration:none;font-size:14px;font-weight:700;">Open Sanity Studio</a>`
+    <a href="${escapeHtml(`${siteUrl}/admin/submissions?inbox=donation-intents`)}" style="display:inline-block;background:#ffb800;color:#14213d;padding:12px 20px;text-decoration:none;font-size:14px;font-weight:700;">Open donation inbox</a>`
 
   const { data, error } = await resend.emails.send({
     from: FROM_EMAIL,

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 import { auth } from "@/lib/auth"
 import { listPrivatePayloadDocuments, updatePrivatePayloadDocument } from "@/lib/cms/payload"
 import type { CmsCollection } from "@/lib/cms/types"
+import { inboxStatuses } from "@/lib/cms/inbox-statuses"
 
 export const dynamic = "force-dynamic"
 
@@ -44,7 +45,7 @@ export async function PATCH(request: Request, props: Context) {
   if (!isAllowed(params.collection)) return NextResponse.json({ error: "Unknown inbox" }, { status: 404 })
   try {
     const { id, status } = await request.json()
-    const statuses = params.collection === "email-deliveries" ? ["queued", "sent", "failed", "retry"] : ["new", "in_review", "replied", "resolved", "archived"]
+    const statuses = inboxStatuses(params.collection)
     if (typeof id !== "string" || !/^[A-Za-z0-9_-]{1,128}$/.test(id) || typeof status !== "string" || !statuses.includes(status)) {
       return NextResponse.json({ error: "Invalid inbox update" }, { status: 400 })
     }

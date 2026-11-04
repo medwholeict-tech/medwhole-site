@@ -92,10 +92,25 @@ export async function createWebsiteSubmission(
     headers: { ...getHeaders(websiteApiKey), "Content-Type": "application/json" },
     body: JSON.stringify(data),
     cache: "no-store",
-    signal: AbortSignal.timeout(4000),
+    signal: AbortSignal.timeout(15000),
   })
   if (!response.ok) throw new Error(`Payload submission failed with HTTP ${response.status}`)
-  return response.json()
+  const result = await response.json()
+  return result.doc ?? result
+}
+
+export async function createPrivatePayloadDocument<T extends CmsDocument = CmsDocument>(collection: CmsCollection, data: Record<string, unknown>): Promise<T> {
+  const key = keyForPrivateCollection(collection)
+  if (!baseUrl || !key || (!financeCollections.has(collection) && !operationalCollections.has(collection))) {
+    throw new Error("Payload private record integration is not configured")
+  }
+  const response = await fetch(`${baseUrl}/api/${collection}`, {
+    method: "POST", headers: { ...getHeaders(key), "Content-Type": "application/json" },
+    body: JSON.stringify(data), cache: "no-store", signal: AbortSignal.timeout(15000),
+  })
+  if (!response.ok) throw new Error(await payloadFailure(response))
+  const result = await response.json()
+  return (result.doc ?? result) as T
 }
 
 export async function payloadHealth(): Promise<CmsHealth> {
@@ -172,7 +187,8 @@ export async function updatePrivatePayloadDocument<T extends CmsDocument = CmsDo
     body: JSON.stringify(data), cache: "no-store",
   })
   if (!response.ok) throw new Error(await payloadFailure(response))
-  return response.json() as Promise<T>
+  const result = await response.json()
+  return (result.doc ?? result) as T
 }
 
 export async function getPayloadDocument<T extends CmsDocument = CmsDocument>(collection: CmsCollection, id: string): Promise<T> {

@@ -2,8 +2,7 @@ import { randomUUID } from "node:crypto"
 import { NextRequest, NextResponse } from "next/server"
 import { donationIntentSchema } from "@/lib/donation-intent"
 import { sendDonationAdminNotification, sendDonationInstructionsEmail } from "@/lib/donation-email"
-import { writeClient } from "@/lib/sanity.server"
-import { createWebsiteSubmission } from "@/lib/cms/payload"
+import { createWebsiteSubmission, updatePrivatePayloadDocument } from "@/lib/cms/payload"
 
 export const runtime = "nodejs"
 
@@ -32,45 +31,24 @@ export async function POST(request: NextRequest) {
     const submittedAt = new Date().toISOString()
     const emailStatus = input.email ? "failed" : "not-requested"
 
-    const record = await writeClient.create({
-      _type: "donationIntent",
+    const record = await createWebsiteSubmission("donation-intents", {
       reference,
       fullName: input.fullName,
       email: input.email || undefined,
       phone: input.phone || undefined,
       country: input.country,
       currency: input.currency,
-      amount: Number(input.amount),
+      amount: String(input.amount),
       frequency: input.frequency,
       programme: input.programme,
       designation: input.designation || undefined,
-      sourcePath: input.sourcePath || undefined,
+      sourcePage: input.sourcePath || undefined,
       expectedTransferDate: input.expectedTransferDate || undefined,
       consent: input.consent,
       status: "new",
       emailStatus,
       submittedAt,
     })
-
-    // Also record into Payload operational inbox
-    try {
-      if (process.env.PAYLOAD_CMS_URL && process.env.PAYLOAD_CMS_WEBSITE_API_KEY) {
-        await createWebsiteSubmission("donation-intents", {
-          reference,
-          fullName: input.fullName,
-          email: input.email || undefined,
-          phone: input.phone || undefined,
-          amount: String(input.amount),
-          currency: input.currency,
-          frequency: input.frequency,
-          programme: input.programme || undefined,
-          status: "new",
-          submittedAt,
-        })
-      }
-    } catch (cmsError) {
-      console.warn("Payload donation intent write:", cmsError)
-    }
 
     const emailIntent = {
       reference,
@@ -96,13 +74,10 @@ export async function POST(request: NextRequest) {
       donorEmailResult.status === "fulfilled" && donorEmailResult.value.success
 
     if (input.email) {
-      await writeClient
-        .patch(record._id)
-        .set({
-          emailStatus: donorEmailSent ? "sent" : "failed",
-          ...(donorEmailSent ? { status: "instructions-sent" } : {}),
-        })
-        .commit()
+      await updatePrivatePayloadDocument("donation-intents", String(record.id), {
+        emailStatus: donorEmailSent ? "sent" : "failed",
+        ...(donorEmailSent ? { status: "instructions-sent" } : {}),
+      })
     }
 
     if (donorEmailResult.status === "rejected") {

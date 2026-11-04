@@ -42,7 +42,7 @@ export const Media: CollectionConfig = {
     { name: 'category', type: 'select', required: true, options: ['Homepage', 'Academy', 'Health', 'Empowerment', 'Community', 'Events', 'Team', 'Partner', 'Documents', 'Uncategorized'] },
     { name: 'consentConfirmed', type: 'checkbox', defaultValue: false, admin: { description: 'Required before publishing an identifiable person-focused image.' } },
     { name: 'source', type: 'text', admin: { description: 'Original source URL or library reference.' } },
-    { name: 'sourceSanityId', type: 'text', unique: true, index: true, admin: { description: 'Stable asset ID used for safe, repeatable Sanity imports.' } },
+    { name: 'sourceId', type: 'text', unique: true, index: true, admin: { readOnly: true, description: 'Original asset identifier retained for reconciliation.' } },
     { name: 'altReviewRequired', type: 'checkbox', defaultValue: false, admin: { description: 'This migrated asset needs meaningful alternative text before publication.' } },
     { name: 'consentReviewRequired', type: 'checkbox', defaultValue: false, admin: { description: 'Review source consent records and confirm consent or non-identifiability before publication.' } },
     { name: 'usageNotes', type: 'textarea', access: { read: ({ req }) => Boolean(req.user) } },

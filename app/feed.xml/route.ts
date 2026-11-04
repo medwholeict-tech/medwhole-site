@@ -1,5 +1,5 @@
 import { getCombinedSocialFeed } from "@/lib/social-feed"
-import { getNews } from "@/lib/sanity-queries"
+import { getNews } from "@/lib/cms/queries"
 
 export const revalidate = 3600 // Revalidate hourly
 

@@ -3,6 +3,7 @@
 import { useState } from "react"
 import type { CmsCollection, CmsDocument } from "@/lib/cms/types"
 import { Button } from "@/components/ui/button"
+import { inboxStatuses } from "@/lib/cms/inbox-statuses"
 
 const workflowStatuses = ["new", "in_review", "replied", "resolved", "archived"]
 
@@ -21,7 +22,7 @@ function dateLabel(value: unknown) {
 }
 
 export function SubmissionInbox({ collection, records }: { collection: CmsCollection; records: CmsDocument[] }) {
-  const statuses = collection === "email-deliveries" ? ["queued", "sent", "failed", "retry"] : workflowStatuses
+  const statuses = inboxStatuses(collection)
   const [items, setItems] = useState(records)
   const [pending, setPending] = useState<string | null>(null)
   const [message, setMessage] = useState("")
@@ -58,7 +59,7 @@ export function SubmissionInbox({ collection, records }: { collection: CmsCollec
 }
 
 function SubmissionRow({ item, statuses, pending, onUpdate }: { item: CmsDocument; statuses: string[]; pending: boolean; onUpdate: (status: string) => void }) {
-  const current = typeof item.status === "string" && statuses.includes(item.status) ? item.status : "new"
+  const current = typeof item.status === "string" && statuses.includes(item.status) ? item.status : statuses[0]
   const [nextStatus, setNextStatus] = useState(current)
   return <tr className="border-b border-grey-azure/60 align-top last:border-0">
     <td className="py-4 pr-4"><div className="font-medium text-dark-azure">{primaryValue(item)}</div>{typeof item.message === "string" && <p className="mt-1 max-w-md whitespace-pre-wrap text-xs text-graphite">{item.message}</p>}</td>

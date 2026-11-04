@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { cache } from "react"
-import { PortableText } from "@portabletext/react"
+import { CmsRichText } from "@/components/cms-rich-text"
 import { notFound } from "next/navigation"
 import {
   ArrowLeft,
@@ -21,8 +21,8 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { StorySupportCta } from "@/components/story-support-cta"
 import { BreadcrumbSchema, EventSchema } from "@/components/structured-data"
-import { getEventBySlug } from "@/lib/sanity-queries"
-import { urlFor } from "@/lib/sanity"
+import { getEventBySlug } from "@/lib/cms/queries"
+import { mediaUrl } from "@/lib/cms/media"
 import { generateSEO, metaDescription, siteConfig } from "@/lib/seo"
 import { generateApprovedSEO } from "@/lib/approved-seo"
 import { websiteCopyEvents } from "@/lib/website-copy"
@@ -55,7 +55,7 @@ export async function generateMetadata(props: EventPageProps): Promise<Metadata>
 
   const description = metaDescription(event.excerpt || event.description)
   const image = event.featuredImage
-    ? urlFor(event.featuredImage).width(1200).height(630).fit("crop").url()
+    ? mediaUrl(event.featuredImage)!
     : undefined
 
   return generateSEO({
@@ -123,7 +123,7 @@ export default async function EventPage(props: EventPageProps) {
           startDate={event.date}
           endDate={event.endDate}
           location={event.venue || event.location || "FCT Abuja, Nigeria"}
-          image={event.featuredImage ? urlFor(event.featuredImage).width(1200).height(630).fit("crop").url() : siteConfig.ogImage}
+          image={event.featuredImage ? mediaUrl(event.featuredImage)! : siteConfig.ogImage}
           url={`/events/${params.slug}`}
           status={event.status}
         />
@@ -169,7 +169,7 @@ export default async function EventPage(props: EventPageProps) {
             {event.featuredImage ? (
               <div data-image-reveal className="relative m-5 min-h-[26rem] overflow-hidden rounded-[4px] bg-pale-sky lg:my-8 lg:mr-8 lg:min-h-[36rem]">
                 <Image
-                  src={urlFor(event.featuredImage).width(1400).height(1500).fit("crop").url()}
+                  src={mediaUrl(event.featuredImage)!}
                   alt={event.featuredImage.alt || event.title}
                   fill
                   priority
@@ -195,7 +195,7 @@ export default async function EventPage(props: EventPageProps) {
                 {event.description ? <p className="font-heading text-xl leading-9 text-dark-azure sm:text-2xl">{event.description}</p> : null}
                 {event.content ? (
                   <div className="prose prose-lg mt-7 max-w-none text-graphite prose-p:leading-8">
-                    <PortableText value={event.content} />
+                    <CmsRichText value={event.content} />
                   </div>
                 ) : null}
               </div>
@@ -213,10 +213,10 @@ export default async function EventPage(props: EventPageProps) {
 
               <div className="mt-10 space-y-10 lg:space-y-16">
                 {event.storyMoments.map((moment: any, index: number) => (
-                  <figure key={moment._key} className="grid items-center gap-6 lg:grid-cols-[1.3fr_0.7fr] lg:gap-12">
+                  <figure key={moment.id || index} className="grid items-center gap-6 lg:grid-cols-[1.3fr_0.7fr] lg:gap-12">
                     <div data-image-reveal className={`relative aspect-[4/3] overflow-hidden rounded-[4px] bg-pale-sky ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                       <Image
-                        src={urlFor(moment.image).width(1200).height(900).fit("crop").url()}
+                        src={mediaUrl(moment.image)!}
                         alt={moment.image?.alt || moment.title || event.title}
                         fill
                         className="object-cover"

@@ -7,9 +7,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Calendar, ArrowRight, User } from "lucide-react"
 import { ShareButtons } from "@/components/share-buttons"
-import { getNewsBySlug, getNews } from "@/lib/sanity-queries"
-import { urlFor } from "@/lib/sanity"
-import { PortableText } from "@portabletext/react"
+import { CmsRichText } from "@/components/cms-rich-text"
 import Image from "next/image"
 import { NewsletterForm } from "@/components/newsletter-form"
 import { StorySupportCta } from "@/components/story-support-cta"
@@ -24,7 +22,7 @@ type ArticleView = {
   excerpt: string
   author?: string
   category?: string
-  publishedAt?: string
+  publishedAt: string
   updatedAt?: string
   imageUrl?: string
   imageAlt: string
@@ -32,55 +30,12 @@ type ArticleView = {
   body?: string
 }
 
-const getSanityArticle = cache(getNewsBySlug)
-
-function normalizeSanityArticle(article: Awaited<ReturnType<typeof getNewsBySlug>>): ArticleView | null {
-  if (!article) return null
-  return {
-    id: article._id,
-    title: article.title,
-    slug: article.slug.current,
-    excerpt: article.excerpt || "",
-    author: article.author,
-    category: article.category,
-    publishedAt: article.publishedAt,
-    updatedAt: article._updatedAt,
-    imageUrl: article.featuredImage ? urlFor(article.featuredImage).width(1200).height(675).url() : undefined,
-    imageAlt: article.featuredImage?.alt || article.title,
-    content: article.content,
-  }
-}
-
 const getArticle = cache(async (slug: string): Promise<ArticleView | null> => {
-  const payloadArticle = await getPayloadNewsBySlug(slug)
-  if (payloadArticle) {
-    return {
-      id: payloadArticle.id,
-      title: payloadArticle.title,
-      slug: payloadArticle.slug,
-      excerpt: payloadArticle.excerpt,
-      author: payloadArticle.author,
-      category: payloadArticle.category,
-      publishedAt: payloadArticle.publishedAt,
-      imageUrl: payloadArticle.imageUrl,
-      imageAlt: payloadArticle.imageAlt || payloadArticle.title,
-      body: payloadArticle.body,
-    }
-  }
-  return normalizeSanityArticle(await getSanityArticle(slug))
+  return await getPayloadNewsBySlug(slug)
 })
 
 async function getRelatedArticles(category: string | undefined, slug: string): Promise<ArticleView[]> {
-  const payloadNews = await getPayloadNews()
-  if (payloadNews.length > 0) {
-    return payloadNews.filter((article) => article.slug !== slug && (!category || article.category === category)).slice(0, 3)
-  }
-  const related = await getNews(category, 4)
-  return related
-    .map((article: Parameters<typeof normalizeSanityArticle>[0]) => normalizeSanityArticle(article))
-    .filter((article): article is ArticleView => Boolean(article))
-    .filter((article) => article.slug !== slug)
-    .slice(0, 3)
+  return (await getPayloadNews()).filter(article => article.slug !== slug && (!category || article.category === category)).slice(0, 3)
 }
 
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -190,7 +145,7 @@ export default async function NewsArticlePage(props: { params: Promise<{ slug: s
                 {/* Article Body */}
                 {article.content ? (
                   <div className="article-prose max-w-none">
-                    <PortableText value={article.content} />
+                    <CmsRichText value={article.content} />
                   </div>
                 ) : article.body ? (
                   <div className="article-prose max-w-none">

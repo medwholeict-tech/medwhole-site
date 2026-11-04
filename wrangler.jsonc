@@ -12,8 +12,6 @@
     "NEXTAUTH_URL": "https://medwhole-website.medwhole.workers.dev",
     "NEXT_PUBLIC_APP_URL": "https://www.medwhole.org",
     "NEXT_PUBLIC_SITE_URL": "https://www.medwhole.org",
-    "NEXT_PUBLIC_SANITY_PROJECT_ID": "zouo3v31",
-    "NEXT_PUBLIC_SANITY_DATASET": "production",
     "NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY": "public_NlUSbegVr9G2frZZqSyYpkGhKpA=",
     "NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT": "https://ik.imagekit.io/medwhole",
     "NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION": "your-google-verification-code",

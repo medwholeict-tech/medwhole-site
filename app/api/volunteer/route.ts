@@ -1,15 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
-import { createClient } from "@sanity/client"
 import { rateLimit } from "@/lib/rate-limit"
 import { createWebsiteSubmission } from "@/lib/cms/payload"
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
-  apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2024-01-01",
-  token: process.env.SANITY_API_TOKEN!,
-  useCdn: false,
-})
 
 export async function POST(request: NextRequest) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0] ?? "unknown"
@@ -28,58 +19,20 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true })
     }
 
-    // Create volunteer application in Sanity
-    const application = await client.create({
-      _type: "volunteerApplication",
-      fullName: data.fullName,
-      email: data.email,
-      phone: data.phone,
-      location: {
-        state: data.state,
-        city: data.city || undefined,
-      },
-      age: data.age || undefined,
-      occupation: data.occupation || undefined,
-      education: data.education || undefined,
-      areasOfInterest: data.areasOfInterest,
-      skills: data.skills,
-      availability: {
-        frequency: data.frequency || undefined,
-        duration: data.duration || undefined,
-      },
-      motivation: data.motivation,
-      previousVolunteer: data.previousVolunteer || undefined,
-      status: "new",
-      submittedAt: new Date().toISOString(),
+    const application = await createWebsiteSubmission("volunteer-applications", {
+      fullName: data.fullName, email: String(data.email).toLowerCase(), phone: data.phone,
+      location: { state: data.state, city: data.city },
+      areasOfInterest: data.areasOfInterest || [], skills: data.skills || [], motivation: data.motivation,
+      details: { age: data.age, occupation: data.occupation, education: data.education,
+        availability: { frequency: data.frequency, duration: data.duration }, previousVolunteer: data.previousVolunteer },
+      status: "new", submittedAt: new Date().toISOString(),
     })
-
-    // Also record into Payload operational inbox
-    try {
-      if (process.env.PAYLOAD_CMS_URL && process.env.PAYLOAD_CMS_WEBSITE_API_KEY) {
-        await createWebsiteSubmission("volunteer-applications", {
-          fullName: data.fullName,
-          email: data.email,
-          phone: data.phone || "",
-          location: {
-            state: data.state,
-            city: data.city || undefined,
-          },
-          areasOfInterest: data.areasOfInterest || [],
-          skills: data.skills || [],
-          motivation: data.motivation,
-          status: "new",
-          submittedAt: new Date().toISOString(),
-        })
-      }
-    } catch (cmsError) {
-      console.warn("Payload volunteer application write:", cmsError)
-    }
 
     return NextResponse.json(
       { 
         success: true, 
         message: "Volunteer application submitted successfully!",
-        id: application._id 
+        id: application.id
       },
       { status: 201 }
     )

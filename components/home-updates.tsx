@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { getPastEvents, getUpcomingEvents } from "@/lib/sanity-queries"
-import { urlFor } from "@/lib/sanity"
+import { getPastEvents, getUpcomingEvents } from "@/lib/cms/queries"
+import { mediaUrl } from "@/lib/cms/media"
 import styles from "./home-updates.module.css"
 
 type HomepageUpdate = {
@@ -31,13 +31,13 @@ export async function HomeUpdates() {
       id: event._id,
       href: `/events/${event.slug.current}`,
       title: event.title,
-      imageUrl: event.featuredImage ? urlFor(event.featuredImage).width(1100).height(760).fit("crop").url() : "/images/field-notes/summer-school.jpg",
+      imageUrl: event.featuredImage ? mediaUrl(event.featuredImage)! : "/images/field-notes/summer-school.jpg",
       imageAlt: event.featuredImage?.alt || event.title,
       category: event.category || "Event",
       date: event.date,
     }))
   } catch {
-    // Sanity errors can contain request headers; never log the raw request.
+    // Keep backend request details out of public logs.
     console.warn("Unable to load homepage events; showing published fallback updates.")
   }
   if (updates.length < 3) updates = fallbackUpdates

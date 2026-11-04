@@ -5,6 +5,7 @@ import type { CmsDocument } from "./types"
 import { getPublicPayloadGlobal, isPayloadPublicEnabled, listPublicPayloadDocuments, payloadBaseUrl } from "./payload"
 import type { SourceBlock, SourcePage } from "@/lib/approved-copy"
 import { convertSourcePage, type WebsiteCopyPage } from "@/lib/website-copy"
+import { mediaUrl } from "./media"
 
 type PayloadMedia = {
   url?: string | null
@@ -41,6 +42,8 @@ export type PayloadNewsArticle = {
   imageUrl?: string
   imageAlt: string
   body?: string
+  content?: unknown
+  updatedAt?: string
 }
 
 export type PayloadTeamMember = {
@@ -170,7 +173,7 @@ export const getPayloadNews = cache(async (): Promise<PayloadNewsArticle[]> => {
           : typeof slugValue === "object" && slugValue && "current" in slugValue
             ? String((slugValue as { current?: string }).current || "")
             : ""
-        const image = doc.image
+        const image = doc.image && typeof doc.image === "object" ? doc.image : (doc.details as { publicImage?: unknown } | undefined)?.publicImage
         return {
           id: doc.id,
           title: typeof doc.title === "string" ? doc.title : "",
@@ -179,9 +182,11 @@ export const getPayloadNews = cache(async (): Promise<PayloadNewsArticle[]> => {
           publishedAt: typeof doc.publishedAt === "string" ? doc.publishedAt : "",
           category: typeof doc.category === "string" ? doc.category : "",
           author: typeof doc.author === "string" ? doc.author : undefined,
-          imageUrl: payloadMediaUrl(image),
+          imageUrl: mediaUrl(image),
           imageAlt: typeof doc.imageAlt === "string" ? doc.imageAlt : "",
           body: typeof doc.body === "string" ? doc.body : undefined,
+          content: doc.content,
+          updatedAt: typeof doc.updatedAt === "string" ? doc.updatedAt : undefined,
         }
       })
       .filter((article) => article.slug && article.title)

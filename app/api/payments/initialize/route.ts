@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto"
 import { NextResponse } from "next/server"
 import { amountInKobo, checkoutSchema } from "@/lib/payment-validation"
 import { paystackRequest } from "@/lib/paystack"
-import { writeClient } from "@/lib/sanity.server"
+import { createPayment } from "@/lib/cms/payments"
 import { siteConfig } from "@/lib/seo"
 import { rateLimit } from "@/lib/rate-limit"
 
@@ -24,11 +24,11 @@ export async function POST(request: Request) {
       const plan = await paystackRequest<{ plan_code: string }>("/plan", { name: `MedWHOLE monthly gift ${reference}`, interval: "monthly", amount, currency: "NGN", send_invoices: true, send_sms: false })
       planCode = plan.plan_code
     }
-    await writeClient.create({
-      _id: `private.donation-payment-${reference}`, _type: "donationPayment", reference,
-      fullName: input.fullName, email: input.email.toLowerCase(), amount, currency: "NGN",
+    await createPayment({
+      reference,
+      fullName: input.fullName, email: input.email.toLowerCase(), amountMinor: amount, currency: "NGN",
       frequency: input.frequency, designation: input.designation, community: input.community,
-      status: "pending", submittedAt: new Date().toISOString(), ...(planCode ? { planCode } : {}),
+      status: "pending", providerStatus: "pending", submittedAt: new Date().toISOString(), ...(planCode ? { planCode } : {}),
     })
     const result = await paystackRequest<{ authorization_url: string }>("/transaction/initialize", {
       email: input.email.toLowerCase(), amount, currency: "NGN", reference,

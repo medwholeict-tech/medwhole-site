@@ -10,13 +10,17 @@ export function hasRole(user: unknown, roles: CmsRole[]) {
 
 export const authenticated: Access = ({ req }) => Boolean(req.user)
 export const isAdmin = ({ req }: { req: PayloadRequest }) => hasRole(req.user, ['administrator'])
+export const canReadAdministrator: Access = ({ req }) => {
+  if (hasRole(req.user, ['administrator'])) return true
+  return req.user ? { id: { equals: req.user.id } } : false
+}
 export const bootstrapAdministrator = async ({ req }: { req: PayloadRequest }) => {
   if (req.user) return hasRole(req.user, ['administrator'])
   const existing = await req.payload.count({ collection: 'administrators', overrideAccess: true })
   return existing.totalDocs === 0
 }
 export const canAccessAdmin = ({ req }: { req: PayloadRequest }) => hasRole(req.user, ['administrator', 'editor', 'contributor', 'operations', 'finance'])
-export const canEditContent: Access = ({ req }) => hasRole(req.user, ['administrator', 'editor'])
+export const canEditContent = ({ req }: { req: PayloadRequest }) => hasRole(req.user, ['administrator', 'editor'])
 export const canCreateContent: Access = ({ req }) => hasRole(req.user, ['administrator', 'editor', 'contributor'])
 export const canEditDraftContent: Access = ({ req }) => {
   if (hasRole(req.user, ['administrator', 'editor'])) return true

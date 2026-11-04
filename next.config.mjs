@@ -22,10 +22,6 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn.sanity.io',
-      },
-      {
-        protocol: 'https',
         hostname: 'ik.imagekit.io',
       },
     ],
@@ -36,7 +32,7 @@ const nextConfig = {
   },
   async headers() {
     // Baseline security headers applied to every route. A strict Content-Security-Policy
-    // needs a dedicated testing pass (inline next scripts, Sanity/ImageKit assets),
+    // needs a dedicated testing pass (inline next scripts and external assets),
     // so it is intentionally not added here yet.
     return [
       {
