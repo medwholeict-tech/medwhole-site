@@ -1,0 +1,7 @@
+node_modules/
+.next/
+.env*
+media/
+.open-next/
+.wrangler/
+.dev.vars*

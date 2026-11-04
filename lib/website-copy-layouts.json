@@ -1,0 +1,435 @@
+{
+  "/our-work": {
+    "eyebrow": "Our Work",
+    "sections": [
+      {
+        "heading": "How the work is organised"
+      },
+      {
+        "heading": "Health",
+        "id": "pillars",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Literacy",
+        "tone": "white"
+      },
+      {
+        "heading": "Empowerment",
+        "tone": "parchment"
+      },
+      {
+        "heading": "All programmes"
+      },
+      {
+        "heading": "How we choose a community"
+      },
+      {
+        "heading": "Get involved",
+        "tone": "dark"
+      }
+    ]
+  },
+  "/our-work/health": {
+    "eyebrow": "Pillar",
+    "sections": [
+      {
+        "heading": "The need"
+      },
+      {
+        "heading": "Our approach"
+      },
+      {
+        "heading": "Programmes",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Health in numbers",
+        "tone": "dark"
+      },
+      {
+        "heading": "Seven referrals, seven recoveries"
+      },
+      {
+        "tone": "teal",
+        "accessLine": "Free, and open to everyone in the community."
+      }
+    ]
+  },
+  "/our-work/literacy": {
+    "eyebrow": "Pillar",
+    "sections": [
+      {
+        "heading": "The need"
+      },
+      {
+        "heading": "Our approach"
+      },
+      {
+        "heading": "Programmes",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Literacy in numbers",
+        "tone": "dark"
+      },
+      {
+        "heading": "Twenty-one children, five years"
+      },
+      {
+        "tone": "teal",
+        "accessLine": "Free, and open to every child in the community."
+      }
+    ]
+  },
+  "/our-work/empowerment": {
+    "eyebrow": "Pillar",
+    "sections": [
+      {
+        "heading": "The need"
+      },
+      {
+        "heading": "Our approach"
+      },
+      {
+        "heading": "Programmes",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Empowerment in numbers",
+        "tone": "dark"
+      },
+      {
+        "heading": "From the registration desk to a graduation"
+      },
+      {
+        "tone": "teal",
+        "accessLine": "Free, and open to everyone in the community."
+      }
+    ]
+  },
+  "/our-work/health/medical-outreaches": {
+    "eyebrow": "Programme · Health",
+    "sections": [
+      {
+        "heading": "What it is"
+      },
+      {
+        "heading": "Who it is for",
+        "tone": "parchment",
+        "accessLine": "Free, and open to everyone in the community."
+      },
+      {
+        "heading": "How it works"
+      },
+      {
+        "heading": "Events"
+      },
+      {
+        "heading": "Results to date",
+        "tone": "dark"
+      },
+      {
+        "heading": "Referrals and outcomes"
+      },
+      {
+        "heading": "Get involved",
+        "tone": "teal"
+      }
+    ]
+  },
+  "/our-work/health/continuity-of-care": {
+    "eyebrow": "Programme · Health",
+    "sections": [
+      {
+        "heading": "What it is"
+      },
+      {
+        "heading": "Who it is for",
+        "accessLine": "Free, and open to everyone in the community."
+      },
+      {
+        "heading": "Events"
+      },
+      {
+        "heading": "Results to date",
+        "tone": "dark"
+      },
+      {
+        "heading": "Partners",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Get involved",
+        "tone": "teal"
+      }
+    ]
+  },
+  "/our-work/health/school-health": {
+    "eyebrow": "Programme · Health",
+    "sections": [
+      {
+        "heading": "What it is"
+      },
+      {
+        "heading": "Who it is for",
+        "accessLine": "Free, and open to every child in the school."
+      },
+      {
+        "heading": "How it works",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Events"
+      },
+      {
+        "heading": "What we found at Toge",
+        "tone": "dark"
+      },
+      {
+        "heading": "How we measured it"
+      },
+      {
+        "heading": "Consent"
+      },
+      {
+        "heading": "Give or volunteer",
+        "tone": "teal"
+      }
+    ]
+  },
+  "/our-work/health/nutrition": {
+    "eyebrow": "Programme · Health",
+    "sections": [
+      {
+        "heading": "What it is"
+      },
+      {
+        "heading": "How it works",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Who it is for",
+        "accessLine": "Free, and open to everyone in the community."
+      },
+      {
+        "heading": "Results to date",
+        "tone": "dark"
+      },
+      {
+        "heading": "Give"
+      }
+    ]
+  },
+  "/our-work/health/health-systems": {
+    "eyebrow": "Programme · Health",
+    "sections": [
+      {
+        "heading": "What it is"
+      },
+      {
+        "heading": "Status",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Why it matters here"
+      },
+      {
+        "heading": "Partner"
+      }
+    ]
+  },
+  "/our-work/empowerment/compart": {
+    "eyebrow": "Programme · Empowerment",
+    "sections": [
+      {
+        "heading": "What it is"
+      },
+      {
+        "heading": "Who it is for",
+        "accessLine": "Free, and open to everyone in the community."
+      },
+      {
+        "heading": "The three streams",
+        "tone": "parchment"
+      },
+      {
+        "heading": "How it works"
+      },
+      {
+        "heading": "What the Public Health stream covered",
+        "tone": "dark"
+      },
+      {
+        "heading": "Events"
+      },
+      {
+        "heading": "Results to date",
+        "tone": "parchment"
+      },
+      {
+        "heading": "What comes next"
+      },
+      {
+        "heading": "Get involved",
+        "tone": "teal"
+      }
+    ]
+  },
+  "/our-work/empowerment/community-innovation-challenge": {
+    "eyebrow": "Programme · Empowerment",
+    "sections": [
+      {
+        "heading": "What it is"
+      },
+      {
+        "heading": "Who it is for",
+        "tone": "parchment",
+        "accessLine": "Free, and open to everyone in the community."
+      },
+      {
+        "heading": "The three tracks"
+      },
+      {
+        "heading": "How it works"
+      },
+      {
+        "heading": "Two things at once, every day"
+      },
+      {
+        "heading": "What participants get"
+      },
+      {
+        "heading": "Events — Gosa 2026, the pilot edition"
+      },
+      {
+        "heading": "What a pilot edition costs",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Partner or volunteer",
+        "tone": "teal"
+      }
+    ]
+  },
+  "/events/kunyami-health-outreach-feb-2026": {
+    "eyebrow": "Event · Health",
+    "sections": [
+      {
+        "heading": "What happened"
+      },
+      {
+        "heading": "The numbers",
+        "tone": "dark"
+      },
+      {
+        "heading": "Referrals and outcomes"
+      },
+      {
+        "heading": "Take part",
+        "tone": "teal"
+      }
+    ]
+  },
+  "/events/summer-school-gosa-2026": {
+    "eyebrow": "Event · Literacy",
+    "sections": [
+      {
+        "heading": "What happened"
+      },
+      {
+        "heading": "Numbers",
+        "tone": "dark"
+      },
+      {
+        "heading": "Who was there"
+      },
+      {
+        "heading": "Also delivered"
+      },
+      {
+        "heading": "Related",
+        "tone": "teal"
+      },
+      {
+        "heading": "Take part"
+      }
+    ]
+  },
+  "/events/summer-school-kunyami-2026": {
+    "eyebrow": "Event · Literacy",
+    "sections": [
+      {
+        "heading": "What happened"
+      },
+      {
+        "heading": "The numbers",
+        "tone": "dark"
+      },
+      {
+        "heading": "What the first week showed"
+      },
+      {
+        "heading": "Also delivered"
+      },
+      {
+        "heading": "Related",
+        "tone": "teal"
+      },
+      {
+        "heading": "Take part"
+      }
+    ]
+  },
+  "/events/toge-school-health-jun-2026": {
+    "eyebrow": "Event · Health",
+    "sections": [
+      {
+        "heading": "What happened",
+        "accessLine": "Free, and open to every child in the school."
+      },
+      {
+        "heading": "The numbers"
+      },
+      {
+        "heading": "What we found"
+      },
+      {
+        "heading": "How we measured it"
+      },
+      {
+        "heading": "How it was arranged"
+      },
+      {
+        "heading": "Related",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Take part",
+        "tone": "teal"
+      }
+    ]
+  },
+  "/events/compart-graduation-jun-2026": {
+    "eyebrow": "Event · Empowerment",
+    "sections": [
+      {
+        "heading": "What happened"
+      },
+      {
+        "heading": "The numbers"
+      },
+      {
+        "heading": "What followed"
+      },
+      {
+        "heading": "Related",
+        "tone": "parchment"
+      },
+      {
+        "heading": "Take part",
+        "tone": "teal"
+      }
+    ]
+  }
+}

@@ -1,0 +1,4842 @@
+{
+  "source": "MedWHOLE-Website-Copy.docx",
+  "sha256": "79166d3e94d441159456c0694602cc6e7407d795cba288b457aa8a534b61a3c9",
+  "pages": {
+    "/": {
+      "path": "/",
+      "title": "MedWHOLE Alliance for Health and Development",
+      "description": "Free education, healthcare and skills training from a Nigerian non-profit, beginning with communities along the Airport Road corridor in Kyami District, AMAC, FCT Abuja. Since 2021.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Whole people. Lasting impact."
+            },
+            {
+              "kind": "subheading",
+              "text": "MedWHOLE Alliance for Health and Development is a Nigerian non-profit working to restore people and communities through free education, free healthcare and skills training. Our work began in 2021 in Gosa, on the Nnamdi Azikiwe Airport Road in Kyami District, AMAC, FCT Abuja."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "See our work",
+                "Give"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "2026 in numbers",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "700+ children in free summer school program this August",
+                "506 people seen at one outreach in a community with no clinic",
+                "16 young adults completed skills training",
+                "5 years working in Gosa"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "MedWHOLE Academy",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "MedWHOLE Academy"
+            },
+            {
+              "kind": "subheading",
+              "text": "Whole child. Whole family. Whole community."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The Academy is our largest and longest-running work. It provides free education for children and teenagers in Gosa and Kunyami: holiday lessons every August, a capacity building club that meets weekly through the year, scholarships for out of school children, and coaching for the exams that decide what comes next."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It began in 2021 with twenty-one children. This August it taught more than seven hundred across two communities."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "450 children at Summer School Gosa, August 2026",
+                "280 a day at Kunyami, in its first year",
+                "200 at the weekly club",
+                "50+ children returned to school since 2021"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Explore the Academy"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Our other work",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Our other work"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Alongside the Academy, we run free medical outreaches in communities without health facilities, and we train young adults who have volunteered with us."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The two connect. The volunteers who staffed our February outreach in Kunyami became the first cohort of our skills programme, and twelve of them completed it in June."
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Health — medical outreaches, school health screening, nutrition, and follow-up care after referral",
+                "Empowerment — skills training, mentorship, and a community innovation challenge with grant funding"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Health",
+                "Empowerment",
+                "All our work"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "A story from this year",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Seven referrals, seven recoveries"
+            },
+            {
+              "kind": "paragraph",
+              "text": "At a free outreach in Kunyami in February, seven people were found to need surgery. Each was referred to Gibonna Women's Hospital in Garki, where all seven operations were carried out. All seven recovered without complications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Identifying a case takes a morning. Following it through to recovery takes months, and it is the part that decides whether an outreach mattered."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "How we follow up"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "How we work",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Three pillars, pursued together"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Health, literacy and empowerment are not separate problems, so we do not treat them separately. A child who cannot see the board does not need a better teacher. A mother who cannot read a prescription has not really been treated."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We call our method the Made Whole Journey. Every programme is built to move through four phases — engaged, equipped, deployed, supported — and we judge each one by how far it actually gets."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "The Made Whole Journey"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Where we work",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Where we work"
+            },
+            {
+              "kind": "subheading",
+              "text": "Where our work began: Gosa, Kunyami and Toge, in Kyami District, AMAC, FCT Abuja."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Our first community, and where everything was built. Five years of a free Summer School programme, free health outreaches, and an innovation challenge run by Gosa's own young adults."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Learn more"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "A farming community of more than three thousand, with no health facility of its own. In one year we opened a weekly club, a summer school and a skills cohort here."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Learn more"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Around four thousand people, a few primary schools, no secondary school and no hospital. We began with school health in June 2026 and are working out what comes next with the people who live there."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Learn more"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Gosa, Kunyami and Toge are where we started. We have begun work in other communities, and each one gets a page here once there is enough behind it to say something true."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Talk to us about a new community"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Get involved",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Three ways to take part"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Give — fund a child's place, an outreach, or a full programme",
+                "Volunteer — teach, mentor, or bring a clinical skill",
+                "Partner — for institutions, companies and funders"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Give",
+                "Volunteer",
+                "Partner"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "label": "Latest",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "News and events"
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "All news and events"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/about": {
+      "path": "/about",
+      "title": "About MedWHOLE",
+      "description": "A Nigerian non-profit, founded in 2021. Who we are, how we are governed, and how we account for our work.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Who we are"
+            },
+            {
+              "kind": "subheading",
+              "text": "A Nigerian non-profit restoring people and communities, and staying long enough for the change to hold. Our work began in 2021 in Gosa, on the Nnamdi Azikiwe Airport Road in Kyami District, AMAC, FCT Abuja."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We do not think a person is a single problem to be solved. Health, learning and livelihood arrive together in people's lives, so we work on them together, in the same communities, year after year."
+            },
+            {
+              "kind": "paragraph",
+              "text": "That conviction is the organisation. Everything else on this page — the three pillars, the method, the governance, the figures below — is how we act on it and how we hold ourselves to it."
+            },
+            {
+              "kind": "label",
+              "text": "So far"
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "Since 2021",
+                "3 communities",
+                "700+ children at Summer School this August",
+                "506 people seen at one outreach",
+                "7 referrals followed through to recovery",
+                "12 young adults through a full skills cohort"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "How we work",
+                "Our accountability"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Who we are",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "MedWHOLE Alliance for Health and Development is a registered Nigerian non-profit. Our work began in 2021 in Gosa, a community on the Airport Road outside Abuja, with a weekly club for twenty-one children. Today we run education, health and empowerment programmes in Gosa, Kunyami and Toge. These are our first communities."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Our work is held in three pillars — health, literacy and empowerment. Each pillar holds programmes. Each programme holds dated events that carry their own numbers. Every figure on this site can be traced down to a named community on a named day."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "2021 founded",
+                "3 communities",
+                "3 pillars",
+                "700+ children at Summer School in August 2026"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "What we mean by whole",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "What we mean by whole"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Need rarely arrives one problem at a time. A family short of money for school fees is usually also a family that cannot easily reach a clinic. So we work on more than one thing at once, and we stay long enough to see what changes."
+            },
+            {
+              "kind": "paragraph",
+              "text": "In practice that looks ordinary. A summer school timetable carries mathematics and reading in the morning, a skills lab in the afternoon, and a health talk midweek. The Health Service team runs deworming inside an education programme. The volunteers who staff a medical outreach become the next cohort of a skills course."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "The Made Whole journey"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Vision, mission and belief",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Vision, mission and belief"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Our vision — A society transformed by whole individuals who serve as lights within their communities.",
+                "Our mission — To improve human development through faith-centred engagement in health, literacy and empowerment, guiding individuals through discipleship and deployment toward sustainable community impact.",
+                "What we believe — Whole people create lasting impact."
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "We picture communities where people are not only supported but equipped — where the people we have worked with become the leaders, teachers, carers and catalysts their own communities need."
+            },
+            {
+              "kind": "paragraph",
+              "text": "So every pillar is pursued in full, every piece of work touches more than one part of a person's life, and everyone we work with is prepared to serve others in turn."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "What we believe, and how we work",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "What we believe, and how we work"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Our work is motivated by Christian faith. It shows less in what we say than in how we work, and it has never decided who we serve. Our services are open to everyone, without condition and without regard to faith, background or belief."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Families hand us their children every August, and we keep that trust by asking first and keeping our word. When three parents in Toge declined deworming for their children, the refusals were written down and the children were not treated."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Free does not mean second-rate. When we screened 196 pupils at Toge, we measured them against the standard the World Health Organization uses for school-age children, the same one a well-funded clinic would use."
+            },
+            {
+              "kind": "paragraph",
+              "text": "And we say what we cannot count. Our Toge figures came with a plain note on the limits of our own method. When our registers disagree with each other, we publish the number we can reconcile and explain why. A figure we cannot stand behind does not go on this site."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Seven people found to need surgery at Kunyami were not handed a referral slip and forgotten. We followed each of them to a hospital in Garki and stayed with them until they recovered. That is what care looks like after the outreach has packed up."
+            },
+            {
+              "kind": "paragraph",
+              "text": "None of it is done alone. The Health Service team runs deworming inside the Academy's summer school. Young people who came to help at an outreach became the next cohort we trained. Doctors, teachers, volunteers and community leaders work as one team, and the community is part of it."
+            },
+            {
+              "kind": "paragraph",
+              "text": "When the budget for Toge was cut mid-planning, the team redesigned the day rather than cancelling it, and reached 196 pupils rather than a handful. In Gosa, young adults bring us ideas for their own community's problems and we fund the best of them. We would rather find a better way than repeat a familiar one."
+            },
+            {
+              "kind": "paragraph",
+              "text": "And we answer for all of it. Every figure we publish can be traced to a named community on a named day, and our trustees review spending and safeguarding every quarter."
+            },
+            {
+              "kind": "quote",
+              "text": "We would rather you saw what we value in the work than read it on a wall."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Meet the team",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Our team"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Our team is small, and most of it works in the field. Clinicians, educators, researchers, communicators and operations staff lead the work in Gosa, Kunyami and Toge, alongside the volunteers they train."
+            },
+            {
+              "kind": "list",
+              "items": []
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Team and governance"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Governance",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "How we are governed"
+            },
+            {
+              "kind": "paragraph",
+              "text": "MedWHOLE is overseen by a Board of Trustees and run day to day by the General Coordinator and team leads. Oversight and operations are kept separate."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Every quarter the board reviews what was spent, the results of clinical safety audits, and the safeguarding log. MedWHOLE Alliance for Health and Development is a registered non-profit organisation in Nigeria, Charity ID 169086."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Team and governance",
+                "Accountability"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Cross-links",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "The Made Whole journey",
+                "Accountability",
+                "Our work"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/about/journey": {
+      "path": "/about/journey",
+      "title": "The Made Whole Journey",
+      "description": "MedWHOLE's method, in four phases — engaged, equipped, deployed, supported. How every programme is designed and judged.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "The Made Whole Journey"
+            },
+            {
+              "kind": "subheading",
+              "text": "Our method, in four phases. How every MedWHOLE programme is designed, and what we hold each one to."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What the method is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The Made Whole Journey is how we design and run our work. It is not a path one person walks. It is the sequence every programme is built to follow, and the test we hold each one to."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A programme that engages a community but equips nobody has stopped at the first phase. One that trains people and then leaves them with nowhere to use it has stopped at the second. Naming the four phases lets us say plainly how far a programme has got, and what is still missing."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "The four phases",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Engaged — we establish presence and meet a real need, free and open to everyone. A medical outreach, a summer school programme, a weekly club.",
+                "Equipped — we build skill and character in the same room, over months rather than in a single workshop.",
+                "Deployed — people put what they have gained to work in their own community, with us alongside them.",
+                "Supported — we stay after the training ends. Grants, mentoring, follow-up, and the next cycle."
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "The method at work",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Kunyami, February to June 2026"
+            },
+            {
+              "kind": "paragraph",
+              "text": "On 14 February 2026 we ran a free medical outreach in Kunyami, a community with no health facility. Five hundred and six people were seen. Among those who helped run it were young people from the community itself, working the registration desk and the service units."
+            },
+            {
+              "kind": "paragraph",
+              "text": "That group became the first cohort of ComPart, our community participation programme. They met fortnightly from February to June, learning graphics and photography, printing and branding, or public health. Every meeting opened with a thirty-minute teaching session."
+            },
+            {
+              "kind": "paragraph",
+              "text": "On 7 June they presented their work — designs, media projects and community advocacy plans. The public health stream then ran Operation Keep Kunyami Clean, a sanitation activity they planned and delivered themselves."
+            },
+            {
+              "kind": "quote",
+              "text": "They came as helpers on February 14th. They are now being equipped as leaders."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "506 people seen at the outreach",
+                "8 public health sessions delivered",
+                "12 completed the cohort"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "A second example",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "The Community Innovation Challenge"
+            },
+            {
+              "kind": "paragraph",
+              "text": "The Challenge runs all four phases inside a single programme. Young adults from Gosa are recruited, trained for two days, mentored for several weeks, pitch solutions to problems they chose themselves, and the strongest proposals receive grants and continued guidance."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Its curriculum pairs a technical skill with a human one every single day. Prototyping with resourcefulness. Costing with financial literacy. Pitching with public speaking. Deadline pressure with managing stress."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Community Innovation Challenge"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Cross-links",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Our work",
+                "About"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/about/team": {
+      "path": "/about/team",
+      "title": "Team and Governance",
+      "description": "The people who run MedWHOLE, how the organisation is governed, and our registration and policies.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Team and governance"
+            },
+            {
+              "kind": "subheading",
+              "text": "Who does the work, who holds the decisions, and where our policies sit."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Meet the team",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Our team"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Our team is small, and most of it works in the field. Clinicians, educators, researchers, communicators and operations staff lead the work in Gosa, Kunyami and Toge, alongside the volunteers they train."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Board of Trustees",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Board of Trustees"
+            },
+            {
+              "kind": "paragraph",
+              "text": "MedWHOLE is overseen by a Board of Trustees. Every quarter, the board reviews what was spent and on what, the results of clinical safety audits, and the safeguarding log."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The board sets the organisation's direction and holds its leadership to account for delivering it."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "How decisions are made",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "How decisions are made"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Programme decisions are made by the General Coordinator with the team leads who will carry them out. Every programme has a budget before it runs, and it is approved before money is spent."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We adopt a new community only after spending time there first: a courtesy visit to its leaders, any clearances the work needs, and a first piece of work small enough to learn from. That is how Toge began — a visit to the school in March 2026, clearance from the AMAC Local Education Authority in April, and a school health day in June."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Registration and legal status",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Registration"
+            },
+            {
+              "kind": "paragraph",
+              "text": "MedWHOLE Alliance for Health and Development is a registered non-profit organisation in Nigeria, Charity ID 169086."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Our main office is the MedWHOLE Resource Centre, 7 Nissi Drive, Fort Royal, Nnamdi Azikiwe Airport Road, Kyami District, AMAC, FCT Abuja."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Policies",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Safeguarding and child protection",
+                "Equal opportunities and non-discrimination",
+                "Code of conduct for facilitators and volunteers",
+                "Photography and image consent"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Read our safeguarding policy"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/about/accountability": {
+      "path": "/about/accountability",
+      "title": "Accountability",
+      "description": "How MedWHOLE manages funds, reports on its work, and handles complaints.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Accountability"
+            },
+            {
+              "kind": "subheading",
+              "text": "How money is managed, how work is reported, and how to raise a concern."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "How we count",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Every event records what it did on the day. Those records add up to programme totals, programme totals to pillar totals, and pillar totals to the figures on our home page. Nothing is estimated upward."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We publish three separate measures and never add them together. Unique people counts distinct individuals. Attendances counts every visit, which means the same child on four mornings is four attendances and one person. Services counts what was delivered — a deworming dose, a laboratory test, a pair of glasses."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where our own records disagree, we publish the figure we can reconcile and say so. At Toge in June, our report's column totals did not match its component rows, so this site uses the component sums: 196 pupils screened and 193 dewormed."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "How money is managed",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "How money is managed"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Every programme has a budget before it runs, and spending is recorded against it. The Board of Trustees reviews expenditure every quarter."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Money given for a named programme is spent on that programme. A gift that is not designated goes where the need is greatest at the time."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Reports and downloads",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Quarterly programme reports",
+                "Annual report",
+                "Financial summary",
+                "Organisational profile"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Safeguarding",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Safeguarding"
+            },
+            {
+              "kind": "paragraph",
+              "text": "We work with hundreds of children every week. Written parental consent comes before any medical procedure, refusals are recorded and respected, every facilitator receives a code of conduct, and no child's photograph is published without a parent's written permission."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Safeguarding"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Raising a concern",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Raising a concern"
+            },
+            {
+              "kind": "paragraph",
+              "text": "If something we have done has gone wrong, we want to know. Write to info@medwhole.org and tell us what happened, where and when."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A concern about the safety of a child or a vulnerable adult goes straight to our Safeguarding Lead at safeguarding@medwhole.org."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Contact us",
+                "Safeguarding"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Registration",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Registration"
+            },
+            {
+              "kind": "paragraph",
+              "text": "MedWHOLE Alliance for Health and Development is a registered non-profit organisation in Nigeria, Charity ID 169086, based at the MedWHOLE Resource Centre, 7 Nissi Drive, Fort Royal, Nnamdi Azikiwe Airport Road, Kyami District, AMAC, FCT Abuja."
+            }
+          ]
+        }
+      ]
+    },
+    "/academy": {
+      "path": "/academy",
+      "title": "MedWHOLE Academy — free education in Gosa and Kunyami",
+      "description": "Free holiday lessons, a weekly club, scholarships and exam coaching for children and teenagers in Gosa and Kunyami — Kyami District, AMAC, FCT Abuja. Open to every child in the community.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "MedWHOLE Academy"
+            },
+            {
+              "kind": "subheading",
+              "text": "Whole child. Whole family. Whole community."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Free education for children and teenagers in Gosa and Kunyami. Holiday lessons every August, a club that meets weekly through the year, scholarships for children who had left school, and coaching for the exams that decide what comes next."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "See this year's programmes",
+                "Give to the Academy"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Open to every child",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to every child in the community."
+            },
+            {
+              "kind": "paragraph",
+              "text": "No fees, no uniform requirement, no entrance test. A parent does not need to register in advance, and no child is asked what their family believes."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Five years",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Five years in Gosa"
+            },
+            {
+              "kind": "paragraph",
+              "text": "The Academy began in 2021 at Christ Word Centre in Gosa, with twenty-one children in a weekly club. The first summer school ran that same year."
+            },
+            {
+              "kind": "paragraph",
+              "text": "In August 2026 we taught more than seven hundred children across two communities. On a single Thursday morning that month, 670 children and teenagers were in Summer School classes across both sites."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "21 children in 2021",
+                "700+ in August 2026",
+                "670 in class on one morning",
+                "5 years running"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "This year, in two communities",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Gosa and Kunyami"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Summer School has run in Gosa every August since 2021. In 2026 it ran in Kunyami for the first time, at the same time, and Good News Club opened there in February."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Kunyami drew 122 children on its first morning and 240 by the fourth. It had not stopped growing when the first week ended. Gosa, in its fifth year, filled to 423 by its second morning and held there."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The two curves say different things and both are useful. One is a programme the community already knows. The other is a programme being discovered."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "450+ at Gosa, fifth edition",
+                "280 a day at Kunyami, first edition",
+                "190 at Good News Club each week",
+                "168 at the first Kunyami club meeting"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Not only children",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Primary through senior secondary"
+            },
+            {
+              "kind": "paragraph",
+              "text": "About forty-three per cent of the children at Gosa Summer School are of secondary-school age. The largest single class band is JSS 1 and 2 — 105 pupils on one morning, more than any primary band on any day."
+            },
+            {
+              "kind": "paragraph",
+              "text": "So the Academy is not only a children's programme, and we have stopped describing it as one. Six class bands run at once every morning, from Primary 1 to SS 3."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "What the Academy runs",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Summer School — four weeks of free lessons every August, Monday to Thursday mornings. Mathematics, English and reading, plus a skills lab, exams and a closing party.",
+                "Good News Club — weekly through the year, in Gosa and Kunyami. Bible lessons, memory verses, songs and activities, with a teenagers' section.",
+                "Library and Reading Club — reading support through the year, including guided practice for computer-based exams.",
+                "Back-to-School Scholarship — for children who had dropped out, covering the cost of returning.",
+                "Exam Coaching — WAEC and JAMB preparation for the senior bands."
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Summer School",
+                "Good News Club",
+                "Reading Club",
+                "Scholarship",
+                "Exam Coaching"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "One morning, one timetable",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "How a day is built"
+            },
+            {
+              "kind": "paragraph",
+              "text": "A Summer School morning carries mathematics, English and reading, and a memory verse. From the second week a skills lab is added — bead making, soap making, stool making, tote bags, air fresheners. In the final week there are exams, a skills competition, and talks on career, health and mental health."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The Health Service team runs deworming inside the same programme, with written parental consent obtained in advance."
+            },
+            {
+              "kind": "quote",
+              "text": "One timetable, carrying reading, a trade, a health check and a conversation about what comes next."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "The path through",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Where a child can go from here"
+            },
+            {
+              "kind": "paragraph",
+              "text": "A child who joins Good News Club at seven can move into the teenagers' section, sit in the secondary bands at Summer School, be coached through WAEC, and at eighteen compete in the Community Innovation Challenge with a grant behind their idea."
+            },
+            {
+              "kind": "paragraph",
+              "text": "That path runs across programmes and across years, in one community. It is the reason the Academy is organised as a cluster rather than a set of separate activities."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "The Made Whole journey"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "label": "How we count",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We publish attendance and unique children separately. 670 is a single morning's attendance across both sites. Gosa's season figure is 450+; Kunyami's 2026 Summer School averaged 280 children a day. Where a figure is a registration count rather than an attendance count, this site says so."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Accountability"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "label": "Teach, or fund a place",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Six class groups need six teachers every morning"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Summer School runs six bands at once in Gosa and five in Kunyami. Every one needs a facilitator, every morning, for four weeks."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Volunteer to teach",
+                "Fund a child's place",
+                "Partner with the Academy"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "label": "Latest from the Academy",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Latest from the Academy"
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "All news and events"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/academy/summer-school": {
+      "path": "/academy/summer-school",
+      "title": "Summer School — free holiday lessons in Gosa and Kunyami",
+      "description": "Four weeks of free lessons every August for children and teenagers in Gosa and Kunyami. Mondays to Thursdays, 9am to 12pm. Free to attend.",
+      "breadcrumb": "Academy › Summer School",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Summer School"
+            },
+            {
+              "kind": "subheading",
+              "text": "Four weeks of free lessons every August, in Gosa and Kunyami."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "Mon–Thu, 9am–12pm",
+                "August",
+                "Primary 1 to SS 3",
+                "Free"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Summer School runs for four weeks every August. Mathematics, English and reading every morning, a memory verse, and from the second week a skills lab in the afternoon. The final week holds exams, a skills and memory verse competition, talks, and a closing party."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It has run in Gosa every year since 2021. In 2026 it ran in Kunyami for the first time, at the same time."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Most of the children who come are on holiday from schools that are overcrowded and short of trained teachers. Four weeks of focused teaching in August is how we help close that gap. Some who come are not in school at all, and for them there is the Back-to-School Scholarship."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Children and teenagers, from Primary 1 to SS 3. Gosa runs six class bands at once; Kunyami runs five."
+            },
+            {
+              "kind": "paragraph",
+              "text": "About forty-three per cent of the children at Gosa are of secondary-school age, and JSS 1 and 2 is the largest single band in the school."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to every child in the community."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "How it works",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Monday to Thursday, 9am to 12pm. Friday is the rest day at Gosa; Saturday at Kunyami.",
+                "Good News Club runs as the weekend component — Saturdays at 3pm in Gosa, Fridays at 4pm in Kunyami.",
+                "The skills lab starts in week two.",
+                "Registration continues into the first week. Attendance builds by word of mouth — Gosa grew thirty-five per cent between its first and second mornings.",
+                "The Health Service team runs deworming during the programme. Parents give written consent in advance."
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "What is taught",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Mathematics",
+                "English and reading, with a reading assessment",
+                "Memory verse, daily",
+                "Skill Lab — bead making, soap making, stool making, and at Gosa tote bags and air fresheners",
+                "Health hygiene and sex education, taught in separate age bands",
+                "Career Compass, health talks, and at Gosa a mental health talk"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Events",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Summer School — Gosa 2026, fifth edition, 3–31 August 2026, 450+ pupils",
+                "Summer School — Kunyami 2026, first edition, 3–28 August 2026, 280 average daily attendance"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Results to date",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "700+ children across both sites in August 2026",
+                "670 in class on one Thursday morning",
+                "2,323 attendance-days in the first week alone",
+                "5 editions in Gosa"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Give or volunteer",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund a child's place",
+                "Volunteer to teach"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/academy/good-news-club": {
+      "path": "/academy/good-news-club",
+      "title": "Good News Club",
+      "description": "A free weekly club for children and teenagers in Gosa and Kunyami. Bible lessons, memory verses, songs and activities.",
+      "breadcrumb": "Academy › Good News Club",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Good News Club"
+            },
+            {
+              "kind": "subheading",
+              "text": "A free weekly club for children and teenagers, in Gosa and Kunyami."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "Weekly",
+                "Term time",
+                "190 children a week",
+                "Free"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Good News Club meets once a week through the year. Bible lessons, memory verses, songs, learning activities and a light refreshment. There is a separate section for teenagers, the Junior Youth Club."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It is where MedWHOLE began. Twenty-one children met at Christ Word Centre in Gosa in 2021. The club now averages 190 children a week."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Children, with a teenagers' section. Free, and open to every child in the community."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Where and when",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Gosa Primary — weekly, resumed for 2026 on 7 February. Saturdays at 3pm during Summer School.",
+                "Kunyami — weekly since 6 February 2026. Fridays, 4pm to 5pm."
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Events",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "First Kunyami meeting — 6 February 2026, 168 children",
+                "Gosa 2026 resumption — 7 February 2026, 190 average weekly attendance",
+                "Fifth anniversary, Gosa — 22 February 2026, All Saints Anglican Church, 305 children and teenagers with 19 teachers and volunteers",
+                "Film show, Gosa — 21 March 2026, 206 children",
+                "Film show, Kunyami — 27 March 2026, 85 children"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Results to date",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Twenty-one children in 2021. Three hundred and five present at the fifth anniversary in 2026."
+            },
+            {
+              "kind": "paragraph",
+              "text": "In its first year in Kunyami the club drew 168 children on its opening day — close to what Gosa reaches weekly after five years."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "21 → 305 over five years",
+                "190 a week in Gosa",
+                "168 on day one in Kunyami",
+                "2 communities"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Give or volunteer",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Volunteer to teach",
+                "Give"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/academy/reading-club": {
+      "path": "/academy/reading-club",
+      "title": "Library and Reading Club",
+      "description": "Free reading support through the year for children and teenagers in Gosa, including guided practice for computer-based exams.",
+      "breadcrumb": "Academy › Library and Reading Club",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Library and Reading Club"
+            },
+            {
+              "kind": "subheading",
+              "text": "Reading support through the year, and guided practice for computer-based exams."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The Reading Club runs outside the August programme, as year-round support. It also provides guided practice on computer-based tests for candidates sitting JAMB — four candidates were supported this way in the second quarter of 2026."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Summer School includes a reading assessment, which is the only literacy measure in our programmes. It means we can report what a child's reading did over four weeks, not only that they attended."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Children and teenagers. Free, and open to every child in the community."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "How to join",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "How to join"
+            },
+            {
+              "kind": "paragraph",
+              "text": "The Reading Club is free and there is no sign-up. Ask at the Gosa liaison office, Shop 6, Gosa Shopping Complex, for this term's meeting times, or write to info@medwhole.org."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Contact us"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/academy/scholarship": {
+      "path": "/academy/scholarship",
+      "title": "Back-to-School Scholarship",
+      "description": "Support for children in Gosa and Kunyami who had left school, covering what it costs to return.",
+      "breadcrumb": "Academy › Back-to-School Scholarship",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Back-to-School Scholarship"
+            },
+            {
+              "kind": "subheading",
+              "text": "For children who had left school, and what it costs to get them back."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Most of the children at our Summer School programme are on holiday from their own schools. A few are not enrolled anywhere. The scholarship is for them: it covers what it takes to get a child back into school and keep them there."
+            },
+            {
+              "kind": "paragraph",
+              "text": "More than fifty children have gone back to school through the programme since 2021."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Children of school age in Gosa and Kunyami who are out of school. Free, and open to every child in the community."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "How it works",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Some families come to us. Other children we meet through our clubs and our Summer School programme, and find out they are not enrolled anywhere. Either way, we sit down with the family, find out what is keeping the child out of school, and cover what it takes to get them back into a classroom."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Then we stay in touch, because getting a child back is only half of it. Keeping them there is the rest."
+            },
+            {
+              "kind": "paragraph",
+              "text": "To ask about a scholarship, visit the Gosa liaison office, Shop 6, Gosa Shopping Complex, or write to info@medwhole.org."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Give",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund a child's return to school"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/academy/exam-coaching": {
+      "path": "/academy/exam-coaching",
+      "title": "Exam Coaching — WAEC and JAMB",
+      "description": "Free coaching for WAEC and JAMB candidates in Gosa and Kunyami.",
+      "breadcrumb": "Academy › Exam Coaching",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Exam Coaching"
+            },
+            {
+              "kind": "subheading",
+              "text": "Free preparation for WAEC and JAMB."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Coaching for the two exams that decide what a teenager in these communities does next. WAEC for school leavers, JAMB for university entrance, with guided practice on the computer-based format."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The senior bands at Summer School are small — around twenty pupils in SS 2 and 3 — and they are the cohort with the most at stake."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Candidates sitting WAEC or JAMB. Free, and open to every child in the community."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "How to join",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "How to join"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Coaching is free for any candidate preparing for WAEC or JAMB in the communities where we work. Ask at the Gosa liaison office, Shop 6, Gosa Shopping Complex, or write to info@medwhole.org."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Contact us"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work": {
+      "path": "/our-work",
+      "title": "Our Work",
+      "description": "Health, literacy and empowerment programmes in Gosa, Kunyami and Toge — Kyami District, AMAC, FCT Abuja. What we run, where, and for whom.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Our work"
+            },
+            {
+              "kind": "subheading",
+              "text": "Everything we run, and where it is running today."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "How the work is organised",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Three pillars hold the work: health, literacy and empowerment. Under each pillar sit programmes, and under each programme sit dated events that carry their own numbers."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Nutrition is a programme under Health, not a pillar of its own. Health in our terms means physical, mental and systemic wellbeing, and nutrition belongs inside that."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Health",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Free care in communities with no health facility, school health screening, nutrition, and follow-up after referral."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "506 people seen at one outreach",
+                "196 pupils screened at Toge",
+                "7 surgeries completed"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Health"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Literacy",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Free education for children and teenagers, held mostly within MedWHOLE Academy."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "700+ children in August 2026",
+                "190 at a weekly club",
+                "50+ children returned to school"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "MedWHOLE Academy",
+                "Literacy"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Empowerment",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Skills training, mentorship, and a community innovation challenge with grant funding."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "12 completed the first ComPart cohort",
+                "3 learning streams",
+                "₦2m pilot budget"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Empowerment"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "All programmes",
+          "blocks": []
+        },
+        {
+          "number": 7,
+          "label": "Upcoming events",
+          "blocks": []
+        },
+        {
+          "number": 8,
+          "label": "How we choose where to work",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We began in Kyami District, AMAC, along the Nnamdi Azikiwe Airport Road corridor, in communities that sit close to major infrastructure and still have interior sections without basic amenities. Kunyami had no health facility at all."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We start by spending time in a community rather than by delivering to it. Gosa took five years to reach its present scale. Kunyami and Toge began in 2026, and both began with an invitation and a courtesy visit to local leadership."
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "label": "Get involved",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Give",
+                "Volunteer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/health": {
+      "path": "/our-work/health",
+      "title": "Health",
+      "description": "Free medical outreaches, school health screening, nutrition and follow-up care in Gosa, Kunyami and Toge — Kyami District, AMAC, FCT Abuja.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Health"
+            },
+            {
+              "kind": "subheading",
+              "text": "Physical, mental and systemic wellbeing. We provide care where there is none, and work toward the systems that would make our visits unnecessary."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "The need",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Kunyami has no health facility. For the people who live there, care has meant travelling elsewhere or going without."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The same pattern repeats along the corridor. Children swim in a river that carries schistosomiasis. Teachers have untreated high blood pressure. Undernutrition in one school we screened was five times more common among boys than girls."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Our approach",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We run free outreaches in communities without facilities, screen children in schools, and follow referred cases through to treatment. We also train community members to carry health knowledge themselves."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We do not treat an outreach as finished on the day. Identifying a case takes a morning; following it through to recovery takes months."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Programmes",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Medical Outreaches — one-day free outreaches, with triage, treatment, laboratory services, counselling and referral",
+                "Continuity of Care — home follow-up, medical posts at events, and referral tracking through to specialist treatment",
+                "School Health Interventions — health education, screening and deworming in primary schools",
+                "Nutrition — nutritional screening, targeted support, and community feeding",
+                "Health Systems Strengthening — mapping and establishing a health post along the Airport Road corridor"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Health in numbers",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "506 people seen in one day at Kunyami",
+                "697 clinical services delivered that day",
+                "196 pupils screened at Toge",
+                "7 surgeries completed, 7 recoveries, 0 complications"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Access",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to everyone in the community."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "One story",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Seven referrals, seven recoveries"
+            },
+            {
+              "kind": "paragraph",
+              "text": "At the Kunyami outreach on 14 February 2026, seven people were found to need surgery. Each was referred to Gibonna Women's Hospital in Garki. All seven operations were carried out and all seven recovered without complications."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Continuity of Care"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Give or volunteer",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Give to health work",
+                "Volunteer a clinical skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/health/medical-outreaches": {
+      "path": "/our-work/health/medical-outreaches",
+      "title": "Medical Outreaches",
+      "description": "Free one-day medical outreaches in communities without health facilities in Kyami District, AMAC, FCT Abuja. Triage, treatment, laboratory services, counselling and referral.",
+      "breadcrumb": "Our work › Health › Medical Outreaches",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Medical Outreaches"
+            },
+            {
+              "kind": "subheading",
+              "text": "A full day of free care, in communities that have no health facility."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A one-day outreach brings a working clinic to a community that does not have one. Everyone who comes passes through registration and triage, then moves between service units: consultation, laboratory, nursing, eye care, counselling, pharmacy."
+            },
+            {
+              "kind": "paragraph",
+              "text": "What is found on the day does not end on the day. Cases needing more than we can provide are referred to a partner hospital, and we follow them through."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Everyone who comes. Free, and open to everyone in the community."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "How it works",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Registration and triage for every person",
+                "Preventive, curative and diagnostic services across several units",
+                "Individual counselling",
+                "Referral for cases needing higher-level care, tracked through Continuity of Care"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Events",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Kunyami Health Outreach — 14 February 2026, Kyami District, AMAC. 506 people seen.",
+                "Vine Heritage Home Orphanage Outreach — 20 June 2026. Consultation, laboratory, nursing, nutritional assessment, treatment, dispensing and mass deworming."
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Results to date",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "At Kunyami on 14 February 2026, 506 people were seen in a single day: 274 children and 232 adults. Four hundred and fifty received deworming treatment, 136 laboratory investigations were conducted, 39 electrocardiograms performed, 47 eye patients seen and 25 pairs of medicated glasses issued."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Seven people were found to need surgery. All seven were operated on and all seven recovered."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "506 people seen in one day",
+                "697 clinical services delivered",
+                "25 pairs of glasses issued",
+                "7 surgical cases identified"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Give or volunteer",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund an outreach",
+                "Volunteer a clinical skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/health/continuity-of-care": {
+      "path": "/our-work/health/continuity-of-care",
+      "title": "Continuity of Care",
+      "description": "Follow-up after a MedWHOLE outreach — home visits, medical posts, and referral tracking through to specialist treatment.",
+      "breadcrumb": "Our work › Health › Continuity of Care",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Continuity of Care"
+            },
+            {
+              "kind": "subheading",
+              "text": "What happens after the outreach packs up."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Continuity of Care is a standing service rather than an event. It covers home follow-up for children needing wound care or treatment for common childhood illness, medical posts kept running during Academy events, and referral tracking from the day a case is identified to the day it is resolved."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Identifying a case takes a morning. Following it through to recovery takes months, and it is the part that decides whether an outreach mattered."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Anyone referred or identified through a MedWHOLE programme. Free, and open to everyone in the community."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Events",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Surgical follow-up at Gibonna Women's Hospital, Garki — Q2 2026. All seven cases identified at the 14 February Kunyami outreach underwent surgery and all seven recovered without complications.",
+                "Teacher referral, Toge — June 2026. A 49-year-old teacher found with moderately elevated blood pressure was counselled and referred to the Primary Health Centre in Kuje, where she lives."
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Results to date",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "7 cases identified",
+                "7 operated",
+                "7 recovered",
+                "0 complications"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Partners",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Gibonna Women's Hospital, Garki — surgical referral partner"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Give",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund a referral"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/health/school-health": {
+      "path": "/our-work/health/school-health",
+      "title": "School Health Interventions",
+      "description": "Health education, nutritional screening and deworming in primary schools in Kyami District, AMAC, FCT Abuja, with local education authority clearance.",
+      "breadcrumb": "Our work › Health › School Health Interventions",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "School Health Interventions"
+            },
+            {
+              "kind": "subheading",
+              "text": "Health education, screening and deworming, delivered inside the school day."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We take a half-day health programme into a primary school: a general assembly for the whole school, then separate sessions by age and sex, then screening and deworming."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The separate sessions matter. What a six-year-old needs to hear about handwashing is not what a twelve-year-old girl needs to hear about her own safety."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Pupils and teaching staff of the host school. Free, and open to every child in the school."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "How it works",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "A courtesy visit to school leadership, first",
+                "Clearance from the AMAC Local Education Authority",
+                "General assembly, then age- and sex-appropriate breakout sessions",
+                "Anthropometric screening, and mid-upper arm circumference for under-fives",
+                "Albendazole administered under direct observation, with parental consent and recorded refusals",
+                "Blood pressure and random blood glucose screening for teaching staff"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Events",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "LEA Primary School, Toge — 30 June 2026. 196 pupils screened, 193 dewormed, 9 teachers screened."
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "What we found at Toge",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Of 195 pupils with complete measurements, 169 had a normal BMI-for-age. Fourteen were thin and four severely thin. Seven were overweight and one obese."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Undernutrition was five times more common among boys than girls — fifteen cases to three. No pupil presented with an illness needing urgent treatment on the day. One teacher was referred for high blood pressure."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "196 pupils screened",
+                "193 dewormed",
+                "18 undernourished",
+                "9 teachers screened",
+                "1 referral"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "How we measured it",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Nutritional status was assessed using BMI-for-Age Z-score, the standard the World Health Organization recommends for school-age children."
+            },
+            {
+              "kind": "paragraph",
+              "text": "One limitation is worth stating. Exact dates of birth were not recorded, so each child's age was estimated at the midpoint of their stated year. The figures are a close approximation rather than an exact clinical score, and we are capturing dates of birth from now on."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Consent",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Three parents declined deworming for their children. The refusals were recorded and the children were not treated."
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "label": "Give or volunteer",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund a school intervention",
+                "Volunteer a clinical skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/health/nutrition": {
+      "path": "/our-work/health/nutrition",
+      "title": "Nutrition",
+      "description": "Nutritional screening, targeted support and community feeding in Gosa, Kunyami and Toge — Kyami District, AMAC, FCT Abuja.",
+      "breadcrumb": "Our work › Health › Nutrition",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Nutrition"
+            },
+            {
+              "kind": "subheading",
+              "text": "Finding the children who are not growing, and doing something about it."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Nutrition sits under Health rather than standing on its own, because that is what it is — a clinical matter measured with clinical standards."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The work has three parts: screening children to find who is affected, targeted support for those who are, and community feeding where need is widespread."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Children in the communities where we work, with under-fives measured separately. Free, and open to every child in the community."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "How it works",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Height and weight measured, with mid-upper arm circumference for under-fives",
+                "Status assessed using BMI-for-Age Z-score, the WHO standard for school-age children",
+                "Targeted support for children identified as thin or severely thin",
+                "Community feeding where it is needed"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Results to date",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "At Toge in June 2026, 195 pupils were measured and 18 were found to be undernourished — fourteen thin and four severely thin. A further eight were overweight or obese."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We publish the undernutrition figure as 18 because that is what the term describes. If a figure of 26 appears anywhere, it includes overweight and obesity, and should say so."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "195 children measured",
+                "18 undernourished",
+                "86.7% within normal range"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Give",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund nutritional screening"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/health/health-systems": {
+      "path": "/our-work/health/health-systems",
+      "title": "Health Systems Strengthening",
+      "description": "Mapping and establishing a health post along the Nnamdi Azikiwe Airport Road corridor in Kyami District, AMAC, FCT Abuja.",
+      "breadcrumb": "Our work › Health › Health Systems Strengthening",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Health Systems Strengthening"
+            },
+            {
+              "kind": "subheading",
+              "text": "Working toward the day a community does not need an outreach."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "An outreach is a good answer to a bad situation. The better answer is a facility that is there every day."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We are mapping the Airport Road corridor toward establishing a health post. The work is at mapping stage: identifying where the gaps are, what a post would need to run, and who would have to be involved."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Status",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "In development. Mapping underway."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Why it matters here",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Kunyami has no health facility. In February 2026 we saw 506 people there in one day, which tells you both how much need there was and how little of it a single day can hold."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Partner",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Partner with us on this"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/literacy": {
+      "path": "/our-work/literacy",
+      "title": "Literacy",
+      "description": "Free education for children and teenagers in Gosa and Kunyami — Kyami District, AMAC, FCT Abuja — delivered through MedWHOLE Academy.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Literacy"
+            },
+            {
+              "kind": "subheading",
+              "text": "Reading, learning and the skills that follow from them. Most of this work sits inside MedWHOLE Academy."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "The need",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Schools in these communities are overcrowded and short of trained teachers. A child can go through a whole term without the attention they need, and many fall behind in reading. Summer School fills that gap during the holidays. A smaller number of children are not in school at all, and the Back-to-School Scholarship exists for them."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It reaches past childhood. When we ran our first skills cohort for young adults in Kunyami, the thing that most shaped how we had to teach was the literacy level of the participants."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Our approach",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We teach free, in the community, and in the holidays when school is out. We measure reading rather than only counting attendance, and we return the same programme to the same community year after year."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The work is held almost entirely within MedWHOLE Academy, which has its own page."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "MedWHOLE Academy"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Programmes",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Summer School — four weeks of free lessons every August",
+                "Good News Club — a free weekly club, with a teenagers' section",
+                "Library and Reading Club — year-round reading support",
+                "Back-to-School Scholarship — for children who had left school",
+                "Exam Coaching — WAEC and JAMB preparation"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Literacy in numbers",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "700+ children in August 2026",
+                "670 in class on one morning",
+                "190 at a weekly club",
+                "50+ children returned to school since 2021"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Access",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to every child in the community."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "One story",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Twenty-one children, five years"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Good News Club began in 2021 at Christ Word Centre in Gosa with twenty-one children. At its fifth anniversary in February 2026, three hundred and five children and teenagers were present, with nineteen teachers and volunteers. Mrs Faith Adurojaire, Pastor of the church where it started, led the closing prayer."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Give or volunteer",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund a child's place",
+                "Volunteer to teach"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/empowerment": {
+      "path": "/our-work/empowerment",
+      "title": "Empowerment",
+      "description": "Skills training, mentorship and a community innovation challenge for young adults in Gosa and Kunyami — Kyami District, AMAC, FCT Abuja.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Empowerment"
+            },
+            {
+              "kind": "subheading",
+              "text": "Agency, leadership and the practical capacity to act. We train the people already doing the work."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "The need",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Young adults in these communities are not short of willingness. They are short of training, equipment and a route from willing to employed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The volunteers who ran the registration desk at our February outreach in Kunyami are the clearest example. They gave a day of skilled work and had nowhere to take it next."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Our approach",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We recruit from the people who already turn up, train them in a marketable skill over months rather than days, and stay with them after the training ends."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Every session pairs a technical skill with a human one. Prototyping with resourcefulness. Costing with financial literacy. Pitching with public speaking."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Programmes",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "ComPart — the Community Participation Programme. Fortnightly training in graphics and media, printing and branding, or public health.",
+                "Community Innovation Challenge — young adults identify a problem in their own community and build a solution, with grants for the strongest proposals."
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Empowerment in numbers",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "12 completed the first ComPart cohort",
+                "3 learning streams",
+                "8 public health sessions delivered",
+                "₦2m budget for the first innovation challenge"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Access",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to everyone in the community."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "One story",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "From the registration desk to a graduation"
+            },
+            {
+              "kind": "paragraph",
+              "text": "The young people who staffed our February outreach in Kunyami became the first ComPart cohort. They met fortnightly from February to June, and on 7 June they presented designs, media projects and community advocacy plans. The public health stream went on to plan and run Operation Keep Kunyami Clean."
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Give or volunteer",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund a cohort",
+                "Volunteer as a facilitator"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/empowerment/compart": {
+      "path": "/our-work/empowerment/compart",
+      "title": "ComPart — Community Participation Programme",
+      "description": "Free skills training for young adults in Kunyami, Kyami District, AMAC, FCT Abuja. Graphics and media, printing and branding, or public health.",
+      "breadcrumb": "Our work › Empowerment › ComPart",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "ComPart"
+            },
+            {
+              "kind": "subheading",
+              "text": "The Community Participation Programme. Free skills training for young adults, over months rather than days."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "ComPart takes young people who have already volunteered with us and trains them in a skill they can earn from. It meets fortnightly and runs across several months, not a weekend."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The first cohort came straight out of a medical outreach. The young people from Kunyami who worked the service units on 14 February 2026 became the group that started training that same month."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Young adults from the community, recruited from those who have volunteered with MedWHOLE before. Free, and open to everyone in the community."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "The three streams",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Graphics design, photography and videography — multimedia skills, visual storytelling and digital content",
+                "Printing and graphic branding design — commercial branding, layout and production",
+                "Public Health Ambassadors — health awareness, and connecting local health needs to action"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "How it works",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Fortnightly meetings",
+                "Every meeting opens with a thirty-minute teaching session",
+                "Practical work in the chosen stream",
+                "A graduation at which participants present what they have made",
+                "Continued mentoring after the cohort ends"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "What the Public Health stream covered",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Identifying and prioritising community health problems, simple data collection, planning and budgeting an intervention, delivering health education, and promoting handwashing, safe water, sanitation and food hygiene."
+            },
+            {
+              "kind": "paragraph",
+              "text": "They then applied it. Operation Keep Kunyami Clean was a sanitation activity the stream planned and delivered themselves."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "5 registered in the stream",
+                "3 completed",
+                "8 sessions delivered"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Events",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Pioneer cohort — February to June 2026, Kunyami",
+                "Graduation and project presentation day — 7 June 2026, Kunyami",
+                "Operation Keep Kunyami Clean — Q2 2026, Kunyami"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Results to date",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Twelve people completed the pioneer cohort. At the graduation they presented designs, media projects and community advocacy frameworks — work they can show to a client, not certificates of attendance."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "12 graduates",
+                "3 streams",
+                "5 months",
+                "1 community sanitation project delivered"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "label": "What comes next",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The next phase expands into other Airport Road communities, with the training adapted to participants' reading levels and working hours — the clearest lesson from the first cohort."
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "label": "Give or volunteer",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund a cohort",
+                "Volunteer as a facilitator"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/our-work/empowerment/community-innovation-challenge": {
+      "path": "/our-work/empowerment/community-innovation-challenge",
+      "title": "Community Innovation Challenge",
+      "description": "Young adults in Gosa identify a problem in their own community and build a solution, with training, mentorship and grants. Free to enter.",
+      "breadcrumb": "Our work › Empowerment › Community Innovation Challenge",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Community Innovation Challenge"
+            },
+            {
+              "kind": "subheading",
+              "text": "Ideas that heal."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Young adults in Gosa choose a problem in their own community, and we back them to solve it. Training, mentors, and grants for the strongest proposals."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What it is",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The Challenge runs over several weeks. Participants are recruited from the community, trained across a two-day bootcamp, mentored through prototyping and pitching, and then present to judges and the community. The strongest proposals receive grants."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We do not arrive with the problem list. Participants assess their own community and choose what to work on, within three tracks."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who it is for",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Aged 18 to 30",
+                "Secondary school leaving certificate, minimum",
+                "A member of the Gosa community",
+                "Has an idea for making the community better, or is simply passionate about it"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to everyone in the community. You do not need to arrive with a team — teams are formed on the first day of the bootcamp."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "The three tracks",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Waste management",
+                "Water access",
+                "Maternal and child health"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "All three are health problems, which is why a health alliance runs an innovation challenge. Participants are not delivering health services. They are solving the problems we otherwise treat clinically."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "How it works",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Recruitment — register by phone, SMS, or in person at the Gosa liaison office",
+                "Bootcamp — two days. Orientation, the tracks, problem understanding, design thinking, empathy mapping and ideation. Teams are formed.",
+                "Hackathon weeks — prototyping, costing, sustainability planning, pitch drafting, mentor clinics",
+                "Mock ceremony — a full dress rehearsal before judges",
+                "Close-out ceremony — final presentations to judges and the community",
+                "Grants and execution — funding and continued guidance for winning projects"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Two things at once, every day",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Every day of the programme runs a technical track and a capacity-development track together. Prototyping with resourcefulness. Costing with financial literacy. Pitch drafting with public speaking. Final deadline pressure with managing stress."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The full capacity curriculum covers teamwork and communication, creative and critical thinking, resourcefulness, financial literacy and costing, leadership and decision-making, public speaking, confidence-building, taking feedback, and time management."
+            },
+            {
+              "kind": "quote",
+              "text": "Every day pairs a hard skill with a human one."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "What participants get",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Free training on how to build your idea",
+                "Mentors to guide you",
+                "Cash support to develop the best ideas",
+                "A certificate of participation"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Events — Gosa 2026, the pilot edition",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Training of trainers — 29 July 2026",
+                "Auditions — 3 August 2026, Anglican Church, Gosa",
+                "Bootcamp — 6 and 7 August 2026",
+                "Hackathon week one — 10 to 14 August 2026",
+                "Hackathon week two — 17 to 20 August 2026",
+                "Mock ceremony — 25 August 2026",
+                "Close-out ceremony — 27 August 2026"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "label": "What a pilot edition costs",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Two million naira covers one edition: recruitment, the bootcamp, the mentorship weeks, the ceremonies and the grant pool."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "₦2,000,000 per edition"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "label": "Partner or volunteer",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Three ways to support an edition: fund it, facilitate on it, or help with the operational load of running it."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund an edition",
+                "Volunteer as a facilitator",
+                "Partner with us"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/impact": {
+      "path": "/impact",
+      "title": "Impact",
+      "description": "What MedWHOLE has done in Gosa, Kunyami and Toge — Kyami District, AMAC, FCT Abuja — with dates, methods and the figures behind each claim.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Impact"
+            },
+            {
+              "kind": "subheading",
+              "text": "Every figure here is dated, sourced, and traceable to a named community on a named day."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Headline figures",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "506 people seen in one day in a community with no clinic — Kunyami, 14 February 2026",
+                "670 children and teenagers in class on one morning — both sites, August 2026",
+                "196 pupils nutritionally screened — Toge, 30 June 2026",
+                "7 surgeries identified, completed and recovered — February to June 2026"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Health",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "At Kunyami on 14 February 2026 we saw 506 people in a single day: 274 children and 232 adults. The community has no health facility, so for most of them this was the first consultation available to them in their own village."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The day produced 697 clinical services — 450 deworming treatments, 136 laboratory investigations, 39 electrocardiograms, 47 eye consultations and 25 pairs of medicated glasses."
+            },
+            {
+              "kind": "paragraph",
+              "text": "At Toge on 30 June, 196 pupils were screened and 193 dewormed. Eighteen were undernourished. One teacher was referred for high blood pressure."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Literacy",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "In August 2026, more than 700 children and teenagers attended free Summer School across two communities. On the Thursday of the first week, 670 were in class at once."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Good News Club began with twenty-one children in 2021. Three hundred and five were present at its fifth anniversary in February 2026."
+            },
+            {
+              "kind": "paragraph",
+              "text": "More than fifty children have returned to school through the Back-to-School Scholarship since 2021."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Empowerment",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Twelve people completed the first ComPart cohort between February and June 2026, across three learning streams. The public health stream delivered eight sessions and then planned and ran a community sanitation project."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The first Community Innovation Challenge ran in Gosa in August 2026. Its outcomes are being compiled."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Replication",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "2026: the same model, a second community"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Good News Club and Summer School were both built in Gosa over five years. In 2026 both opened in Kunyami."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Good News Club Kunyami drew 168 children to its first meeting on 6 February. Summer School Kunyami drew 122 on its first morning in August and 240 by its fourth — fifty-six per cent of what Gosa reaches in its fifth year, inside one week."
+            },
+            {
+              "kind": "quote",
+              "text": "Five years proving it in one community. One year moving it into the next."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "2 communities",
+                "2 programmes replicated",
+                "168 on day one at the new club",
+                "+97% growth across Kunyami's first week"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Impact by programme",
+          "blocks": []
+        },
+        {
+          "number": 8,
+          "label": "How we count",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We publish three measures and never add them together."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Unique people counts distinct individuals. Attendances counts visits — the same child on four mornings is four attendances and one person. Services counts what was delivered."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Where our own records disagree, we publish the figure we can reconcile and say which one it is. At Toge, our report's column totals did not match its component rows, so this site uses the component sums: 196 screened and 193 dewormed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "One measurement limitation is worth naming. Nutritional status at Toge was assessed using BMI-for-Age Z-score, the WHO standard for school-age children, but exact dates of birth were not on record, so each child's age was taken at the midpoint of their stated year. The figures are a close approximation. We are capturing dates of birth from now on."
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "label": "Stories",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Seven referrals, seven recoveries — Kunyami to Garki, February to June 2026",
+                "Twenty-one children to three hundred and five — Good News Club, Gosa, 2021 to 2026",
+                "From the registration desk to a graduation — ComPart, Kunyami, 2026"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "label": "Reports and downloads",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Quarterly programme reports",
+                "Annual report",
+                "Financial summary",
+                "Organisational profile"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "label": "Where we are heading",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A health post along the Airport Road corridor. Water, sanitation and river-safety work in Toge. ComPart in more corridor communities. Exact dates of birth captured at every screening so our nutrition figures become exact."
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "label": "Doors",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Give",
+                "Partner"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/communities/gosa": {
+      "path": "/communities/gosa",
+      "title": "Gosa",
+      "description": "MedWHOLE's first community. Free education, health outreaches and a community innovation challenge in Gosa, Kyami District, AMAC, FCT Abuja, since 2021.",
+      "breadcrumb": "Where we work › Gosa",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Gosa"
+            },
+            {
+              "kind": "subheading",
+              "text": "Our first community, and where everything was built."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "~4,000 people",
+                "Since 2021",
+                "Kyami District, AMAC, FCT Abuja"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "The community",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Gosa is a farming settlement of around four thousand people on the Nnamdi Azikiwe Airport Road, in Kyami District, AMAC. It sits at the edge of a fast-growing part of Abuja, close to major infrastructure, and the interior streets have very little of it."
+            },
+            {
+              "kind": "paragraph",
+              "text": "When we started working here in 2021, quality healthcare and schooling were hard to reach, housing was poor, potable water was limited, and there was almost no waste collection — including along the stream much of the community draws from."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Five years on, Gosa is where most of what MedWHOLE does was first built and proved it worked."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Literacy",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "MedWHOLE Academy began here, with twenty-one children in a church hall in 2021."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A Good News Club and a reading club now meet weekly, giving children somewhere to read and ask questions outside school hours. Every August, free Summer School runs for the whole month: mathematics, English and reading each morning, and a skills lab where children learn a trade they can actually use. In 2026 it taught more than four hundred and fifty."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "21 children in 2021",
+                "450+ at Summer School 2026",
+                "190 at Good News Club each week",
+                "50+ children returned to school"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "MedWHOLE Academy"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Health",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We run free outreaches in Gosa, treat what can be treated on the day, follow up the people who need checking on, and refer what needs a hospital."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The following-up is the part that decides whether an outreach mattered. We are now working toward sustained health provision for Gosa and the settlements around it, rather than returning with a tent every few months."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Medical Outreaches",
+                "Health Systems Strengthening"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Empowerment",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The Community Innovation Challenge belongs to Gosa. Young adults from the community are screened, placed in teams, and supported by facilitators to take an idea from a problem they have noticed to a costed solution they can present — waste management, water access, maternal and child health."
+            },
+            {
+              "kind": "paragraph",
+              "text": "They are not asked to comment on their community's problems. They choose which one to work on, and they build the answer."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "Ages 18–30",
+                "3 challenge tracks",
+                "₦2m per edition"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Community Innovation Challenge"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Where we have got to",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "In Gosa, MedWHOLE is a household name — for the reading clubs, the summer school, the outreaches and the innovation challenge, and for what has happened to the children and young adults who have been through them."
+            },
+            {
+              "kind": "quote",
+              "text": "Twenty-one children in a church hall. More than four hundred at Summer School five years later."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Join our work in Gosa",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Join our work in Gosa"
+            },
+            {
+              "kind": "paragraph",
+              "text": "There is always something here that needs doing. Teach a Summer School band in August. Facilitate a team through the innovation challenge. Bring a clinical skill to an outreach. Sponsor a pillar for a year, or write to us and we will tell you plainly what is short."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Volunteer in Gosa",
+                "Fund our work in Gosa",
+                "Talk to us"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/communities/kunyami": {
+      "path": "/communities/kunyami",
+      "title": "Kunyami",
+      "description": "Free education, health outreaches and skills training in Kunyami, Kyami District, AMAC, FCT Abuja. Our second community, since February 2026.",
+      "breadcrumb": "Where we work › Kunyami",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Kunyami"
+            },
+            {
+              "kind": "subheading",
+              "text": "Where we found out whether any of this works anywhere else."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "3,000+ people",
+                "Since February 2026",
+                "Kyami District, AMAC, FCT Abuja"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "The community",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Kunyami is a short distance from Gosa, on the same Airport Road, in the same district. It is a farming community of more than three thousand people, built on sloping ground with poor roads, and a large share of its population are children and young people."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It has no health facility. Care has meant travelling elsewhere or going without, and most households have no potable water, which shows up in the water-borne infections we see. Non-communicable disease is on record here too. Schooling is hard for children and young people to hold on to."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We came in February 2026 with programmes we had already spent five years building in Gosa."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Health",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Our first day here was a free medical outreach on 14 February 2026. Five hundred and six people were seen: registration and triage, then consultation, laboratory, nursing, eye care, counselling and pharmacy."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Seven people were found to need surgery. All seven were referred to Gibonna Women's Hospital in Garki, all seven were operated on, and all seven recovered without complications. That chain — outreach to referral to recovery — is what we mean by following through."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We are working toward sustained, accessible provision here rather than periodic visits."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "506 people seen in one day",
+                "697 clinical services delivered",
+                "7 surgeries, 7 recoveries, 0 complications"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Medical Outreaches",
+                "Continuity of Care"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Literacy",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Good News Club opened in Kunyami on 6 February 2026 and drew 168 children on its first Friday. Summer School followed in August, the first time it had ever run outside Gosa."
+            },
+            {
+              "kind": "paragraph",
+              "text": "It started with 122 children on the Monday and reached 240 by the Thursday, and it kept climbing — across the month it averaged 280 a day. Children who had fallen behind were given study support, which has made going back to class easier to sustain."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "168 at the first club meeting",
+                "280 a day at the first Summer School",
+                "122 → 240 across its first four mornings"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "MedWHOLE Academy",
+                "Summer School — Kunyami 2026"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Empowerment",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The young people from Kunyami who worked the service units at the February outreach became the first ComPart cohort. They met fortnightly from February to June, training in graphics and media, printing and branding, or public health."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Twelve completed it. At the graduation they presented work they can show to a client, and the public health stream went on to plan and run a community sanitation project themselves."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "12 graduates",
+                "3 learning streams",
+                "5 months"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "ComPart"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "What this year proved",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Good News Club and Summer School were both built in Gosa over five years. Both opened in Kunyami inside twelve months, and both worked immediately."
+            },
+            {
+              "kind": "paragraph",
+              "text": "That is the answer to the question anyone funding scale asks first: does this work anywhere other than where you built it."
+            },
+            {
+              "kind": "quote",
+              "text": "Five years proving it in one community. One year moving it into the next."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Join our work in Kunyami",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Join our work in Kunyami"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Kunyami is a year old and growing faster than anything we have run before. It needs teachers each August, facilitators for the next ComPart cohort, clinical volunteers for the outreaches, and funding for a community that still has no health facility of its own."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Volunteer in Kunyami",
+                "Fund our work in Kunyami",
+                "Talk to us"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/communities/toge": {
+      "path": "/communities/toge",
+      "title": "Toge",
+      "description": "School health, screening and deworming in Toge, Kyami District, AMAC, FCT Abuja. Our newest community, since June 2026.",
+      "breadcrumb": "Where we work › Toge",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Toge"
+            },
+            {
+              "kind": "subheading",
+              "text": "Our newest community. We are at the beginning here."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "~4,000 people",
+                "1,000+ households",
+                "Since June 2026",
+                "Kyami District, AMAC, FCT Abuja"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "The community",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Toge is about the same size as Gosa — more than a thousand households, around four people to a home, so roughly four thousand people in all. Most of them are women and children."
+            },
+            {
+              "kind": "paragraph",
+              "text": "There are a few primary schools and no secondary school, so a child who finishes primary here has nowhere in the community to go next. There is no hospital serving the settlement."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Health",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We have run outreaches in Toge, and in June 2026 we took a full health programme into LEA Primary School: a general assembly, then separate sessions by age and sex, then screening and deworming."
+            },
+            {
+              "kind": "paragraph",
+              "text": "One hundred and ninety-six pupils were screened and 193 dewormed. Eighteen were undernourished, five times more often among boys than girls. Nine teachers were screened and one was referred for high blood pressure."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The older girls' session covered hygiene and how to identify, resist and report abuse. The boys' session covered hygiene, safe toilet practice, and the risks of swimming in the river — drowning, and the schistosomiasis we had already found in neighbouring Kunyami."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "196 pupils screened",
+                "193 dewormed",
+                "18 undernourished",
+                "9 teachers screened",
+                "1 referral"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "School Health Interventions",
+                "Nutrition"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "What comes next",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "We are talking to the people who hold things together here — school leadership, the local education authority, community leaders — about what a longer presence should look like. Water, sanitation, hygiene and river safety are the priorities on record."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We would rather agree that with Toge than arrive with a plan."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Join our work in Toge",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Join our work in Toge"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Toge is the community where you can still shape what we do, because very little of it is fixed. We are working out with its leaders what a longer presence should look like, and water, sanitation, hygiene and river safety are the priorities on record."
+            },
+            {
+              "kind": "paragraph",
+              "text": "A partner or volunteer who comes in now helps set the direction rather than staffing a plan that already exists."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Partner with us in Toge",
+                "Volunteer in Toge",
+                "Talk to us"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/get-involved": {
+      "path": "/get-involved",
+      "title": "Get Involved",
+      "description": "Three ways to take part in MedWHOLE's work: give, volunteer, or partner.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Get involved"
+            },
+            {
+              "kind": "subheading",
+              "text": "Three ways in."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Three doors",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Give — fund a child's place, an outreach day, or a full programme",
+                "Volunteer — teach, mentor, or bring a clinical skill",
+                "Partner — for institutions, companies and funders"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Give",
+                "Volunteer",
+                "Partner"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Something else",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Sponsorship and community support sit inside Partner. Mentorship sits inside Volunteer. For anything that does not fit, contact us."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Contact"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/give": {
+      "path": "/give",
+      "title": "Give",
+      "description": "Fund a child's place at Summer School, a free medical outreach, or a skills cohort in FCT Abuja. Card, transfer, and multi-currency giving.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Give"
+            },
+            {
+              "kind": "subheading",
+              "text": "A gift here pays for a specific thing in a specific community. Choose what it funds."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What your gift does",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "A child's place at Summer School for four weeks",
+                "A free medical outreach day in a community with no clinic",
+                "A surgical referral followed through to recovery",
+                "A child's return to school through the scholarship",
+                "One ComPart cohort, start to graduation",
+                "One Community Innovation Challenge edition — ₦2,000,000"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "The form",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Amount — with suggested values and a free field",
+                "Frequency — one-off or monthly",
+                "Designation — Academy, Health, Empowerment, or a named programme",
+                "Your details"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Payment",
+          "blocks": []
+        },
+        {
+          "number": 5,
+          "label": "Bank transfer",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Give by bank transfer"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Account name: MedWHOLE Alliance for Health and Development · Fidelity Bank"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Naira — 4011482641",
+                "US dollar — 5250381250",
+                "Pound sterling — 5250381346"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Use your name as the transfer reference, then write to info@medwhole.org so we can match your gift and send your receipt."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "What happens next",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "You receive a receipt",
+                "Your gift goes to the programme you designated",
+                "We will not add you to a marketing list",
+                "Programme reporting is published on the Impact page"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Other ways to give",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Bank transfer, including US dollar and pound sterling accounts",
+                "In-kind — books, materials, medical supplies, equipment",
+                "Corporate and CSR giving"
+              ]
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Partner with us"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Cross-link",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "See what the money did"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/volunteer": {
+      "path": "/volunteer",
+      "title": "Volunteer",
+      "description": "Teach, mentor or bring a clinical skill to MedWHOLE's work in Gosa, Kunyami and Toge — Kyami District, AMAC, FCT Abuja.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Volunteer"
+            },
+            {
+              "kind": "subheading",
+              "text": "Our Summer School programme needs six facilitators every morning in August. That is one of the things we need."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What we need",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Teach — Summer School runs six class bands at once in Gosa and five in Kunyami, Monday to Thursday mornings through August",
+                "Mentor — ComPart and the Community Innovation Challenge need facilitators across several weeks",
+                "Clinical — outreaches need consultation, laboratory, nursing, eye care and pharmacy",
+                "Media — photography and video, with consent discipline",
+                "Logistics — registration, triage flow, materials"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "What it asks of you",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Be honest with yourself about time. Summer School is four weeks of mornings. An outreach is one long day. A ComPart stream is fortnightly for several months."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We would rather have you for one outreach you turn up to than four weeks you cannot sustain."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "What you get",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Training before you start, a named person you report to, and a role rather than a crowd. Several of our own facilitators began as community volunteers at a single outreach."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Safeguarding",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Everyone working with children receives our code of conduct before they start."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Safeguarding"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Apply",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Apply to volunteer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/partner": {
+      "path": "/partner",
+      "title": "Partner with MedWHOLE",
+      "description": "Programme funding, technical and institutional partnership with a non-profit delivering health, education and skills work in Nigeria since 2021.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Partner with MedWHOLE"
+            },
+            {
+              "kind": "subheading",
+              "text": "Faith-informed action grounded in excellence. What partnership looks like, and what it costs."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "What we can show you",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Five years of delivery in one community, and a model that transferred to a second community in 2026 and worked immediately."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Good News Club and Summer School were both built in Gosa from 2021. Both opened in Kunyami in 2026. The club drew 168 children to its first meeting; the summer school reached fifty-six per cent of Gosa's fifth-year attendance within its first week."
+            },
+            {
+              "kind": "paragraph",
+              "text": "That is the answer to the question funders ask before funding scale: does this work anywhere other than where you built it."
+            },
+            {
+              "kind": "figures",
+              "items": [
+                "5 years in Gosa",
+                "2 programmes replicated in 2026",
+                "3 communities",
+                "506 people seen in one day"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "One outcome, followed through",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "At a free outreach in Kunyami on 14 February 2026, seven people were found to need surgery. Each was referred to Gibonna Women's Hospital in Garki. All seven were operated on. All seven recovered without complications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Most organisations our size can show you the outreach. We can show you what happened to the people in it, months later."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Types of partnership",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Programme funding — fund a named programme or edition",
+                "Technical — clinical, education or monitoring expertise",
+                "Institutional — government, multilateral and regulatory relationships",
+                "Corporate and CSR",
+                "Faith-based — churches and faith networks"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Fund a programme",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Named programmes with costs attached, so a partner can point at something specific."
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Community Innovation Challenge — ₦2,000,000 per edition",
+                "Summer School, per site, per season — cost outstanding",
+                "Medical outreach, per day — cost outstanding",
+                "ComPart cohort, start to graduation — cost outstanding",
+                "Health post on the Airport Road corridor — in development"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Existing partners",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Gibonna Women's Hospital, Garki — surgical referral",
+                "AMAC Local Education Authority — clearance for school health work",
+                "Vine Heritage Home — outreach host",
+                "Child Evangelism Fellowship — Vacation Bible School health and welfare outreach",
+                "Christ Word Centre, Gosa — where Good News Club began"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "How we account for funds",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Every event records what it did on the day, and those records are what our published figures are built from. Programme budgets are set and approved before delivery, and spending is recorded against them."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Accountability"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "Our faith, and our partners",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Our work is motivated by Christian faith. Our services are open to everyone, without condition and without regard to faith, background or belief."
+            },
+            {
+              "kind": "paragraph",
+              "text": "We work with secular, government and faith-based partners on the same terms, and no beneficiary of a partnership is ever asked what they believe."
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "label": "Downloads",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Organisational profile",
+                "Latest quarterly report",
+                "Programme one-pagers"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "label": "Talk to us",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Talk to us"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Write to our partnerships desk at partner@medwhole.org with a line on who you are and what you have in mind, or call +234 818 980 0001. We will come back to you to arrange a conversation."
+            },
+            {
+              "kind": "buttons",
+              "items": [
+                "Request a conversation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/contact": {
+      "path": "/contact",
+      "title": "Contact",
+      "description": "How to reach MedWHOLE Alliance for Health and Development in FCT Abuja, by phone, email or in person.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Contact"
+            },
+            {
+              "kind": "subheading",
+              "text": "By phone, by email, or in person at the Gosa office."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Reach us",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Email — info@medwhole.org",
+                "Phone — +234 818 980 0001",
+                "In person — the Gosa liaison office, Shop 6, Gosa Shopping Complex — or the MedWHOLE Resource Centre, 7 Nissi Drive, Fort Royal. Both on Nnamdi Azikiwe Airport Road, Kyami District, AMAC, FCT Abuja"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Where we work",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Our work today is in Gosa, Kunyami and Toge — all three in Kyami District, AMAC, FCT Abuja, along the Nnamdi Azikiwe Airport Road corridor."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Specific routes",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Partnership and funding enquiries — see Partner",
+                "Volunteering — see Volunteer",
+                "A safeguarding concern — see Safeguarding",
+                "Press"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Form",
+          "blocks": []
+        }
+      ]
+    },
+    "/events": {
+      "path": "/events",
+      "title": "Events",
+      "description": "Upcoming and past MedWHOLE events in Gosa, Kunyami and Toge — Kyami District, AMAC, FCT Abuja. Dates, locations, and whether it is free.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Events"
+            },
+            {
+              "kind": "subheading",
+              "text": "What is coming up, where, and what it costs to attend. Almost always nothing."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Filters",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Pillar — Health, Literacy, Empowerment",
+                "Programme",
+                "Community — Gosa, Kunyami, Toge",
+                "Upcoming or past"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Each listing shows",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Event name",
+                "Date and start time",
+                "Community and venue",
+                "Parent programme",
+                "Status — upcoming, running, completed",
+                "Free to attend, stated on the card itself"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/news": {
+      "path": "/news",
+      "title": "News",
+      "description": "Updates and reports from MedWHOLE's work in FCT Abuja.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "News"
+            },
+            {
+              "kind": "subheading",
+              "text": "Updates and reports from the work."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "The feed",
+          "blocks": []
+        },
+        {
+          "number": 3,
+          "label": "Categories",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Programme reports",
+                "Quarterly reports",
+                "Partnerships",
+                "Announcements"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/events/summer-school-gosa-2026": {
+      "path": "/events/summer-school-gosa-2026",
+      "title": "Summer School — Gosa, August 2026",
+      "description": "Four weeks of free lessons for children and teenagers in Gosa, Kyami District, AMAC, FCT Abuja, 3 to 31 August 2026. Mondays to Thursdays, 9am to 12pm. Free.",
+      "breadcrumb": "Academy › Summer School › Gosa 2026",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Summer School — Gosa 2026"
+            },
+            {
+              "kind": "subheading",
+              "text": "3–31 August 2026 · Gosa, Kyami District, AMAC, FCT Abuja · Fifth edition · Completed"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Details",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Four weeks of free lessons, Monday to Thursday, 9am to 12pm. Mathematics, English and reading every morning, a memory verse, and from the second week a skills lab. Good News Club met on Saturdays at 3pm."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The final week held exams on 24 August, a skills and memory verse competition on the 25th, talks on career, health and mental health on the 26th, the closing party on the 27th, and games on the 31st."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to every child in the community."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Numbers",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "450+ pupils",
+                "430 present on the busiest morning of week one",
+                "1,570 attendance-days in week one",
+                "6 class bands",
+                "Primary 1 to SS 3"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "Who was there",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Six class bands ran at once. About fifty-seven per cent of pupils were primary age and forty-three per cent secondary. The largest single band was JSS 1 and 2, which reached 105 pupils."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Also delivered",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The Health Service team ran deworming during the programme. Parents gave written consent in advance."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Related",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Summer School",
+                "Summer School — Kunyami 2026",
+                "MedWHOLE Academy"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "CTA",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund next year's place",
+                "Volunteer to teach"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/events/summer-school-kunyami-2026": {
+      "path": "/events/summer-school-kunyami-2026",
+      "title": "Summer School — Kunyami, August 2026",
+      "description": "The first Summer School in Kunyami, Kyami District, AMAC, FCT Abuja, 3 to 28 August 2026. Free lessons for children and teenagers, Mondays to Thursdays, 9am to 12pm.",
+      "breadcrumb": "Academy › Summer School › Kunyami 2026",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Summer School — Kunyami 2026"
+            },
+            {
+              "kind": "subheading",
+              "text": "3–28 August 2026 · Kunyami, Kyami District, AMAC, FCT Abuja · First edition · Completed"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Details",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The first Summer School in Kunyami, running at the same time as Gosa's fifth. Monday to Thursday, 9am to 12pm. Mathematics, English and reading, a memory verse, and a skills lab from the second week — reading assessment, bead making, liquid soap and stool making. Good News Club met on Fridays at 4pm."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Exams were on 24 August, the competition on the 25th, talks on career and health on the 26th, and the closing party the same day. Games ran on the 24th."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to every child in the community."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Numbers",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "280 average daily attendance",
+                "122 on the first morning",
+                "240 by the fourth",
+                "753 attendance-days in week one",
+                "5 class bands"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "What the first week showed",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Attendance nearly doubled across four days and had not stopped rising when the week ended. Gosa, in its fifth year, filled by its second morning and held steady. Kunyami was still being discovered."
+            },
+            {
+              "kind": "paragraph",
+              "text": "By the fourth morning Kunyami was at fifty-six per cent of Gosa's attendance, in its first week of existence. It kept climbing after that: across the month it averaged 280 children a day."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Also delivered",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The Health Service team ran deworming during the programme, with written parental consent obtained in advance."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "Related",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Summer School",
+                "Summer School — Gosa 2026",
+                "MedWHOLE Academy"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "CTA",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund next year's place",
+                "Volunteer to teach"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/events/kunyami-health-outreach-feb-2026": {
+      "path": "/events/kunyami-health-outreach-feb-2026",
+      "title": "Kunyami Health Outreach, 14 February 2026",
+      "description": "A free one-day medical outreach in Kunyami, Kyami District, AMAC, FCT Abuja. 506 people seen in a community with no health facility.",
+      "breadcrumb": "Our work › Health › Medical Outreaches › Kunyami, February 2026",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Kunyami Health Outreach"
+            },
+            {
+              "kind": "subheading",
+              "text": "14 February 2026 · Kunyami, Kyami District, AMAC, FCT Abuja · Completed"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Details",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Kunyami has no health facility. Care has meant travelling elsewhere or going without."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Everyone who came passed through registration and triage, then moved between service units — consultation, laboratory, nursing, eye care, counselling and pharmacy. Cases needing more than a day could provide were referred."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to everyone in the community."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Numbers",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "506 people seen",
+                "274 children",
+                "232 adults",
+                "450 received deworming treatment",
+                "136 laboratory investigations",
+                "39 electrocardiograms",
+                "47 eye patients seen",
+                "25 pairs of medicated glasses issued",
+                "7 surgical cases identified and referred"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "What happened next",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "All seven surgical cases were referred to Gibonna Women's Hospital in Garki. All seven operations were carried out. All seven recovered without complications."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The young people from Kunyami who worked the service units that day became the first ComPart cohort, which began training the same month."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Related",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Medical Outreaches",
+                "Continuity of Care",
+                "ComPart"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "CTA",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund an outreach",
+                "Volunteer a clinical skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/events/toge-school-health-jun-2026": {
+      "path": "/events/toge-school-health-jun-2026",
+      "title": "School Health Intervention — Toge, 30 June 2026",
+      "description": "Health education, nutritional screening and deworming at LEA Primary School, Toge, Kyami District, AMAC, FCT Abuja. 196 pupils screened, 193 dewormed.",
+      "breadcrumb": "Our work › Health › School Health Interventions › Toge, June 2026",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "School Health Intervention — Toge"
+            },
+            {
+              "kind": "subheading",
+              "text": "30 June 2026 · LEA Primary School, Toge, Kyami District, AMAC, FCT Abuja · Completed"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Details",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A general assembly for the whole school, then separate sessions by age and sex, then screening and deworming."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The younger pupils covered handwashing, bathing, tooth brushing and basic nutrition. Older boys covered personal hygiene, safe toilet practice and the risks of swimming in the river — drowning and schistosomiasis. Older girls covered personal hygiene, toilet safety, oral hygiene, and how to identify, resist and report abuse or threats."
+            },
+            {
+              "kind": "paragraph",
+              "text": "Free, and open to every child in the school."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Numbers",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "196 pupils screened",
+                "193 dewormed",
+                "195 with complete measurements",
+                "9 teachers screened",
+                "3 refusals recorded and respected",
+                "1 referral"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "What we found",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "169 normal BMI-for-age",
+                "14 thin",
+                "4 severely thin",
+                "7 overweight",
+                "1 obese"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Undernutrition was five times more common among boys than girls — fifteen cases to three. No pupil presented with an illness needing urgent treatment on the day. Localised skin lesions and probable fungal scalp infections were observed."
+            },
+            {
+              "kind": "paragraph",
+              "text": "One teacher, a woman of 49, had moderately elevated blood pressure. She was counselled and referred to the Primary Health Centre in Kuje, where she lives."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "How we measured it",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Nutritional status was assessed using BMI-for-Age Z-score, the standard the World Health Organization recommends for school-age children. Exact dates of birth were not on record, so each child's age was taken at the midpoint of their stated year. The figures are a close approximation rather than an exact clinical score."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "How it was arranged",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "A courtesy visit to school leadership in March 2026, clearance from the AMAC Local Education Authority in April, then a pause during a teachers' union strike. The programme resumed after it was resolved, under a new head teacher."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The budget was reduced during planning. Individual clinical consultations were dropped and the team moved to tiered health education with screening — which is how 196 pupils were reached rather than a fraction of them."
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "label": "Related",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "School Health Interventions",
+                "Nutrition",
+                "Continuity of Care"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "label": "CTA",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund a school intervention",
+                "Volunteer a clinical skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/events/compart-graduation-jun-2026": {
+      "path": "/events/compart-graduation-jun-2026",
+      "title": "ComPart Graduation, 7 June 2026",
+      "description": "The first ComPart cohort in Kunyami, Kyami District, AMAC, FCT Abuja, presented their designs, media projects and community advocacy work on 7 June 2026.",
+      "breadcrumb": "Our work › Empowerment › ComPart › Graduation, June 2026",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "ComPart Pioneer Cohort Graduation"
+            },
+            {
+              "kind": "subheading",
+              "text": "7 June 2026 · Kunyami, Kyami District, AMAC, FCT Abuja · Completed"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Details",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The first ComPart cohort finished where it had been heading since February: presenting work. Graduates showed designs, media projects and community advocacy frameworks they had built across the programme."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The cohort had come straight out of the 14 February medical outreach in the same community. They met fortnightly from February to June across three streams — graphics and media, printing and branding, and public health."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Numbers",
+          "blocks": [
+            {
+              "kind": "figures",
+              "items": [
+                "12 graduates",
+                "3 streams",
+                "5 months",
+                "8 public health sessions delivered"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "What followed",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "The public health stream planned and ran Operation Keep Kunyami Clean, a sanitation activity in their own community."
+            },
+            {
+              "kind": "paragraph",
+              "text": "The next phase takes ComPart into other Airport Road communities, with training adapted to participants' reading levels and working hours."
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "Related",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "ComPart",
+                "Kunyami Health Outreach",
+                "The Made Whole journey"
+              ]
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "CTA",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Fund a cohort",
+                "Volunteer as a facilitator"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/safeguarding": {
+      "path": "/safeguarding",
+      "title": "Safeguarding",
+      "description": "How MedWHOLE protects the children and vulnerable adults in its programmes, and how to report a concern.",
+      "breadcrumb": "",
+      "sections": [
+        {
+          "number": 1,
+          "label": "Hero",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "Safeguarding"
+            },
+            {
+              "kind": "subheading",
+              "text": "We work with hundreds of children every week. This is how we protect them."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "label": "Our commitment",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "More than seven hundred children and teenagers attended our Summer School programme in August 2026. Protecting them is a condition of running the programmes at all, not an add-on to them."
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "label": "Who this covers",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Every child and vulnerable adult who takes part in a MedWHOLE programme, and every member of staff, facilitator, volunteer and partner who works with them."
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "label": "What we do in practice",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                "Written parental consent before any medical intervention involving a child. Before deworming at Summer School in August 2026, consent forms went to the families of every child across both sites.",
+                "Refusals are recorded and respected. At the Toge school health intervention in June, three parents declined deworming for their children. The refusals were logged and the children were not treated.",
+                "A code of conduct for facilitators, delivered at the start of every programme. The Community Innovation Challenge covered it on the first day of its bootcamp.",
+                "Age- and sex-appropriate teaching. At Toge, older girls were taught personal hygiene and how to identify, resist and report abuse or threats. Older boys were taught hygiene, safe toilet practice and the risks of swimming in the river.",
+                "Sex education and health hygiene inside Summer School, taught in separate age bands.",
+                "Photography consent. No image of a child is published without written consent from a parent or guardian."
+              ]
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "label": "If you are worried about a child",
+          "blocks": [
+            {
+              "kind": "heading",
+              "text": "If you are worried about a child"
+            },
+            {
+              "kind": "paragraph",
+              "text": "Tell us straight away. Anyone can raise a concern — a parent, a child, a volunteer, a teacher or a neighbour. If a child is in immediate danger, contact the police first."
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Email our Safeguarding Lead — safeguarding@medwhole.org",
+                "Call — +234 818 980 0001"
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Every report is acknowledged within two hours. We then make sure the child is safe, refer to medical or statutory services where that is needed, and bring in the board's safeguarding trustee."
+            }
+          ]
+        },
+        {
+          "number": 6,
+          "label": "The policy",
+          "blocks": [
+            {
+              "kind": "buttons",
+              "items": [
+                "Download the safeguarding policy (PDF)",
+                "Download the equal opportunities policy (PDF)"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

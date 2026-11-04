@@ -1,0 +1,4 @@
+allowBuilds:
+  esbuild: true
+  rclone.js: true
+  workerd: true

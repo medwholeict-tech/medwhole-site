@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "medwhole-cms",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-29",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "e20ebb33a929422f967dfe917566440e"
+    }
+  ],
+  "vars": {
+    "PAYLOAD_PUBLIC_SERVER_URL": "https://medwhole-cms.medwhole.workers.dev",
+    "PAYLOAD_CORS_ORIGINS": "https://www.medwhole.org,https://medwhole-website.medwhole.workers.dev",
+    "PAYLOAD_CSRF_ORIGINS": "https://www.medwhole.org,https://medwhole-website.medwhole.workers.dev",
+    "PAYLOAD_DB_PUSH": "false",
+    "PAYLOAD_LOG_LEVEL": "info"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

@@ -1,0 +1,99 @@
+name: Build Cloudflare artifacts
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  website:
+    name: Build website Worker
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.2
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build OpenNext worker
+        run: pnpm cf:build
+        env:
+          CF_BUILD: "1"
+          NODE_OPTIONS: "--max-old-space-size=3072"
+          DATABASE_URL: "postgresql://build:build@127.0.0.1:5432/build"
+          NEXTAUTH_SECRET: "build-only-not-a-real-secret-000000000000"
+          NEXTAUTH_URL: "https://medwhole-website.medwhole.workers.dev"
+          NEXT_PUBLIC_APP_URL: "https://www.medwhole.org"
+          NEXT_PUBLIC_SITE_URL: "https://www.medwhole.org"
+          NEXT_PUBLIC_SANITY_PROJECT_ID: "zouo3v31"
+          NEXT_PUBLIC_SANITY_DATASET: "production"
+          NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY: "public_NlUSbegVr9G2frZZqSyYpkGhKpA="
+          NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT: "https://ik.imagekit.io/medwhole"
+          NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: "your-google-verification-code"
+          EMAIL_FROM: "info@medwhole.org"
+          RESEND_API_KEY: "re_build_placeholder"
+          IMAGEKIT_PRIVATE_KEY: "build-placeholder"
+          PAYLOAD_CMS_URL: "https://medwhole-cms.medwhole.workers.dev"
+          PAYLOAD_CMS_READ_API_KEY: "build-placeholder"
+          PAYLOAD_CMS_ADMIN_API_KEY: "build-placeholder"
+
+      - name: Upload website artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-open-next
+          path: .open-next
+          include-hidden-files: true
+          retention-days: 3
+
+  cms:
+    name: Build CMS Worker
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.2
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install CMS dependencies
+        working-directory: cms
+        run: pnpm install --frozen-lockfile --ignore-workspace
+
+      - name: Build OpenNext worker
+        working-directory: cms
+        run: pnpm cf:build
+        env:
+          NODE_OPTIONS: "--max-old-space-size=3072"
+          PAYLOAD_SECRET: "build-only-not-a-real-secret-000000000000"
+          DATABASE_URL: "postgresql://build:build@127.0.0.1:5432/build"
+          PAYLOAD_DB_PUSH: "false"
+          PAYLOAD_PUBLIC_SERVER_URL: "https://medwhole-cms.medwhole.workers.dev"
+          PAYLOAD_CORS_ORIGINS: "https://www.medwhole.org,https://medwhole-website.medwhole.workers.dev"
+          PAYLOAD_CSRF_ORIGINS: "https://www.medwhole.org,https://medwhole-website.medwhole.workers.dev"
+          PAYLOAD_LOG_LEVEL: "info"
+
+      - name: Upload CMS artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cms-open-next
+          path: cms/.open-next
+          include-hidden-files: true
+          retention-days: 3
