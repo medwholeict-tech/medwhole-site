@@ -2,13 +2,15 @@ import { legacyProgramRoutes } from './lib/legacy-program-routes.mjs'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Keep production builds isolated from Antigravity's continuously running
-  // `next dev` process, which writes to the default `.next` directory.
-  // Cloudflare/OpenNext requires the standard `.next` output directory.
+  // Keep local production builds isolated from Antigravity's continuously
+  // running `next dev` process, which writes to the default `.next` directory.
+  // Cloudflare/OpenNext and Hostinger's Next.js pipeline expect the standard
+  // `.next` output directory, so they override it via NEXT_DIST_DIR=.next.
   distDir:
-    process.env.NODE_ENV === 'production' && process.env.CF_BUILD !== '1'
+    process.env.NEXT_DIST_DIR ||
+    (process.env.NODE_ENV === 'production' && process.env.CF_BUILD !== '1'
       ? '.next-build'
-      : '.next',
+      : '.next'),
   eslint: {
     ignoreDuringBuilds: true,
   },
