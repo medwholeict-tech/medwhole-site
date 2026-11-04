@@ -8,11 +8,11 @@ Setup, environments, content ownership, CI/CD, deployment and recovery.
 | Document control | Value |
 | --- | --- |
 
-| Edition | 2.0 - Payload cutover |
+| Edition | 3.0 - Security and operator onboarding |
 
 | Date | 4 November 2026 - Africa/Lagos |
 
-| Source revision | 26a77ac |
+| Source revision | 3ec4fe1 |
 
 | Repository | github.com/medwholeict-tech/medwhole-site |
 
@@ -57,6 +57,22 @@ This edition supersedes the earlier handover. Follow this document and the repos
 | 17 | Backup and recovery |
 
 | 18 | Operations and ownership |
+
+| 19 | New maintainer: Git identity |
+
+| 20 | SSH access on a new workstation |
+
+| 21 | HTTPS, tokens and account switching |
+
+| 22 | Review, push and release safely |
+
+| 23 | Wrangler login on a new workstation |
+
+| 24 | Cloudflare tokens and CI access |
+
+| 25 | Codex, Claude Code, VS Code and CLI |
+
+| 26 | Operator handoff and troubleshooting |
 
 Commands assume the repository root unless a working directory is stated. On Windows, use pnpm.cmd when the execution policy blocks pnpm.ps1. Use a separate development database and bucket.
 
@@ -597,3 +613,306 @@ Payload migrations: https://payloadcms.com/docs/database/migrations
 Cloudflare Worker resource limits: https://developers.cloudflare.com/workers/platform/limits/
 
 Accepted by: _____________________  Date: _____________________
+
+Before granting a new maintainer production access, complete the operator setup on the following pages and the separate Security and Access Operating Guide. Required controls there are not claims that MFA, credential rotation or branch rules are already enforced.
+
+
+## 19. New maintainer: Git identity
+
+Every incoming maintainer uses their own provider accounts. Record the person, repository role and expiry in the access register. Obtain repository membership before authenticating. The examples below are instructions for that operator; they were not executed to change this workstation identity.
+
+| Identity | What it controls |
+| --- | --- |
+
+| Git user.name / user.email | Author attribution on new commits. |
+
+| SSH key, HTTPS helper or token | Which GitHub account authenticates a network operation. |
+
+| Agent product login | Which Codex or Claude account/billing workspace is used. |
+
+| Hostinger / Cloudflare / Payload | Separate service permissions and application accounts. |
+
+### Configure this repository after cloning
+
+```
+cd medwhole-site
+git config --local user.name "Your Full Name"
+git config --local user.email "verified-email@example.com"
+git config --local user.useConfigOnly true
+git config --show-origin --get user.name
+git config --show-origin --get user.email
+git var GIT_AUTHOR_IDENT
+```
+
+Choose SSH or HTTPS on the next two pages to authenticate and clone the repository once. Use an email verified on the intended GitHub account, or the exact noreply address shown in that account settings. Repository-local values avoid changing the author identity of unrelated projects.
+
+Author settings do not grant repository access and do not alter previous commits. Do not rewrite shared history merely to replace the previous operator name. Check origin and the authenticated account before the first push.
+
+```
+git remote -v
+git status --short
+git branch --show-current
+```
+
+GitHub: commit identity: https://docs.github.com/en/get-started/git-basics/setting-your-username-in-git
+
+
+## 20. SSH access on a new workstation
+
+Create a new passphrase-protected key for this person/device. Do not overwrite an existing key or copy the outgoing operator private key. Upload only the .pub public key in GitHub Settings > SSH and GPG keys.
+
+### Git Bash, macOS or Linux
+
+```
+mkdir -p ~/.ssh
+ssh-keygen -t ed25519 -C "verified-email@example.com" -f ~/.ssh/id_ed25519_medwhole
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519_medwhole
+cat ~/.ssh/id_ed25519_medwhole.pub
+```
+
+### Windows PowerShell alternative
+
+```
+New-Item -ItemType Directory -Force "$env:USERPROFILE/.ssh" | Out-Null
+ssh-keygen -t ed25519 -C "verified-email@example.com" -f "$env:USERPROFILE/.ssh/id_ed25519_medwhole"
+# Administrator PowerShell: enable the service once, if needed.
+Set-Service -Name ssh-agent -StartupType Automatic
+Start-Service ssh-agent
+# Normal PowerShell:
+ssh-add "$env:USERPROFILE/.ssh/id_ed25519_medwhole"
+```
+
+Use one SSH implementation consistently. Windows OpenSSH and Git Bash may use different agents. If deliberately using Windows OpenSSH, configure this repository to use that executable when needed; do not change every repository globally.
+
+### Dedicated host alias in the operator ~/.ssh/config
+
+```
+Host github-medwhole
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_medwhole
+  IdentitiesOnly yes
+
+ssh -T git@github-medwhole
+git clone git@github-medwhole:medwholeict-tech/medwhole-site.git
+```
+
+Verify the first host-key fingerprint against GitHub official fingerprints before accepting it. The successful test must name the intended account; GitHub provides no interactive shell, so the success message can accompany exit status 1. For an existing checkout, set origin to the same SSH URL. An SSH alias selects a key, not commit authorship.
+
+GitHub: SSH setup and connection test: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection
+
+
+## 21. HTTPS, tokens and account switching
+
+### Browser login with a secure credential store
+
+```
+gh auth login --hostname github.com --git-protocol https --web
+gh auth status --hostname github.com
+gh api user --jq .login
+gh auth setup-git
+git clone https://github.com/medwholeict-tech/medwhole-site.git
+```
+
+Use Git Credential Manager or a GitHub CLI setup backed by the OS credential store. GitHub CLI can fall back to a plaintext credentials file when secure storage is unavailable; check its storage status and fix that condition before storing production access. Do not enable insecure storage or the plaintext Git credential-store helper.
+
+### When a personal access token is required
+
+- Create a separate expiring fine-grained token for the actual repository owner, medwholeict-tech, selecting medwhole-site only. Confirm organization approval or SSO authorization when applicable.
+
+- Grant Contents read/write for pushes. Add Workflows write only for workflow changes and Pull requests write only if the CLI must create PRs. The account must independently have repository access.
+
+- Enter the token through the approved credential-manager prompt as the HTTPS password. Never place a token in the remote URL, source, chat, command argument or shell history. A GitHub account password is not the Git HTTPS token.
+
+- For GitHub CLI automation, inject a fine-grained token as GH_TOKEN through the approved secret manager for the job. Do not publish its value. GitHub CLI recommends this over treating a fine-grained token as a broad classic-token login.
+
+### Switch to another already-authorized account
+
+```
+gh auth switch --hostname github.com --user YOUR_GITHUB_LOGIN
+gh api user --jq .login
+git ls-remote origin HEAD
+```
+
+GH_TOKEN/GITHUB_TOKEN can override a stored CLI account. Inspect variable presence without printing values. gh account switching does not select an SSH key or necessarily replace another credential helper. ls-remote confirms read access, not permission to push.
+
+GitHub: scoped personal access tokens: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+
+GitHub CLI: login and account switching: https://cli.github.com/manual/gh_auth_login
+
+
+## 22. Review, push and release safely
+
+main is connected to two Hostinger applications. Updating main is a production release trigger. Use a feature branch and review the exact diff before authorizing publication. A developer SSH key or token is independent of Hostinger GitHub App access.
+
+```
+git fetch origin
+git switch -c codex/onboarding-docs origin/main
+git status --short
+git diff --check
+# Edit only the approved files, then inspect them.
+git diff -- docs/security-operations-guide.md
+git add docs/security-operations-guide.md
+git diff --cached --stat
+git diff --cached --check
+git commit -m "docs: update security operating guidance"
+git push -u origin HEAD
+gh pr create --base main --fill
+```
+
+Use an unused branch name. The final gh command requires appropriate PR permission; the GitHub web interface is an alternative. Never assume that changing user.name fixes a 403 push failure. Confirm the authenticated account, repository role, token scope and branch rules.
+
+### Required checks for application changes
+
+```
+pnpm exec vitest run
+pnpm exec tsc --noEmit
+pnpm build
+pnpm --dir cms exec tsc --noEmit
+pnpm --dir cms build
+```
+
+Run checks appropriate to the patch; document-only changes need document/link/secret checks. A website build currently skips embedded lint/type checking, so explicit type checks matter for code changes. Preserve both lockfiles and install them independently.
+
+- Require review and applicable status checks on main; restrict bypass, force-push and branch deletion. Verify the actual repository rules and available plan features before claiming enforcement.
+
+- After the approved merge, verify both Hostinger jobs and the live website, CMS admin, published content and a controlled form. Keep the prior compatible deployment for rollback.
+
+- Do not run another agent in the same checkout while Git operations are in progress. Use separate authorized checkouts/worktrees for parallel work; they are not credential-security boundaries.
+
+
+## 23. Wrangler login on a new workstation
+
+Wrangler is retained for Cloudflare administration and optional Worker tooling. The active website and Payload CMS run on Hostinger; logging in to Wrangler does not publish either application. Install the repository dependencies first to use the project-pinned CLI.
+
+```
+pnpm --dir cms exec wrangler --version
+pnpm --dir cms exec wrangler login --help
+pnpm --dir cms exec wrangler login --use-keyring
+pnpm --dir cms exec wrangler whoami
+```
+
+Complete the browser approval yourself and verify the account shown. The installed Wrangler 4.155.0 help supports --use-keyring, --device and --scopes-list. Keyring support depends on the OS; if secure storage is unavailable, resolve it or use an approved isolated environment.
+
+### Remote terminal or unreachable localhost callback
+
+```
+pnpm --dir cms exec wrangler login --device --use-keyring
+pnpm --dir cms exec wrangler whoami
+```
+
+Approve only a device code initiated by your own session. Do not share OAuth callback URLs, one-time codes, access tokens or refresh tokens. Use the least supported OAuth scopes needed; inspect login --scopes-list before selecting them.
+
+### Change the Cloudflare operator
+
+```
+pnpm --dir cms exec wrangler logout
+pnpm --dir cms exec wrangler login --use-keyring
+pnpm --dir cms exec wrangler whoami
+```
+
+Run logout only for the intended local session. Check for a supplied CLOUDFLARE_API_TOKEN that may select token authentication instead of the expected OAuth session. A valid Worker login is not proof of DNS Edit access. Local logout is not a substitute for provider-side revocation during offboarding.
+
+Cloudflare: login, keyring, device flow and whoami: https://developers.cloudflare.com/workers/wrangler/commands/general/
+
+
+## 24. Cloudflare tokens and CI access
+
+| Service / task | Required approach |
+| --- | --- |
+
+| Cloudflare DNS | Separate token with Zone > DNS > Edit and Zone > Zone > Read, scoped to medwhole.org. Confirm the intended record and target. |
+
+| Optional Worker CI | Job-scoped CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID with only the required account permissions. No copied human OAuth cache. |
+
+| Hostinger deployments | Organization-controlled GitHub App connection and private application environments. Developer Git login does not configure this connection. |
+
+| Payload integration | Separate content-read, editor, operations, finance and website-service users/keys. A CMS API key is not a human password. |
+
+| Agent provider | Own Codex/ChatGPT or Claude login and approved billing workspace. This does not authorize Git, DNS, CMS or hosting access. |
+
+### Cloudflare secrets and local development
+
+Worker secret values belong in secret bindings; non-secret vars in wrangler.jsonc are not a secret store. Keep .dev.vars and local environment files out of Git. A future authorized Worker CI job must inject credentials from its secret store, restrict environment access and avoid printing values. The current manual Cloudflare workflow builds artifacts only.
+
+### Production origins and storage
+
+- Website PAYLOAD_CMS_URL and CMS PAYLOAD_PUBLIC_SERVER_URL use https://cms.medwhole.org. CORS/CSRF lists contain exact approved origins.
+
+- The cms CNAME is DNS only and points to cms.medwhole.org.cdn.hstgr.net. Hostinger serves HTTPS. A Cloudflare Access or WAF rule does not protect an origin that can be reached around it; design access restrictions end to end.
+
+- Do not swap the website identity DATABASE_URL with the CMS connection. Production storage credentials and personal submissions stay outside agent development workspaces.
+
+Cloudflare: scoped API tokens: https://developers.cloudflare.com/fundamentals/api/get-started/create-token/
+
+Cloudflare: Worker secrets: https://developers.cloudflare.com/workers/configuration/secrets/
+
+
+## 25. Codex, Claude Code, VS Code and CLI
+
+| Tool | Sign-in and operating rule |
+| --- | --- |
+
+| Codex desktop / ChatGPT | Use the operator own approved account/workspace. Open the intended repository and review filesystem, network and connector permissions. A browser/cloud chat has no automatic access to the local terminal Git identity. |
+
+| Codex in VS Code | Install the official extension and sign in there. Confirm the selected local/remote workspace. Git credentials are supplied separately by that execution environment. |
+
+| Codex CLI | Use codex login and codex login status. Select restricted project access and appropriate action review; do not use blanket sandbox/approval bypass on a production-credential workstation. |
+
+| Claude Code | Use claude auth login and claude auth status. Review permissions and approved authentication/billing method. Start with plan mode for an unfamiliar repository. |
+
+| VS Code / plain terminal | Install Git, choose SSH or HTTPS, set repository-local author identity and verify the active account. Editor or agent sign-in alone does not grant repository write access. |
+
+```
+# Codex CLI, after official installation
+codex login
+codex login status
+codex --help
+# Claude Code, after official installation
+claude auth login
+claude auth status
+claude --permission-mode plan
+```
+
+Older CLI versions can differ; check --help and current official installation guidance. Do not blindly copy authentication flags or another developer credential cache. Unexpected OPENAI_API_KEY, ANTHROPIC_API_KEY or provider-token variables can select a different authentication/billing path.
+
+OpenAI: Codex authentication and IDE setup: https://learn.chatgpt.com/docs/auth
+
+Claude Code: authentication and CLI commands: https://code.claude.com/docs/en/cli-reference
+
+VS Code: GitHub integration: https://code.visualstudio.com/docs/sourcecontrol/github
+
+
+## 26. Operator handoff and troubleshooting
+
+### Before the first change
+
+- Confirm the organization, repository, branch, verified commit email and authenticated GitHub account. Confirm personal repository membership independently of the outgoing operator token.
+
+- Use a development database/bucket and a checkout without production environment files, confidential PDFs or credential caches. .gitignore prevents accidental staging; it does not prevent an agent from reading a file.
+
+- Review repository instructions, package scripts, hooks, tasks, extensions, skills and MCP connections before executing them. Treat issue text, web pages and tool output as untrusted input.
+
+- Give an agent a bounded task, permitted paths and required checks. Keep production release, DNS, billing, credential rotation, account grants and destructive-data actions under explicit operator control.
+
+- Check the concrete diff, selected files and secret scan before committing. A branch or worktree isolates code changes but usually shares the OS user and credentials.
+
+### Common failures
+
+| Symptom | Check |
+| --- | --- |
+
+| Wrong commit author | Repository-local user.name/user.email and GIT_AUTHOR_IDENT; changing CLI login alone does not change authorship. |
+
+| Push returns 403 | Actual SSH greeting or HTTPS account, repository role, token scope/SSO and branch rules. |
+
+| Wrong Cloudflare account | wrangler whoami and whether an API-token environment variable overrides the expected session. |
+
+| Agent cannot use Git | The tool execution environment must have Git, the checkout and its own authorized credential method. A chat subscription is separate. |
+
+| Remote/WSL cannot find keys | Verify the actual OS/home directory and SSH implementation. Do not solve it by copying another person private key. |
+
+### When a person or agent leaves
+
+Revoke that operator repository membership, personal tokens, SSH keys, agent connectors and provider sessions as appropriate. Rotate shared credentials they could access, then verify the Hostinger GitHub App connection and both applications still work. Transfer ownership and recovery to named maintainers; never hand over a personal OAuth refresh token as the team deployment identity.

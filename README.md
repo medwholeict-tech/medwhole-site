@@ -2,6 +2,12 @@
 
 The public Next.js website runs on Hostinger. Payload is the only active CMS and the primary store for editorial content, public form submissions, donation intents and payment records. The Payload admin application runs as a separate Hostinger Node.js website. Cloudflare manages authoritative DNS; Hostinger serves the website and TLS.
 
+## Security and new-maintainer onboarding
+
+Read the [security and access operating guide](docs/security-operations-guide.md) before granting a new maintainer or coding agent production access. It covers required controls, credential rotation, named accounts and recovery, repository-local Git identity, SSH or HTTPS/token authentication, Wrangler login, and Codex/Claude Code/VS Code/CLI workflows. These are required operating practices; this documentation does not certify that every control is enabled.
+
+The [technical handover](docs/technical-handover.md) includes the same eight-page operator onboarding appendix alongside the application setup and release runbooks. Use each maintainer's own accounts and credentials. Commit author settings, GitHub authentication, agent sign-in and hosting/DNS permissions are separate. Keep the confidential credential document and live secrets outside source control and routine agent workspaces.
+
 ## Services and routes
 
 | Service | Location | Purpose |
