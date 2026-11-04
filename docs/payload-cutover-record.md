@@ -3,7 +3,7 @@
 The public website and Payload CMS now run as separate Node.js applications on the existing Hostinger Business plan. Cloudflare continues to manage authoritative DNS.
 
 - Public website: https://www.medwhole.org
-- Native CMS admin: https://darkblue-weasel-536637.hostingersite.com/admin
+- Native CMS admin: https://cms.medwhole.org/admin
 - Source: medwholeict-tech/medwhole-site, main; code baseline 25e682d.
 - CMS app settings: root cms, Node 22, pnpm, build script build, output .next.
 - Website app settings: repository root, Node 22, pnpm, build script build, output .next.

@@ -1,6 +1,6 @@
 # MedWHOLE Payload CMS
 
-Payload 3 runs as a separate Next.js application on the existing Hostinger Business plan. It owns editorial content, persistent media metadata, private operational inboxes and donation records. Production editor: https://darkblue-weasel-536637.hostingersite.com/admin. See ../README.md for the full setup and deployment runbook.
+Payload 3 runs as a separate Next.js application on the existing Hostinger Business plan. It owns editorial content, persistent media metadata, private operational inboxes and donation records. Production editor: https://cms.medwhole.org/admin. See ../README.md for the full setup and deployment runbook.
 
 Install with pnpm --dir cms install --frozen-lockfile --ignore-workspace. Copy env.sample to .env.local and configure a dedicated development database. Run pnpm --dir cms migrate, then pnpm cms:dev from the repository root. The local editor is http://localhost:3100/admin.
 

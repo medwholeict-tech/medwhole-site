@@ -79,7 +79,7 @@ The old Cloudflare Worker runtime is retired because its Free CPU limit produced
 
 | Apex domain | https://medwhole.org - redirect to canonical www |
 
-| Native Payload editor | https://darkblue-weasel-536637.hostingersite.com/admin |
+| Native Payload editor | https://cms.medwhole.org/admin |
 
 | Website portal | /admin/login; /admin/content; /admin/submissions |
 
@@ -212,7 +212,7 @@ AWS_SECRET_ACCESS_KEY=
 S3_FORCE_PATH_STYLE=true
 ```
 
-For production, PAYLOAD_PUBLIC_SERVER_URL is https://darkblue-weasel-536637.hostingersite.com. Set CORS to the actual website origins and CSRF to the CMS origin plus authorized website origins. Keep PAYLOAD_DB_PUSH=false. Hostinger connects directly to the dedicated CMS Neon DATABASE_URL; no Hyperdrive binding is needed.
+For production, PAYLOAD_PUBLIC_SERVER_URL is https://cms.medwhole.org. Set CORS to the actual website origins and CSRF to the CMS origin plus authorized website origins. Keep PAYLOAD_DB_PUSH=false. Hostinger connects directly to the dedicated CMS Neon DATABASE_URL; no Hyperdrive binding is needed.
 
 | Setting | Operational rule |
 | --- | --- |
@@ -398,7 +398,7 @@ The current repository does not have an automatic push/PR test gate in the manua
 
 | Build script / output | build / .next |
 
-| Public CMS origin | https://darkblue-weasel-536637.hostingersite.com |
+| Public CMS origin | https://cms.medwhole.org |
 
 | Database / media | Dedicated Neon DATABASE_URL and existing S3-compatible bucket |
 
@@ -436,7 +436,7 @@ OpenNext and Wrangler files remain in the repository for a deliberate future hos
 
 | NEXT_DIST_DIR | .next |
 
-| PAYLOAD_CMS_URL | https://darkblue-weasel-536637.hostingersite.com |
+| PAYLOAD_CMS_URL | https://cms.medwhole.org |
 
 ```
 pnpm exec vitest run
@@ -468,7 +468,7 @@ Cloudflare is the authoritative DNS manager. Hostinger runs the website processe
 
 | medwhole.org / www | Website records point to Hostinger; apex redirects to www. |
 
-| CMS origin | Hostinger-generated HTTPS domain; no Cloudflare DNS change needed for this move. |
+| CMS origin | cms.medwhole.org; CNAME to cms.medwhole.org.cdn.hstgr.net in Cloudflare, DNS only. |
 
 | academy / office | Separate existing subdomain targets; preserve unless explicitly migrating them. |
 

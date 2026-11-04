@@ -53,7 +53,7 @@ jobs:
           EMAIL_FROM: "info@medwhole.org"
           RESEND_API_KEY: "re_build_placeholder"
           IMAGEKIT_PRIVATE_KEY: "build-placeholder"
-          PAYLOAD_CMS_URL: "https://medwhole-cms.medwhole.workers.dev"
+          PAYLOAD_CMS_URL: "https://cms.medwhole.org"
           PAYLOAD_CMS_READ_API_KEY: "build-placeholder"
           PAYLOAD_CMS_ADMIN_API_KEY: "build-placeholder"
 

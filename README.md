@@ -9,7 +9,7 @@ The public Next.js website runs on Hostinger. Payload is the only active CMS and
 | Public website | https://www.medwhole.org | Public pages, forms, server-side CMS requests |
 | Apex domain | https://medwhole.org | Redirect to canonical www website |
 | Website admin | /admin | Existing NextAuth portal; /admin/content opens Payload, /admin/submissions exposes permitted inboxes |
-| Payload editor | https://darkblue-weasel-536637.hostingersite.com/admin | Native content editor, media and administrative collections |
+| Payload editor | https://cms.medwhole.org/admin | Native content editor, media and administrative collections |
 | Old editor bookmark | /studio | Redirect to /admin/content |
 | CMS database | Dedicated Neon PostgreSQL, medwhole_cms schema | Content, CMS administrators, submissions, donations, versions |
 | Website database | Separate Neon connection | Existing NextAuth administrator identity; not a second CMS |
@@ -70,7 +70,7 @@ The website build configuration currently skips Next.js lint/type checking; run 
 
 Both applications run on the existing Hostinger Business plan and use the same GitHub repository, main branch. The public website root is the repository root; the CMS application root is cms. Each has its own environment variables, build logs and process. Node.js is 22, package manager pnpm, build script build, output .next. A GitHub push to main triggers each connected auto-deployment. Verify both build results in Hostinger; a successful Git push alone is not a successful release.
 
-CMS application: https://darkblue-weasel-536637.hostingersite.com/admin. This Hostinger-generated domain provides HTTPS without changing Cloudflare DNS. The main domain remains on Cloudflare DNS and points to Hostinger. CMS DATABASE_URL connects directly to its dedicated Neon database; CMS uploads use the existing persistent object-storage bucket. Set PAYLOAD_PUBLIC_SERVER_URL to the CMS origin and set the website PAYLOAD_CMS_URL to the same origin.
+CMS application: https://cms.medwhole.org/admin. The cms CNAME in Cloudflare points to cms.medwhole.org.cdn.hstgr.net (DNS only); Hostinger serves the CMS and its HTTPS certificate. The main domain remains on Cloudflare DNS and points to Hostinger. CMS DATABASE_URL connects directly to its dedicated Neon database; CMS uploads use the existing persistent object-storage bucket. Set PAYLOAD_PUBLIC_SERVER_URL to https://cms.medwhole.org and set the website PAYLOAD_CMS_URL to the same origin. PAYLOAD_PREVIOUS_HOST identifies the former CMS hostname for permanent redirects; leave it empty during local development.
 
 For schema changes: back up, apply reviewed additive migrations and release the compatible CMS before the website that requires those fields. For coordinated releases, use a feature branch for the CMS build first, verify it, then promote that tested commit to main. scripts/deploy-production.ps1 verifies the clean main checkout before pushing; it does not monitor both hosting jobs automatically.
 

@@ -16,7 +16,7 @@
     "NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT": "https://ik.imagekit.io/medwhole",
     "NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION": "your-google-verification-code",
     "EMAIL_FROM": "info@medwhole.org",
-    "PAYLOAD_CMS_URL": "https://medwhole-cms.medwhole.workers.dev",
+    "PAYLOAD_CMS_URL": "https://cms.medwhole.org",
     "PAYLOAD_CMS_PUBLIC_ENABLED": "true"
   },
   "observability": {
